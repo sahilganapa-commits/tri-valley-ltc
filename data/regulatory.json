@@ -1,0 +1,65 @@
+[
+ {
+  "resource": "California CDSS Facility Search",
+  "use": "Assisted living and memory care licensing",
+  "url": "https://www.ccld.dss.ca.gov/carefacilitysearch/",
+  "check": "License status, capacity, ownership, inspection reports, complaints, deficiencies, civil penalties, and plans of correction.",
+  "notes": "Search by facility name, city, or license number. Download the most recent reports."
+ },
+ {
+  "resource": "Medicare Care Compare",
+  "use": "Skilled nursing, home health, hospice, and hospitals",
+  "url": "https://www.medicare.gov/care-compare/",
+  "check": "Overall, health-inspection, staffing and quality-measure ratings; ownership; penalties; survey details.",
+  "notes": "Ratings change. Open the detailed report and compare several facilities."
+ },
+ {
+  "resource": "California HCAI Facility Profiles",
+  "use": "Skilled-nursing license category, status, and bed count",
+  "url": "https://hcai.ca.gov/facility/",
+  "check": "Open/closed status, licensed beds, facility type, and state identifiers.",
+  "notes": "Use together with Care Compare and California Department of Public Health survey records."
+ },
+ {
+  "resource": "California Assisted Living Waiver",
+  "use": "Medi-Cal assisted-living alternative for eligible participants",
+  "url": "https://www.dhcs.ca.gov/services/ltc/Pages/AssistedLivingWaiver.aspx",
+  "check": "Eligible counties, participant rules, care coordination agencies, and participating facilities.",
+  "notes": "Alameda and Contra Costa are eligible counties, but each facility\u2019s participation and openings must be confirmed."
+ },
+ {
+  "resource": "Medicare PACE information",
+  "use": "PACE eligibility, coverage, rights, and cost structure",
+  "url": "https://www.medicare.gov/health-drug-plans/health-plans/your-coverage-options/PACE",
+  "check": "Eligibility, covered services, premiums for Medicare-only participants, and participant protections.",
+  "notes": "PACE requires use of the program\u2019s care team and network except in specified situations."
+ },
+ {
+  "resource": "California Home Care Services Registry",
+  "use": "Nonmedical home-care agencies and aides",
+  "url": "https://www.ccld.dss.ca.gov/hcsregistry/registrysearch.aspx",
+  "check": "Organization registration and individual home-care aide status.",
+  "notes": "Also ask about employee status, bonding, liability insurance, supervision, and backup coverage."
+ },
+ {
+  "resource": "Alameda County ADRC",
+  "use": "Public benefits, caregiver, housing, transportation, and long-term-services navigation",
+  "url": "https://alameda.my-adrc.org/",
+  "check": "Medi-Cal, IHSS, caregiver supports, adult day, transportation, housing, legal and disability resources.",
+  "notes": "Dial 2-1-1 for free multilingual resource navigation."
+ },
+ {
+  "resource": "Long-Term Care Ombudsman",
+  "use": "Resident rights and complaints in licensed long-term-care settings",
+  "url": "https://aging.ca.gov/Programs_and_Services/Long-Term_Care_Ombudsman/",
+  "check": "How to contact the local ombudsman, complaint assistance, resident rights, and advocacy.",
+  "notes": "Ombudsman services are free and independent from the facility."
+ },
+ {
+  "resource": "California Hospice and Palliative Care Association",
+  "use": "Hospice education and provider questions",
+  "url": "https://www.calhospice.org/",
+  "check": "Hospice eligibility, rights, service expectations, and provider resources.",
+  "notes": "Verify individual providers through Medicare Care Compare and state records."
+ }
+]

@@ -1,0 +1,92 @@
+[
+ {
+  "care_type": "Independent senior living",
+  "costs": "Entrance fee, refund formula, monthly fee, second-person fee, annual increases, what happens if funds run low.",
+  "care": "Emergency response, accessibility, transportation, medication help limits, and the point at which a resident must move.",
+  "quality": "Occupancy, financial strength, resident council, contract complaints, aging-in-place track record, and access to higher care."
+ },
+ {
+  "care_type": "Assisted living",
+  "costs": "Base rent, community fee, care tiers, medication fee, supplies, transportation, rate increases, deposit and refund rules.",
+  "care": "Licensed nurse schedule, awake overnight staff, caregiver ratios, falls, injections, two-person transfers, emergency transfer, and discharge criteria.",
+  "quality": "Current CDSS reports, staff turnover, complaint resolution, family communication, activities, food, odors, call-response time, and resident rights."
+ },
+ {
+  "care_type": "Memory care",
+  "costs": "All-in memory-care rate, care-tier changes, incontinence supplies, escort fees, and hospice or end-of-life surcharges.",
+  "care": "Dementia training, secured exits, wandering response, overnight staffing, behavior support, psychiatric access, falls, and one-to-one care.",
+  "quality": "Observe resident engagement, noise, dignity, staff tone, outdoor access, family support, hospitalization rate, and criteria for involuntary transfer."
+ },
+ {
+  "care_type": "Skilled nursing and rehabilitation",
+  "costs": "Insurance authorization, covered days, copays, private-pay daily rate, therapy, pharmacy, physician, transportation, and bed-hold charges.",
+  "care": "RN and CNA hours, weekend staffing, therapy frequency, wound care, infection control, rehospitalization, physician coverage, and discharge planning.",
+  "quality": "Medicare stars, most recent health survey, penalties, staffing star, ownership, turnover, complaints, therapy outcomes, and family council."
+ },
+ {
+  "care_type": "In-home care",
+  "costs": "Hourly minimum, overtime, overnight and live-in structure, holiday and mileage rates, cancellation, deposits, and long-term care insurance billing.",
+  "care": "Employee versus contractor, background checks, training, nurse oversight, medication limits, lifting, dementia behaviors, backup coverage, and visit notes.",
+  "quality": "State registry status, insurance and bonding, caregiver continuity, supervisor visits, complaint process, references, and care-plan updates."
+ },
+ {
+  "care_type": "Adult day programs",
+  "costs": "Daily fee, attendance minimum, transportation, meals, assessment fee, scholarships, Medi-Cal or public funding, and missed-day policy.",
+  "care": "Nurse availability, medication administration, toileting, mobility, dementia behaviors, wandering, emergency procedures, and staff ratios.",
+  "quality": "Licensing, participant engagement, caregiver feedback, transportation reliability, trial days, waitlist, and reasons participants may be discharged."
+ },
+ {
+  "care_type": "PACE programs",
+  "costs": "Eligibility, Medicare/Medi-Cal status, monthly premium if not dual eligible, prescriptions, transportation, dental, vision, and out-of-network liability.",
+  "care": "Interdisciplinary team, home-care hours, urgent and after-hours response, specialists, hospital network, rehabilitation, equipment, and caregiver support.",
+  "quality": "Grievances, appeals, disenrollment, participant satisfaction, time to authorize services, network adequacy, and continuity with current doctors."
+ },
+ {
+  "care_type": "Hospice and palliative care",
+  "costs": "Insurance coverage, medications, equipment, supplies, ambulance, inpatient respite, continuous care, palliative-care fees, and services after death.",
+  "care": "Visit frequency, 24/7 response, nurse arrival time, physician role, symptom crisis plan, caregiver training, social work, chaplain, and aide hours.",
+  "quality": "Joint Commission or accreditation, state and Medicare status, family satisfaction, inpatient contracts, staff continuity, and cultural or spiritual fit."
+ },
+ {
+  "care_type": "Care-management services",
+  "costs": "Hourly, retainer, package or annual fee; travel; after-hours; minimum engagement; insurance reimbursement; and termination terms.",
+  "care": "Credentials, scope, emergency availability, medication and appointment coordination, documentation, privacy, family communication, and handoffs.",
+  "quality": "Conflicts and referral fees, professional liability insurance, references, care-plan samples, response time, case load, and measurable outcomes."
+ },
+ {
+  "care_type": "Senior placement and referral services",
+  "costs": "Whether family pays, which facilities pay referral fees, compensation amount or structure, and whether nonparticipating facilities are shown.",
+  "care": "Clinical assessment, inspection review, price comparison, tour attendance, transition help, and post-move follow-up.",
+  "quality": "Advisor credentials, breadth of local network, written conflict disclosure, handling of deficient facilities, references, and privacy practices."
+ },
+ {
+  "care_type": "1",
+  "costs": "An itemized all-in price estimate based on the senior\u2019s current needs.",
+  "care": "",
+  "quality": ""
+ },
+ {
+  "care_type": "2",
+  "costs": "The most recent license, inspection, complaint, deficiency, and correction reports.",
+  "care": "",
+  "quality": ""
+ },
+ {
+  "care_type": "3",
+  "costs": "A sample contract, admission agreement, discharge policy, and rate-increase history.",
+  "care": "",
+  "quality": ""
+ },
+ {
+  "care_type": "4",
+  "costs": "Staffing by shift, nurse availability, turnover, call-response expectations, and backup plan.",
+  "care": "",
+  "quality": ""
+ },
+ {
+  "care_type": "5",
+  "costs": "A written explanation of what the provider cannot safely do and what triggers transfer or discharge.",
+  "care": "",
+  "quality": ""
+ }
+]

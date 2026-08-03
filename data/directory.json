@@ -1,0 +1,947 @@
+[
+ {
+  "id": 1,
+  "primary_category": "Independent senior living",
+  "all_categories": [
+   "Independent senior living",
+   "Assisted living",
+   "Memory care",
+   "Skilled nursing and rehabilitation"
+  ],
+  "name": "Stoneridge Creek",
+  "city": "Pleasanton",
+  "address": "3300 Stoneridge Creek Way, Pleasanton, CA 94588",
+  "phone": "800-850-3167; info@stoneridgecreek.com",
+  "website": "https://stoneridgecreek.com/",
+  "levels": "Independent living; Life Plan Community; priority access to adjacent CreekView Health Center",
+  "services": "Apartment and villa-style residences, dining, amenities, activities, transportation, and a continuing-care pathway through CreekView.",
+  "pricing": "Life Plan Community structure. Ask for current entrance-fee choices, monthly service fees, refundability, and second-person fees.",
+  "payment": "Primarily private pay; long-term care insurance may apply to qualifying future care services.",
+  "languages": "Ask about interpretation and culturally specific programming. Broad lifestyle and wellness programming.",
+  "quality": "Review residency contract, audited financial disclosures, occupancy, and CreekView\u2019s current Medicare and state inspection record.",
+  "questions": "What portion of the entrance fee is refundable? How have monthly fees increased? What care is guaranteed at CreekView, and at what rate?",
+  "sources": [
+   "https://stoneridgecreek.com/",
+   "https://stoneridgecreek.com/contact-us/",
+   "https://www.cityofpleasantonca.gov/our-government/housing/housing-resources/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 2,
+  "primary_category": "Independent senior living",
+  "all_categories": [
+   "Independent senior living",
+   "Assisted living"
+  ],
+  "name": "Heritage Estates",
+  "city": "Livermore",
+  "address": "900 E. Stanley Blvd., Livermore, CA 94550",
+  "phone": "925-373-3636",
+  "website": "https://www.leisurecare.com/our-communities/heritage-estates/",
+  "levels": "Senior apartments; independent living; assisted living",
+  "services": "Apartments, dining, activities, transportation, wellness, housekeeping, and assisted-living support.",
+  "pricing": "Published starting rates: senior apartments about $2,950/month; independent living about $7,395/month; assisted living about $9,320/month, including the first care level. Rates are subject to change.",
+  "payment": "Private pay; long-term care insurance or VA benefits may reimburse eligible care. Affordable tax-credit apartments have separate eligibility and waitlist rules.",
+  "languages": "Ask about language access. Pet-friendly and wellness programming are advertised.",
+  "quality": "California RCFE license 015601095. Operator site reports 4.7/5 from 16 resident/family reviews and a 2026 U.S. News recognition; verify current CDSS inspection history independently.",
+  "questions": "Which services are included at each price? How are care-level charges assessed? Are affordable units available, and what are the income limits?",
+  "sources": [
+   "https://www.leisurecare.com/our-communities/heritage-estates/",
+   "https://www.ccld.dss.ca.gov/carefacilitysearch/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 3,
+  "primary_category": "Independent senior living",
+  "all_categories": [
+   "Independent senior living",
+   "Assisted living",
+   "Memory care",
+   "Skilled nursing and rehabilitation"
+  ],
+  "name": "The Reutlinger",
+  "city": "Danville",
+  "address": "4000 Camino Tassajara, Danville, CA 94506",
+  "phone": "925-648-2800",
+  "website": "https://thereutlinger.org/",
+  "levels": "Independent living; assisted living; memory care; skilled nursing and rehabilitation",
+  "services": "Nonprofit campus with residential care, dementia support, nursing, rehabilitation, activities, dining, and spiritual/cultural programming.",
+  "pricing": "Call for current monthly rates, deposits, care-level fees, skilled-nursing daily rates, and any financial-assistance policy.",
+  "payment": "Private pay for residential care; Medicare, Medi-Cal, managed care, or private pay may apply to skilled nursing depending on eligibility.",
+  "languages": "Welcomes all residents while honoring Jewish traditions; ask about language access, dietary observance, and spiritual care.",
+  "quality": "Nonprofit community. Review CDSS records for residential care and Medicare Care Compare for the skilled-nursing component.",
+  "questions": "Can residents move between care levels without leaving campus? What are the transfer priorities, staffing levels, and current Medicare ratings?",
+  "sources": [
+   "https://thereutlinger.org/",
+   "https://www.medicare.gov/care-compare/details/nursing-home/555885",
+   "https://www.ccld.dss.ca.gov/carefacilitysearch/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 4,
+  "primary_category": "Independent senior living",
+  "all_categories": [
+   "Independent senior living"
+  ],
+  "name": "The Nova",
+  "city": "Danville",
+  "address": "375 W. El Pintado, Danville, CA 94526",
+  "phone": "Contact through the project website or sales office",
+  "website": "https://thenovadanville.com/",
+  "levels": "Age-restricted 55+ condominium ownership; independent living only",
+  "services": "Ownership housing with common amenities. It is not a licensed assisted-living or nursing-care provider.",
+  "pricing": "Purchase prices, HOA dues, taxes, and availability vary by unit; request the current sales sheet and HOA budget.",
+  "payment": "Home purchase financing or cash; ongoing HOA dues and personal expenses.",
+  "languages": "Ask the sales office about accessibility features and community services.",
+  "quality": "Review the public offering statement, HOA reserves, warranties, accessibility, insurance, and emergency planning. No licensed care is included.",
+  "questions": "What does the HOA cover? Are units adaptable for aging in place? Are home-care providers permitted, and what accessibility features are standard?",
+  "sources": [
+   "https://thenovadanville.com/",
+   "https://www.danville.ca.gov/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 5,
+  "primary_category": "Assisted living",
+  "all_categories": [
+   "Assisted living",
+   "Memory care"
+  ],
+  "name": "Emerald Valley",
+  "city": "Dublin",
+  "address": "7601 Amador Valley Road, Dublin, CA 94568",
+  "phone": "Pricing: 925-520-3105; residents/families: 925-361-0913",
+  "website": "https://www.sunriseseniorliving.com/communities/ca/emerald-valley",
+  "levels": "Assisted living; memory care; short-term stays",
+  "services": "24-hour personalized support, medication management, dining, transportation, activities, emergency response, pet-friendly residences, and respite stays.",
+  "pricing": "Personalized model: suite charge plus assessed care level and optional services. Call for a written itemized quote.",
+  "payment": "Primarily private pay; long-term care insurance and VA Aid and Attendance may help eligible residents. Confirm any public-payment participation.",
+  "languages": "Ask about multilingual staff and interpretation. Pet-friendly, salon, fitness, garden, and healthcare-coordination services.",
+  "quality": "Verify current RCFE license status, complaints, deficiencies, and plans of correction in CDSS Facility Search.",
+  "questions": "What is the total cost after care assessment? Is a licensed nurse onsite overnight? What changes trigger a higher care tier or discharge?",
+  "sources": [
+   "https://www.sunriseseniorliving.com/communities/ca/emerald-valley",
+   "https://www.ccld.dss.ca.gov/carefacilitysearch/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 6,
+  "primary_category": "Assisted living",
+  "all_categories": [
+   "Assisted living",
+   "Memory care",
+   "Skilled nursing and rehabilitation"
+  ],
+  "name": "CreekView Health Center",
+  "city": "Pleasanton",
+  "address": "2900 Stoneridge Drive, Pleasanton, CA 94588",
+  "phone": "925-201-4050; info@visitcreekview.com",
+  "website": "https://visitcreekview.com/",
+  "levels": "Assisted living; memory care; skilled nursing; rehabilitation",
+  "services": "Help with daily activities, secured memory support, 24-hour nursing, short-term rehabilitation, and long-term skilled care.",
+  "pricing": "Call for assisted-living monthly rates, care tiers, memory-care pricing, and skilled-nursing daily or insurance-contracted rates.",
+  "payment": "Private pay for assisted/memory care; Medicare, Medi-Cal, managed care, long-term care insurance, or private pay may apply to skilled care.",
+  "languages": "Ask about language access, dementia programming, therapy schedules, and dietary accommodations.",
+  "quality": "HCAI lists the skilled-nursing facility as open with 59 licensed beds. Medicare provider 555895. Check current Care Compare stars and inspection details.",
+  "questions": "What are the current staffing levels by shift? How many therapy days and minutes are typical? What are the hospital readmission and discharge outcomes?",
+  "sources": [
+   "https://visitcreekview.com/",
+   "https://visitcreekview.com/contact-us/",
+   "https://hcai.ca.gov/facility/creekview-skilled-nursing/",
+   "https://www.medicare.gov/care-compare/details/nursing-home/555895"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 7,
+  "primary_category": "Assisted living",
+  "all_categories": [
+   "Assisted living",
+   "Memory care"
+  ],
+  "name": "The Parkview",
+  "city": "Pleasanton",
+  "address": "100 Valley Avenue, Pleasanton, CA 94566",
+  "phone": "925-461-3042",
+  "website": "https://theparkview.org/",
+  "levels": "Assisted living; memory care; respite care",
+  "services": "Residential support with activities, meals, medication assistance, personal care, and memory support.",
+  "pricing": "Call for market rates and care fees. The City of Pleasanton reports that 31 of 105 units participate in a below-market program with reduced rates.",
+  "payment": "Private pay; ask about eligibility, waitlist, and income documentation for below-market units. Confirm ALW participation directly.",
+  "languages": "Ask about multilingual staff, dementia-specific activities, and dietary accommodations.",
+  "quality": "Check CDSS licensing and inspection history. Confirm the current below-market program rules with onsite management and the City.",
+  "questions": "How does the below-market program work? Are care charges included in reduced-rate units? What is overnight staffing in assisted and memory care?",
+  "sources": [
+   "https://theparkview.org/",
+   "https://www.cityofpleasantonca.gov/our-government/housing/housing-resources/",
+   "https://www.ccld.dss.ca.gov/carefacilitysearch/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 8,
+  "primary_category": "Assisted living",
+  "all_categories": [
+   "Assisted living"
+  ],
+  "name": "Eden Villa Pleasanton",
+  "city": "Pleasanton",
+  "address": "4115 Mohr Avenue, Pleasanton, CA 94566",
+  "phone": "925-461-8409",
+  "website": "https://www.facebook.com/EdenVillaPleasanton/",
+  "levels": "Assisted living",
+  "services": "Residential care, meals, activities, and assistance with daily living. Confirm current scope and specialty-care capabilities.",
+  "pricing": "Call for base rent, care tiers, community fee, medication charges, and move-in deposit.",
+  "payment": "Typically private pay; ask about long-term care insurance, VA benefits, and any public-payment program participation.",
+  "languages": "Ask directly about language access, dietary needs, mobility assistance, and dementia-care limits.",
+  "quality": "Review the current CDSS license, inspection reports, complaint history, staffing plan, and emergency-disaster plan.",
+  "questions": "What is the highest care level accepted? Is awake staff present overnight? What conditions or behaviors would require a transfer?",
+  "sources": [
+   "https://www.cityofpleasantonca.gov/our-government/housing/housing-resources/",
+   "https://www.ccld.dss.ca.gov/carefacilitysearch/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 9,
+  "primary_category": "Assisted living",
+  "all_categories": [
+   "Assisted living",
+   "Memory care"
+  ],
+  "name": "Ivy Park at Pleasanton",
+  "city": "Pleasanton",
+  "address": "5700 Pleasant Hill Road, Pleasanton, CA 94588",
+  "phone": "925-886-2434; pleasanton@ivyliving.com",
+  "website": "https://ivyliving.com/pleasanton/",
+  "levels": "Assisted living; memory care",
+  "services": "Personal care, medication support, dining, activities, transportation, wellness, and specialized dementia programming.",
+  "pricing": "Call for apartment rent, care tiers, memory-care rates, community fees, and respite pricing.",
+  "payment": "Primarily private pay; long-term care insurance and VA benefits may apply. Confirm whether the community participates in ALW.",
+  "languages": "Ask about multilingual staff, cultural programming, special diets, and dementia behavior support.",
+  "quality": "Review current CDSS license and inspection reports; ask for staffing, turnover, falls, and emergency-transfer data.",
+  "questions": "How are care points or tiers calculated? What is nurse coverage? How are falls, medication changes, and dementia behaviors handled?",
+  "sources": [
+   "https://ivyliving.com/pleasanton/",
+   "https://www.ccld.dss.ca.gov/carefacilitysearch/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 10,
+  "primary_category": "Assisted living",
+  "all_categories": [
+   "Assisted living",
+   "Memory care"
+  ],
+  "name": "Ivy Park at Livermore",
+  "city": "Livermore",
+  "address": "35 Fenton Street, Livermore, CA 94550",
+  "phone": "925-660-7074",
+  "website": "https://ivyliving.com/livermore/",
+  "levels": "Assisted living; memory care",
+  "services": "Residential care, medication management, dining, activities, transportation, wellness, and dementia support.",
+  "pricing": "Call for current base rent, care-tier charges, memory-care pricing, and one-time fees.",
+  "payment": "Primarily private pay; long-term care insurance and VA benefits may help. Confirm ALW participation directly.",
+  "languages": "Ask about language access, culturally familiar meals, and specialized dementia services.",
+  "quality": "RCFE license 019201597. Review current CDSS inspections, complaints, and plans of correction.",
+  "questions": "What is included in the base rate? How much have rates risen in the last three years? What staffing and nurse coverage apply overnight?",
+  "sources": [
+   "https://ivyliving.com/livermore/",
+   "https://www.ccld.dss.ca.gov/carefacilitysearch/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 11,
+  "primary_category": "Assisted living",
+  "all_categories": [
+   "Assisted living"
+  ],
+  "name": "Brookdale San Ramon",
+  "city": "San Ramon",
+  "address": "18888 Bollinger Canyon Road, San Ramon, CA 94583",
+  "phone": "925-831-3964",
+  "website": "https://www.brookdale.com/en/communities/brookdale-san-ramon.html",
+  "levels": "Assisted living",
+  "services": "Personal care, dining, housekeeping, activities, transportation, emergency-alert support, and pet-friendly apartments.",
+  "pricing": "As of July 26, 2026, published limited-availability base rent starts at $2,750/month. Care costs and other fees are additional.",
+  "payment": "Private pay; long-term care insurance and VA benefits may help. Medicare generally does not cover room and board in assisted living.",
+  "languages": "Ask about multilingual staff, interpretation, dietary accommodations, and transportation radius.",
+  "quality": "Verify CDSS license and inspection history. Published price is a limited-availability promotional base rate and may not represent total cost.",
+  "questions": "What is the all-in monthly estimate after assessment? Which services are extra? How often are residents reassessed and rates changed?",
+  "sources": [
+   "https://www.brookdale.com/en/communities/brookdale-san-ramon.html",
+   "https://www.ccld.dss.ca.gov/carefacilitysearch/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 12,
+  "primary_category": "Assisted living",
+  "all_categories": [
+   "Assisted living",
+   "Memory care"
+  ],
+  "name": "Discovery Commons San Ramon",
+  "city": "San Ramon",
+  "address": "12720 Alcosta Boulevard, San Ramon, CA 94583",
+  "phone": "925-230-0799",
+  "website": "https://discoverycommonssanramon.com/",
+  "levels": "Assisted living; memory care",
+  "services": "Personal care, medication assistance, dining, activities, transportation, wellness, and secured dementia support.",
+  "pricing": "Call for current rent, care-level fees, memory-care rates, community fees, and respite pricing.",
+  "payment": "Primarily private pay; ask about long-term care insurance, VA benefits, and any ALW participation.",
+  "languages": "Ask about multilingual team members, cultural programs, and dementia-specialist availability.",
+  "quality": "CDSS facility 079200962. A complaint investigation dated Dec. 30, 2024 and amended Apr. 10, 2025 reported substantiated concerns, Type A and B deficiencies, and a $500 immediate civil penalty. Review later correction and follow-up reports for current status.",
+  "questions": "What corrective actions followed the 2024-2025 findings? May we review recent inspection reports, fall-prevention data, staffing, and resident-property procedures?",
+  "sources": [
+   "https://discoverycommonssanramon.com/",
+   "https://www.ccld.dss.ca.gov/transparencyapi/api/FacilityReports?facNum=079200962&inx=6",
+   "https://www.ccld.dss.ca.gov/carefacilitysearch/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 13,
+  "primary_category": "Assisted living",
+  "all_categories": [
+   "Assisted living",
+   "Memory care"
+  ],
+  "name": "Ivy Park at San Ramon",
+  "city": "San Ramon",
+  "address": "9199 Fircrest Lane, San Ramon, CA 94583",
+  "phone": "925-275-5363",
+  "website": "https://ivyliving.com/san-ramon/",
+  "levels": "Assisted living; memory care",
+  "services": "Residential support, meals, activities, medication management, transportation, wellness, and dementia care.",
+  "pricing": "Call for current monthly rent, care-level fees, memory-care pricing, and one-time charges.",
+  "payment": "Primarily private pay; long-term care insurance and VA benefits may apply. Confirm ALW participation.",
+  "languages": "Ask about language access, special diets, and culturally responsive dementia programming.",
+  "quality": "Review current CDSS licensing, inspections, complaints, staffing, and emergency-preparedness records.",
+  "questions": "Is independent living currently offered? What is the nurse schedule? How are care-level increases and transfers communicated?",
+  "sources": [
+   "https://ivyliving.com/san-ramon/",
+   "https://www.ccld.dss.ca.gov/carefacilitysearch/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 14,
+  "primary_category": "Assisted living",
+  "all_categories": [
+   "Assisted living",
+   "Memory care"
+  ],
+  "name": "Sunrise of Danville",
+  "city": "Danville",
+  "address": "1027 Diablo Road, Danville, CA 94526",
+  "phone": "Pricing: 925-265-8102; residents/families: 925-831-1740",
+  "website": "https://www.sunriseseniorliving.com/communities/ca/sunrise-of-danville",
+  "levels": "Assisted living; memory care; short-term stays",
+  "services": "Personalized care, medication help, dining, activities, transportation, dementia support, and respite.",
+  "pricing": "Published starting price is $5,806+ per month. Total cost depends on suite, care level, and optional services.",
+  "payment": "Primarily private pay; long-term care insurance and VA benefits may help. Confirm any public-payment participation.",
+  "languages": "Ask about multilingual team members, interpretation, dietary needs, and dementia behavior support.",
+  "quality": "Review current CDSS license and inspection reports; request staffing, turnover, falls, and emergency-transfer information.",
+  "questions": "What is included in the $5,806 starting rate? What does the care assessment add? Is a licensed nurse onsite overnight?",
+  "sources": [
+   "https://www.sunriseseniorliving.com/communities/ca/sunrise-of-danville",
+   "https://www.ccld.dss.ca.gov/carefacilitysearch/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 15,
+  "primary_category": "Assisted living",
+  "all_categories": [
+   "Assisted living"
+  ],
+  "name": "Brookdale Diablo Lodge",
+  "city": "Danville",
+  "address": "950 Diablo Road, Danville, CA 94526",
+  "phone": "925-838-8300",
+  "website": "https://www.brookdale.com/en/communities/brookdale-diablo-lodge.html",
+  "levels": "Assisted living",
+  "services": "Personal care, dining, housekeeping, social programs, pet-friendly apartments, and 24/7 staff availability for emergencies.",
+  "pricing": "Call for current base rent, apartment options, assessed care charges, and community fees.",
+  "payment": "Private pay; long-term care insurance and VA benefits may help. Medicare generally does not cover assisted-living room and board.",
+  "languages": "Ask about language access, special diets, and transportation.",
+  "quality": "Review current CDSS licensing and inspection history. Ask for staffing, falls, hospital transfers, and resident satisfaction data.",
+  "questions": "What is the all-in cost for the expected care level? Who is onsite overnight? What situations require a move to a higher-care setting?",
+  "sources": [
+   "https://www.brookdale.com/en/communities/brookdale-diablo-lodge.html",
+   "https://www.ccld.dss.ca.gov/carefacilitysearch/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 16,
+  "primary_category": "Memory care",
+  "all_categories": [
+   "Memory care"
+  ],
+  "name": "Sunol Creek Memory Care",
+  "city": "Pleasanton",
+  "address": "5980 Sunol Boulevard, Pleasanton, CA 94566",
+  "phone": "925-846-8283",
+  "website": "https://sunolcreekmemorycare.com/",
+  "levels": "Memory care; respite stays",
+  "services": "Secured dementia care, personalized support, activities, meals, medication assistance, and short-term respite.",
+  "pricing": "Call for monthly memory-care rates, care tiers, community fees, and respite pricing.",
+  "payment": "Primarily private pay; long-term care insurance and VA benefits may apply. Confirm ALW participation.",
+  "languages": "Ask about multilingual staff, dementia training, behavior support, and culturally familiar routines.",
+  "quality": "Operator cites U.S. News recognition. Independently review CDSS inspection and complaint records.",
+  "questions": "What dementia training is required? What is overnight staffing? How are wandering, agitation, falls, and end-of-life needs managed?",
+  "sources": [
+   "https://sunolcreekmemorycare.com/",
+   "https://www.ccld.dss.ca.gov/carefacilitysearch/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 17,
+  "primary_category": "Memory care",
+  "all_categories": [
+   "Memory care"
+  ],
+  "name": "Brookdale Danville",
+  "city": "Danville",
+  "address": "400 W. El Pintado Boulevard, Danville, CA 94526",
+  "phone": "925-838-3020",
+  "website": "https://www.brookdale.com/en/communities/brookdale-danville.html",
+  "levels": "Memory care",
+  "services": "Person-centered Alzheimer\u2019s and dementia care, structured activities, dining, housekeeping, and private apartments.",
+  "pricing": "As of July 26, 2026, published base rent starts at $8,995/month. Care costs and other fees may be additional.",
+  "payment": "Private pay; long-term care insurance and VA benefits may help. Confirm any public-payment participation.",
+  "languages": "Ask about multilingual staff, dementia-specialist credentials, behavior management, and family support.",
+  "quality": "Verify current CDSS licensing and inspection history. Published price excludes possible care and ancillary fees.",
+  "questions": "What behaviors can you safely support? Is awake staff assigned overnight? What is the staff turnover and resident-to-caregiver pattern by shift?",
+  "sources": [
+   "https://www.brookdale.com/en/communities/brookdale-danville.html",
+   "https://www.ccld.dss.ca.gov/carefacilitysearch/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 18,
+  "primary_category": "Skilled nursing and rehabilitation",
+  "all_categories": [
+   "Skilled nursing and rehabilitation"
+  ],
+  "name": "Pleasanton Nursing & Rehabilitation Center",
+  "city": "Pleasanton",
+  "address": "300 Neal Street, Pleasanton, CA 94566",
+  "phone": "925-462-2400",
+  "website": "https://pleasantonnursing.com/",
+  "levels": "Skilled nursing; short-term rehabilitation; long-term care",
+  "services": "24-hour nursing, physical therapy, occupational therapy, speech therapy, wound care, and discharge planning.",
+  "pricing": "Daily rates and insurance contracts vary. Request a written estimate for room, therapy, physician, pharmacy, transportation, and noncovered charges.",
+  "payment": "Medicare after a qualifying skilled-care episode, Medicare Advantage, Medi-Cal if eligible, commercial insurance, or private pay.",
+  "languages": "Ask about interpreter access, dietary needs, therapy schedules, and culturally responsive care.",
+  "quality": "California license 140000091. Check current Medicare Care Compare overall, health-inspection, staffing, and quality-measure ratings.",
+  "questions": "What are current Care Compare ratings? How much therapy occurs on weekends? What are staffing hours, readmission rates, and discharge destinations?",
+  "sources": [
+   "https://pleasantonnursing.com/",
+   "https://www.medicare.gov/care-compare/",
+   "https://healthy.kaiserpermanente.org/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 19,
+  "primary_category": "Skilled nursing and rehabilitation",
+  "all_categories": [
+   "Skilled nursing and rehabilitation"
+  ],
+  "name": "Stratford Villa Post-Acute",
+  "city": "Livermore",
+  "address": "752 Holmes Street, Livermore, CA 94550",
+  "phone": "925-454-5333",
+  "website": "https://stratfordvillapostacute.com/",
+  "levels": "Skilled nursing; short-term rehabilitation; long-term care",
+  "services": "Nursing, therapy, post-hospital rehabilitation, and longer-term skilled care.",
+  "pricing": "Request current private-pay daily rate and an insurance-specific coverage estimate.",
+  "payment": "Medicare, Medicare Advantage, Medi-Cal, commercial insurance, or private pay depending on eligibility and authorization.",
+  "languages": "Ask about interpreters, therapy schedule, special diets, and family communication.",
+  "quality": "HCAI lists 27 licensed beds and open status. Facility claims a five-star Medicare rating; verify the current rating on Care Compare. CMS provider 555899.",
+  "questions": "Is the five-star rating still current? What are nurse and CNA hours per resident day? Are therapy and admissions available seven days a week?",
+  "sources": [
+   "https://stratfordvillapostacute.com/",
+   "https://hcai.ca.gov/facility/stratford-villa-post-acute/",
+   "https://www.medicare.gov/care-compare/details/nursing-home/555899"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 20,
+  "primary_category": "Skilled nursing and rehabilitation",
+  "all_categories": [
+   "Skilled nursing and rehabilitation"
+  ],
+  "name": "Avondale Villa Post-Acute",
+  "city": "Livermore",
+  "address": "788 Holmes Street, Livermore, CA 94550",
+  "phone": "925-447-2280",
+  "website": "https://avondalevillapostacute.com/",
+  "levels": "Skilled nursing; short-term rehabilitation; long-term care",
+  "services": "Nursing, physical/occupational/speech therapy, post-acute rehabilitation, and longer-term care.",
+  "pricing": "Request current daily rates, therapy coverage, pharmacy costs, and noncovered charges.",
+  "payment": "Medicare, Medicare Advantage, Medi-Cal, commercial insurance, or private pay depending on eligibility.",
+  "languages": "Ask about interpreter availability, special diets, and family communication routines.",
+  "quality": "HCAI lists 37 licensed beds and open status. Facility claims a five-star Medicare rating; verify on Care Compare. CMS provider 555399.",
+  "questions": "What are the current health-inspection and staffing stars? How are infections, falls, and rehospitalizations tracked? How often is therapy provided?",
+  "sources": [
+   "https://avondalevillapostacute.com/",
+   "https://hcai.ca.gov/facility/avondale-villa-post-acute/",
+   "https://www.medicare.gov/care-compare/details/nursing-home/555399"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 21,
+  "primary_category": "Skilled nursing and rehabilitation",
+  "all_categories": [
+   "Skilled nursing and rehabilitation"
+  ],
+  "name": "Danville Post-Acute Rehab",
+  "city": "Danville",
+  "address": "336 Diablo Road, Danville, CA 94526",
+  "phone": "925-837-4566; contact-Danville@ensignservices.net",
+  "website": "https://danvillepostacute.com/",
+  "levels": "Skilled nursing; rehabilitation",
+  "services": "24-hour skilled nursing, in-house therapy, post-hospital rehabilitation, activities, and discharge planning.",
+  "pricing": "Ask for current private-pay daily rate and a written insurance benefits estimate.",
+  "payment": "Medicare, Medicare Advantage, Medi-Cal, commercial insurance, or private pay based on eligibility and authorization.",
+  "languages": "Ask about interpretation, therapy scheduling, special diets, and family meetings.",
+  "quality": "HCAI lists the facility as open with 54 licensed beds. Check current Medicare Care Compare ratings and recent state survey reports.",
+  "questions": "What are the current CMS stars and survey findings? What is weekend staffing? How quickly does therapy start after admission?",
+  "sources": [
+   "https://danvillepostacute.com/",
+   "https://hcai.ca.gov/facility/danville-rehabilitation/",
+   "https://www.medicare.gov/care-compare/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 22,
+  "primary_category": "In-home care",
+  "all_categories": [
+   "In-home care"
+  ],
+  "name": "FirstLight Home Care of San Ramon and Tri-Valley",
+  "city": "San Ramon / Tri-Valley",
+  "address": "Service area includes San Ramon, Pleasanton, Danville, Blackhawk, and nearby communities",
+  "phone": "925-286-9509",
+  "website": "https://www.firstlighthomecare.com/home-healthcare-san-ramon/",
+  "levels": "Nonmedical in-home personal care; companion care; respite; dementia support",
+  "services": "Bathing, dressing, meal preparation, transportation, companionship, household help, respite, and care coordination.",
+  "pricing": "Usually hourly with minimum shifts; ask for weekday, overnight, weekend, holiday, mileage, and cancellation rates.",
+  "payment": "Private pay; long-term care insurance and VA benefits may reimburse eligible services. Ask whether any IHSS arrangements are accepted.",
+  "languages": "Ask for caregiver language matching and experience with dementia, Parkinson\u2019s, mobility, and cultural preferences.",
+  "quality": "Verify the agency and assigned aides through California\u2019s Home Care Services Registry. Ask about W-2 employment, background checks, bonding, supervision, and backup coverage.",
+  "questions": "Are caregivers employees? Who replaces a call-out? Is there nurse supervision? What are minimum hours, overtime, and cancellation terms?",
+  "sources": [
+   "https://www.firstlighthomecare.com/home-healthcare-san-ramon/",
+   "https://www.ccld.dss.ca.gov/hcsregistry/registrysearch.aspx"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 23,
+  "primary_category": "In-home care",
+  "all_categories": [
+   "In-home care"
+  ],
+  "name": "Senior Helpers Pleasanton",
+  "city": "Pleasanton / Tri-Valley",
+  "address": "4900 Hopyard Road, Suite 100, Pleasanton, CA 94588",
+  "phone": "925-392-7643",
+  "website": "https://www.seniorhelpers.com/ca/pleasanton/",
+  "levels": "Nonmedical personal care; companion care; respite; dementia and Parkinson\u2019s support",
+  "services": "Daily-living help, companionship, meal preparation, transportation, respite, and specialized care programs.",
+  "pricing": "Hourly or shift-based private-pay pricing; ask for minimum hours and all premium rates.",
+  "payment": "Private pay; long-term care insurance and VA benefits may apply. Confirm IHSS compatibility.",
+  "languages": "Ask about language matching, dementia training, and caregiver continuity.",
+  "quality": "Home Care Organization license 414700072. Confirm agency and aides in the state registry; ask about employee screening, supervision, and backup coverage.",
+  "questions": "How are caregivers matched and supervised? Can the same caregiver be maintained? What happens when a caregiver is absent?",
+  "sources": [
+   "https://www.seniorhelpers.com/ca/pleasanton/",
+   "https://www.ccld.dss.ca.gov/hcsregistry/registrysearch.aspx"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 24,
+  "primary_category": "In-home care",
+  "all_categories": [
+   "In-home care"
+  ],
+  "name": "Visiting Angels Livermore",
+  "city": "Livermore",
+  "address": "2600 Kitty Hawk Road, Suite 107, Livermore, CA 94551",
+  "phone": "925-443-1000",
+  "website": "https://www.visitingangels.com/livermore/home",
+  "levels": "Nonmedical in-home personal care; companion care; respite",
+  "services": "Personal assistance, companionship, meals, light housekeeping, transportation, dementia support, and respite.",
+  "pricing": "Free consultation; ongoing care is generally hourly or shift based. Ask about minimum shifts and premiums.",
+  "payment": "Private pay; long-term care insurance and VA benefits may apply. Verify the exact service area for Dublin, Pleasanton, and San Ramon.",
+  "languages": "Ask about caregiver language matching and specialized dementia or mobility experience.",
+  "quality": "Verify state registration, background checks, employment status, bonding, supervision, and backup staffing.",
+  "questions": "Do you serve the senior\u2019s exact ZIP code? Are caregivers employees? What are the minimum shift and 24-hour-care billing rules?",
+  "sources": [
+   "https://www.visitingangels.com/livermore/home",
+   "https://www.ccld.dss.ca.gov/hcsregistry/registrysearch.aspx"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 25,
+  "primary_category": "In-home care",
+  "all_categories": [
+   "In-home care"
+  ],
+  "name": "Seniors Helping Seniors Tri-Valley",
+  "city": "Pleasanton / Dublin / Livermore",
+  "address": "Tri-Valley service area",
+  "phone": "925-397-1771; Care@TriValleySHS.com",
+  "website": "https://locations.seniorshelpingseniors.com/ca/pleasanton/",
+  "levels": "Nonmedical companion care; personal care; respite",
+  "services": "Mature-caregiver matching, companionship, personal assistance, errands, transportation, meals, and respite.",
+  "pricing": "No long-term contract advertised. Ask for hourly minimums, overnight rates, mileage, holidays, and cancellation terms.",
+  "payment": "Private pay; long-term care insurance and VA benefits may reimburse eligible care.",
+  "languages": "Ask about language and cultural matching, dementia experience, and caregiver continuity.",
+  "quality": "Home Care Organization license 14700237. Verify aides in the state registry and ask about training, supervision, and backup coverage.",
+  "questions": "How are mature caregivers screened and matched? What personal-care tasks can they perform? Is backup coverage guaranteed?",
+  "sources": [
+   "https://locations.seniorshelpingseniors.com/ca/pleasanton/",
+   "https://www.ccld.dss.ca.gov/hcsregistry/registrysearch.aspx"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 26,
+  "primary_category": "In-home care",
+  "all_categories": [
+   "In-home care"
+  ],
+  "name": "Tri-Valley Personal Home Care Services",
+  "city": "Pleasanton / Greater Bay Area",
+  "address": "4900 Hopyard Road, Suite 100, Pleasanton, CA 94588",
+  "phone": "925-667-7842; office 925-468-4100; services@trivalleyhomecare.com",
+  "website": "https://www.tri-valleyhomecare.com/",
+  "levels": "Nonmedical home care; personal care; companion care; specialized support",
+  "services": "General, basic, and specialized home-care services coordinated by an RN/BSN care coordinator.",
+  "pricing": "Call for hourly rates, minimum shifts, overnight/24-hour structure, and care-plan fees.",
+  "payment": "Private pay; ask about long-term care insurance billing, VA benefits, and IHSS compatibility.",
+  "languages": "Ask about caregiver languages, nurse oversight, and experience with specific diagnoses.",
+  "quality": "Verify state Home Care Organization registration, caregiver registry status, insurance, supervision, and replacement policy.",
+  "questions": "What does RN coordination include? Are caregivers employees? How are urgent call-outs and changes in condition handled?",
+  "sources": [
+   "https://www.tri-valleyhomecare.com/",
+   "https://www.ccld.dss.ca.gov/hcsregistry/registrysearch.aspx"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 27,
+  "primary_category": "In-home care",
+  "all_categories": [
+   "In-home care",
+   "Care-management services"
+  ],
+  "name": "ComForCare Home Care Tri-Valley",
+  "city": "Dublin / Pleasanton / Livermore / San Ramon",
+  "address": "Tri-Valley service area",
+  "phone": "510-538-2273",
+  "website": "https://www.comforcare.com/california/tri-valley/",
+  "levels": "Nonmedical personal care; companion care; dementia support; respite; care management",
+  "services": "Hourly or 24/7 assistance, transitions of care, chronic-condition support, dementia care, and elder-care management.",
+  "pricing": "Call for hourly, overnight, 24-hour, holiday, mileage, and care-management pricing.",
+  "payment": "Private pay; long-term care insurance and VA benefits may apply. Ask about public-program compatibility.",
+  "languages": "Ask about language matching, dementia credentials, and nurse/care-manager oversight.",
+  "quality": "Home Care Organization license 14700097. Verify agency and caregivers in the state registry and ask about supervision and backup staffing.",
+  "questions": "Is care management included or billed separately? What dementia training is required? How are hospital-to-home transitions documented?",
+  "sources": [
+   "https://www.comforcare.com/california/tri-valley/",
+   "https://www.ccld.dss.ca.gov/hcsregistry/registrysearch.aspx"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 28,
+  "primary_category": "In-home care",
+  "all_categories": [
+   "In-home care"
+  ],
+  "name": "Right at Home East Bay",
+  "city": "Pleasanton / East Bay",
+  "address": "Serves Pleasanton and surrounding East Bay communities",
+  "phone": "925-401-5261",
+  "website": "https://www.rightathome.net/east-bay",
+  "levels": "Nonmedical personal care; companion care; respite; Alzheimer\u2019s and Parkinson\u2019s support",
+  "services": "Bathing, dressing, meals, transportation, companionship, household assistance, respite, and condition-specific support.",
+  "pricing": "Hourly or shift-based; request all minimums, overtime, holiday, mileage, and cancellation charges.",
+  "payment": "Private pay; long-term care insurance and VA benefits may reimburse eligible care.",
+  "languages": "Ask about multilingual caregivers and experience with dementia, Parkinson\u2019s, diabetes, and mobility needs.",
+  "quality": "Confirm California registration, caregiver background checks, employee status, supervision, insurance, and emergency backup.",
+  "questions": "Who supervises the care plan? Can family view visit notes? What is the backup plan when the assigned caregiver is unavailable?",
+  "sources": [
+   "https://www.rightathome.net/east-bay",
+   "https://www.ccld.dss.ca.gov/hcsregistry/registrysearch.aspx"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 29,
+  "primary_category": "Adult day programs",
+  "all_categories": [
+   "Adult day programs"
+  ],
+  "name": "DayBreak Adult Care Centers",
+  "city": "San Leandro; serves Alameda County",
+  "address": "151 Callan Avenue, Suite 308, San Leandro, CA 94577",
+  "phone": "510-926-0798; 510-834-8314",
+  "website": "https://www.daybreakac.org/",
+  "levels": "Adult day services; caregiver support; respite",
+  "services": "Structured daytime engagement, socialization, wellness activities, caregiver relief, and support for older adults and adults with disabilities.",
+  "pricing": "Ask about daily rates, sliding scale, scholarships, public funding, attendance minimums, and transportation cost.",
+  "payment": "May include private pay and public or grant-supported options depending on program and eligibility; verify directly.",
+  "languages": "Ask about multilingual staff, meals, dementia capacity, behavioral exclusions, and transportation from Tri-Valley cities.",
+  "quality": "Regional Alameda County option, not located in Tri-Valley. Ask about program licensing, staff credentials, emergency procedures, and participant outcomes.",
+  "questions": "Is transportation available from Dublin or Pleasanton? Is a nurse onsite? Which dementia behaviors and medical needs can be supported?",
+  "sources": [
+   "https://www.daybreakac.org/",
+   "https://www.alamedacountysocialservices.org/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 30,
+  "primary_category": "Adult day programs",
+  "all_categories": [
+   "Adult day programs"
+  ],
+  "name": "Alzheimer\u2019s Services of the East Bay (ASEB)",
+  "city": "Fremont / Hayward / Berkeley; regional option",
+  "address": "Nearest centers include Fremont and Hayward",
+  "phone": "Fremont 510-656-1329; Hayward 510-888-1411; Berkeley 510-644-8292",
+  "website": "https://aseb.org/daytime-care/",
+  "levels": "Adult day health care; dementia-specific daytime care; caregiver support",
+  "services": "Daytime health and social services for people with Alzheimer\u2019s disease or related dementias, plus caregiver support.",
+  "pricing": "Ask about assessment fees, daily rates, Medi-Cal coverage, scholarships, attendance schedule, and transportation.",
+  "payment": "Potential private pay and public coverage depending on program eligibility; confirm with the center.",
+  "languages": "Ask each center about languages, meals, nursing, behavioral support, and transportation.",
+  "quality": "Dementia-specialized regional provider. Request licensing, nurse and social-work staffing, incident policies, and family references.",
+  "questions": "Which center is closest and has space? Does Medi-Cal cover the program? What medical and behavioral needs can be managed?",
+  "sources": [
+   "https://aseb.org/daytime-care/",
+   "https://aseb.org/contact/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 31,
+  "primary_category": "PACE programs",
+  "all_categories": [
+   "PACE programs",
+   "Adult day programs",
+   "In-home care",
+   "Care-management services"
+  ],
+  "name": "PACE Tri-Valley, Center for Elders\u2019 Independence",
+  "city": "Livermore; serves five Tri-Valley cities",
+  "address": "2441 Constitution Drive, Livermore, CA 94551",
+  "phone": "Center 925-505-4700; enrollment 844-319-1150; TDD 510-433-1165",
+  "website": "https://cei.elders.org/locations/pace-tri-valley",
+  "levels": "PACE integrated medical care; adult day center; rehabilitation; home support; transportation; memory-support space",
+  "services": "Interdisciplinary medical care, social center, meals, transportation, medications, rehabilitation gym, occupational-therapy apartment, and support to remain safely at home.",
+  "pricing": "For people with both Medicare and Medi-Cal, approved PACE services generally have no deductible or copay. Medicare-only participants may owe a monthly PACE premium and Part D premium. Confirm individual eligibility and costs.",
+  "payment": "Medicare and Medi-Cal capitation; private-pay participation may be possible. Eligibility generally includes age 55+, service-area residence, nursing-home level of care, and ability to live safely in the community.",
+  "languages": "Ask for current language capacity and interpretation. A listed physician profile notes English, Filipino, medical Spanish, and basic Chinese.",
+  "quality": "PACE is federally and state regulated. Ask for enrollment/disenrollment rights, grievance data, network access, after-hours response, and participant satisfaction.",
+  "questions": "Which doctors and hospitals are in network? What happens to existing specialists? How fast can home care, transportation, and urgent care be arranged?",
+  "sources": [
+   "https://cei.elders.org/locations/pace-tri-valley",
+   "https://www.medicare.gov/health-drug-plans/health-plans/your-coverage-options/PACE"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 32,
+  "primary_category": "Hospice and palliative care",
+  "all_categories": [
+   "Hospice and palliative care"
+  ],
+  "name": "Hope Hospice and Health Services, part of By the Bay Health",
+  "city": "Pleasanton / Tri-Valley",
+  "address": "6801 Koll Center Parkway, Suite 140, Pleasanton, CA 94566",
+  "phone": "925-829-8770",
+  "website": "https://www.hopehospice.com/",
+  "levels": "Hospice; palliative care; advanced-illness transitions; grief support; dementia caregiver support",
+  "services": "Interdisciplinary hospice care wherever the patient lives, palliative support, caregiver education, respite resources, grief services, and dementia support.",
+  "pricing": "Hospice is commonly covered by Medicare, Medi-Cal, and many private insurance plans when eligibility criteria are met. Ask about palliative-care coverage and any noncovered services.",
+  "payment": "Medicare Hospice Benefit, Medi-Cal, private insurance, and other arrangements depending on eligibility.",
+  "languages": "Ask about interpreter access, cultural and spiritual care, We Honor Veterans services, and caregiver support.",
+  "quality": "Joint Commission accredited, state licensed, Medicare and Medi-Cal certified. Hope is part of the nonprofit By the Bay Health network.",
+  "questions": "How quickly can a nurse visit after hours? Which medications and equipment are covered? What inpatient, respite, and continuous-care options are available?",
+  "sources": [
+   "https://www.hopehospice.com/",
+   "https://www.hopehospice.com/about/",
+   "https://bythebayhealth.org/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 33,
+  "primary_category": "Care-management services",
+  "all_categories": [
+   "Care-management services",
+   "Senior placement and referral services"
+  ],
+  "name": "CityServe of the Tri-Valley Senior Services",
+  "city": "Pleasanton and Livermore",
+  "address": "5353 Sunol Blvd., Pleasanton; 3311 Pacific Ave., Livermore",
+  "phone": "925-222-2273, option 1",
+  "website": "https://cityservecares.org/seniors/",
+  "levels": "Senior case management; information and referral; benefits and service navigation",
+  "services": "Case managers connect older adults and families to housing, food, transportation, health, benefits, safety, and community services.",
+  "pricing": "Ask whether services are free, donation supported, grant funded, or income qualified.",
+  "payment": "Community nonprofit and public-resource navigation; individual referred services have their own payment rules.",
+  "languages": "Ask about language access, home visits, eligibility, and help with forms or benefits.",
+  "quality": "Ask about case-manager credentials, confidentiality, caseloads, response time, and referral follow-through.",
+  "questions": "Can a case manager meet the senior at home? Which benefits and housing applications can you help complete? Is there a waitlist?",
+  "sources": [
+   "https://cityservecares.org/seniors/",
+   "https://www.cityofpleasantonca.gov/our-government/housing/housing-resources/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 34,
+  "primary_category": "Care-management services",
+  "all_categories": [
+   "Care-management services",
+   "Senior placement and referral services"
+  ],
+  "name": "Livermore Senior Services Center",
+  "city": "Livermore",
+  "address": "4444 East Avenue, Livermore, CA 94550",
+  "phone": "925-373-5760",
+  "website": "https://www.larpd.org/senior-services",
+  "levels": "Information and referral; senior programs; benefits and legal-resource navigation",
+  "services": "Referrals for housing, Medicare/Medi-Cal, legal aid, advance directives, emergency resources, recreation, and community services.",
+  "pricing": "Many information and referral services are free; activity and program fees vary.",
+  "payment": "Public/community services; referred programs have separate eligibility and payment rules.",
+  "languages": "Ask about translated materials, interpretation, transportation, and appointment availability.",
+  "quality": "Public recreation district program. Ask who provides benefits counseling and whether appointments are available for complex cases.",
+  "questions": "Can you help compare Medicare or Medi-Cal options? Which housing and caregiver resources are currently accepting applications?",
+  "sources": [
+   "https://www.larpd.org/senior-services",
+   "https://www.larpd.org/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 35,
+  "primary_category": "Care-management services",
+  "all_categories": [
+   "Care-management services"
+  ],
+  "name": "Canyon Care Management",
+  "city": "San Ramon / Tri-Valley",
+  "address": "Tri-Valley service area; consultations by appointment",
+  "phone": "Book through website",
+  "website": "https://www.canyoncm.com/",
+  "levels": "RN-led nonclinical healthcare navigation; care coordination; patient advocacy",
+  "services": "Organizes medical information, appointments, medications, portals, insurance and billing, care transitions, and family communication.",
+  "pricing": "Published tiers: concierge care management $25,000/year; 90-day navigation $3,800, then optional ongoing support at $600 every four weeks; seven-day planning blueprint advertised as free.",
+  "payment": "Private pay. Ask whether any long-term care insurance policy reimburses care-management services.",
+  "languages": "Ask about language access, emergency availability, geographic travel, and experience with the senior\u2019s diagnoses.",
+  "quality": "Family-owned, RN-led team reporting 40+ years of combined hospital experience. Service is nonclinical and does not replace medical care.",
+  "questions": "Who is assigned to the case? What is available 24/7? Are there referral fees or financial relationships with providers? How is progress documented?",
+  "sources": [
+   "https://www.canyoncm.com/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 36,
+  "primary_category": "Senior placement and referral services",
+  "all_categories": [
+   "Senior placement and referral services"
+  ],
+  "name": "Neighborly Senior Placement",
+  "city": "Bay Area, including Tri-Valley",
+  "address": "Regional service; phone and virtual consultations",
+  "phone": "866-744-1417",
+  "website": "https://neighborlyseniorplacement.com/",
+  "levels": "Placement for independent living, assisted living, memory care, board-and-care homes, and Life Plan Communities",
+  "services": "Needs assessment, community matching, tour coordination, transition guidance, and dementia-informed placement support.",
+  "pricing": "Free to families. The company states it is compensated by participating communities when a placement is made.",
+  "payment": "Facility-paid referral model; families should ask how compensation and nonparticipating options are handled.",
+  "languages": "Ask about language support, clinical credentials, local tour attendance, and post-move follow-up.",
+  "quality": "Assess advisor training, breadth of facility relationships, conflict disclosures, and whether CDSS inspection records are reviewed before referral.",
+  "questions": "Which facilities pay you? Will you show nonparticipating communities? How do you screen complaints and inspection history? What follow-up occurs after move-in?",
+  "sources": [
+   "https://neighborlyseniorplacement.com/",
+   "https://www.ccld.dss.ca.gov/carefacilitysearch/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 37,
+  "primary_category": "Senior placement and referral services",
+  "all_categories": [
+   "Senior placement and referral services"
+  ],
+  "name": "Bay Area Senior Care Placement",
+  "city": "Tri-Valley and Bay Area",
+  "address": "Regional service",
+  "phone": "510-320-3563; BayAreaSeniorCarePlacement@gmail.com",
+  "website": "https://www.bayareaseniorcareplacement.com/",
+  "levels": "Assisted-living and memory-care placement consultation",
+  "services": "Nurse-led needs assessment, community recommendations, and placement guidance across Pleasanton, San Ramon, Dublin, Danville, and nearby cities.",
+  "pricing": "Advertised as completely free to families. Ask how the service is compensated.",
+  "payment": "Likely facility-paid referral model; request a written conflict-of-interest and compensation disclosure.",
+  "languages": "Ask about language access, in-person tours, clinical assessment, and transition follow-up.",
+  "quality": "Ask which facilities are in the referral network, whether inspection histories are checked, and how advisors handle facilities with deficiencies.",
+  "questions": "How are you paid? Are all appropriate facilities included? Will you provide CDSS reports and compare total pricing in writing?",
+  "sources": [
+   "https://www.bayareaseniorcareplacement.com/",
+   "https://www.ccld.dss.ca.gov/carefacilitysearch/"
+  ],
+  "verified": "2026-07-27"
+ },
+ {
+  "id": 38,
+  "primary_category": "Senior placement and referral services",
+  "all_categories": [
+   "Senior placement and referral services",
+   "Care-management services"
+  ],
+  "name": "Alameda County ADRC and 2-1-1",
+  "city": "Alameda County",
+  "address": "Countywide phone and online resource navigation",
+  "phone": "Dial 2-1-1; ADRC website",
+  "website": "https://alameda.my-adrc.org/",
+  "levels": "Public information and referral; benefits, housing, transportation, caregiver, and long-term-services navigation",
+  "services": "Free confidential resource connection, including options for lower-income seniors, caregivers, disability services, benefits, and public programs.",
+  "pricing": "Information and referral are free. Referred services have separate eligibility and cost rules.",
+  "payment": "Public and nonprofit resource navigation, including Medi-Cal and county-supported programs.",
+  "languages": "2-1-1 offers multilingual assistance; confirm specific language and accessibility needs.",
+  "quality": "Public referral gateway. Ask for several options and verify each provider\u2019s license, availability, cost, and inspection history independently.",
+  "questions": "Which programs can help with Medi-Cal, IHSS, housing, transportation, adult day care, or caregiver respite? Who can help complete applications?",
+  "sources": [
+   "https://alameda.my-adrc.org/",
+   "https://www.211alamedacounty.org/"
+  ],
+  "verified": "2026-07-27"
+ }
+]

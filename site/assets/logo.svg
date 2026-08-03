@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 92" role="img" aria-label="Tri-Valley Long Term Care">
+  <title>Tri-Valley Long Term Care</title>
+  <defs>
+    <path id="tvltc-heart" d="M50 88C50 88 8 60 8 34 8 18 20 8 32 8c8 0 15 4 18 12 3-8 10-12 18-12 12 0 26 10 26 26 0 26-42 54-42 54Z"/>
+  </defs>
+  <use href="#tvltc-heart" transform="translate(70 0) scale(.95)" fill="#b9cff2"/>
+  <use href="#tvltc-heart" transform="translate(35 9) scale(.82)" fill="#5c7fc0"/>
+  <use href="#tvltc-heart" transform="translate(0 20) scale(.7)" fill="#26295b"/>
+</svg>
