@@ -339,10 +339,68 @@ strong, b { font-weight: 700; }
   position: absolute;
   inset-inline: 0;
   top: 0;
-  background: transparent;
-  border-bottom: 1px solid rgba(255, 255, 255, .35);
+  /* A soft gradient on the BAR only — the photograph underneath is untouched.
+     Photos vary from bright sky to dark foliage, so no single text colour
+     works on its own; this guarantees white type always reads. */
+  background: linear-gradient(to bottom,
+    rgba(10, 12, 30, .58) 0%,
+    rgba(10, 12, 30, .34) 62%,
+    rgba(10, 12, 30, 0) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, .22);
   transition: background .3s var(--ease), border-color .3s var(--ease);
 }
+
+/* White type on the bar, whatever the photograph is doing. */
+.masthead--overlay .brand,
+.masthead--overlay .brand__name { color: #fff; }
+.masthead--overlay .brand__sub { color: #e8c877; }
+.masthead--overlay .nav__link { color: #fff; }
+.masthead--overlay .nav__cta { background: #fff; color: var(--navy); }
+.masthead--overlay .navtoggle {
+  color: #fff;
+  background: rgba(10, 12, 30, .45);
+  border-color: rgba(255, 255, 255, .65);
+}
+.masthead--overlay :focus-visible { outline-color: var(--gold); }
+.masthead--overlay .nav[data-open="true"] { background: var(--navy-deep); border-bottom-color: transparent; }
+.masthead--overlay .nav[data-open="true"] .nav__link { border-bottom-color: rgba(255, 255, 255, .2); }
+
+@media (min-width: 72rem) {
+  .masthead--overlay .nav__link:hover,
+  .masthead--overlay .nav__link[aria-current="page"] { border-bottom-color: #fff; color: #fff; }
+  .masthead--overlay .nav__cta:hover { background: var(--blue-wash); color: var(--navy); }
+}
+
+/* Once the hero has scrolled by, the bar detaches and follows the reader as a
+   solid white header — so navigation is always within reach. */
+.masthead--overlay.is-stuck .brand,
+.masthead--overlay.is-stuck .brand__name { color: var(--navy); }
+.masthead--overlay.is-stuck .brand__sub { color: var(--gold-ink); }
+.masthead--overlay.is-stuck .nav__link { color: var(--ink); }
+.masthead--overlay.is-stuck .nav__cta { background: var(--navy); color: #fff; }
+.masthead--overlay.is-stuck .navtoggle { color: var(--navy); background: var(--card); border-color: var(--control); }
+.masthead--overlay.is-stuck :focus-visible { outline-color: var(--navy); }
+.masthead--overlay.is-stuck .nav[data-open="true"] { background: var(--card); }
+.masthead--overlay.is-stuck .nav[data-open="true"] .nav__link { border-bottom-color: var(--rule); color: var(--ink); }
+@media (min-width: 72rem) {
+  .masthead--overlay.is-stuck .nav__link:hover,
+  .masthead--overlay.is-stuck .nav__link[aria-current="page"] { border-bottom-color: var(--gold); color: var(--navy); }
+}
+
+.masthead--overlay.is-stuck {
+  position: fixed;
+  background: var(--card);
+  border-bottom-color: var(--rule);
+  box-shadow: 0 10px 24px -20px rgba(27, 30, 69, .55);
+  animation: dropIn .28s var(--ease);
+}
+@keyframes dropIn { from { transform: translateY(-100%); } to { transform: none; } }
+
+@media (min-width: 72rem) {
+    }
+
+/* Once scrolled past the hero the bar is solid white again, so the dark-photo
+   overrides must stop applying. */
 
 /* Mobile menu panel still needs a solid surface behind it. */
 .masthead--overlay .nav[data-open="true"] {
@@ -364,13 +422,21 @@ strong, b { font-weight: 700; }
   padding: 0;
   border-bottom: 0;
   background: var(--navy-deep);
-  isolation: isolate;   /* keeps the scrim above the photo, below the text */
+  isolation: isolate;
+  /* Fits the screen so the headline is never pushed below the fold. */
+  height: 100vh;
+  height: 100svh;
 }
 
+/* `cover` fills the hero edge to edge at any window shape — no bars, and no
+   stretching, since the aspect ratio is preserved and the excess is cropped.
+   Biased slightly above centre so both faces stay in frame. */
 .hero__img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
   position: relative;
   z-index: 0;
 }
@@ -392,14 +458,16 @@ strong, b { font-weight: 700; }
     inset-inline: 0;
     bottom: 0;
     z-index: 2;
-    padding-block: clamp(2rem, 4vw, 4rem);
+    padding-block: clamp(2rem, 4vw, 3.5rem)
+                   calc(clamp(2rem, 3vw, 3rem) + var(--cookiebar-h, 0px));
   }
 }
 
 /* On a phone the picture is too short to carry overlaid text, so the words sit
    below it on solid navy rather than fighting the image. */
 @media (max-width: 45.99rem) {
-  .hero.hero--cover { background: var(--navy-deep); }
+  .hero.hero--cover { background: var(--navy-deep); height: auto; }
+  .hero__img { height: auto; }
   .hero__inner { padding-block: 1.75rem 2.25rem; }
   .hero__scrim { display: none; }
 }
@@ -415,6 +483,11 @@ strong, b { font-weight: 700; }
   text-shadow: 0 2px 24px rgba(9, 11, 26, .45);
   margin: 0;
 }
+
+/* Interior pages carry longer titles than the home page, so the display size
+   steps down; the frame and behaviour are identical. */
+.hero--page .hero__headline { font-size: clamp(2rem, .9rem + 3.1vw, 3.6rem); }
+.hero--page .hero__sub { max-width: 62ch; }
 
 .hero__sub {
   margin: 1.25rem 0 0;
@@ -745,28 +818,6 @@ strong, b { font-weight: 700; }
 .table tbody tr:last-child th, .table tbody tr:last-child td { border-bottom: 0; }
 .table tbody th { font-weight: 600; color: var(--navy); }
 .table td.num { font-family: var(--data); font-size: .9rem; white-space: nowrap; }
-
-/* --------------------------------------------------------- BANNER ------- */
-/* A photographic strip below a page header. Deliberately shallow — it sets a
-   tone without pushing the actual guidance below the fold. */
-
-/* Most of these sources are portrait, so the band has to be deep enough that
-   cropping to it does not decapitate the subject. */
-.banner {
-  margin: 0;
-  width: 100%;
-  height: clamp(220px, 32vw, 440px);
-  overflow: hidden;
-  background: var(--navy-deep);
-  border-bottom: 3px solid var(--gold);
-}
-
-.banner__img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 /* --------------------------------------------------- article + rail ----- */
 
@@ -1122,4 +1173,72 @@ textarea.field__input { min-height: 8rem; line-height: 1.6; resize: vertical; }
   .listing__more { display: block; }
   .footer { background: none; color: #000; padding-block: 1rem; }
   .footer__legal { color: #000; }
+}
+
+/* ------------------------------------------------------------------ FAQ -- */
+/* Tap the question, the answer opens. Native <details>, so no JavaScript is
+   required and the expanded state is announced by screen readers. */
+
+.faq {
+  border-top: 1px solid var(--rule-strong);
+  margin: 2rem 0;
+}
+
+.faq__item { border-bottom: 1px solid var(--rule); }
+
+.faq__q {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.15rem .25rem;
+  min-height: 56px;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--display);
+  font-size: clamp(1.1rem, 1rem + .45vw, 1.3rem);
+  font-weight: 500;
+  line-height: 1.32;
+  color: var(--navy);
+  transition: color .15s var(--ease);
+}
+.faq__q::-webkit-details-marker { display: none; }
+.faq__q:hover { color: var(--gold-ink); }
+
+/* Chevron sits at the end and turns as the answer opens. */
+.faq__q::after {
+  content: "";
+  flex: 0 0 auto;
+  margin-left: auto;
+  margin-top: .4em;
+  width: .6rem;
+  height: .6rem;
+  border-right: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  transform: rotate(45deg);
+  transition: transform .22s var(--ease);
+}
+.faq__item[open] > .faq__q::after { transform: rotate(-135deg); }
+.faq__item[open] > .faq__q { color: var(--navy); font-weight: 600; }
+
+.faq__a {
+  padding: 0 .25rem 1.4rem;
+  max-width: 68ch;
+  animation: faqOpen .22s var(--ease);
+}
+.faq__a > :last-child { margin-bottom: 0; }
+
+@keyframes faqOpen {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq__a { animation: none; }
+  .faq__q::after { transition: none; }
+}
+
+/* site.js opens every accordion before printing; just hide the chevrons. */
+@media print {
+  .faq__q::after { display: none; }
+  .faq__q { padding-bottom: .3rem; }
 }

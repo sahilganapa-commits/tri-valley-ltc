@@ -6,7 +6,7 @@ Numbering is used here because the order genuinely matters — each step
 depends on the one before it.
 """
 
-from layout import (article, banner, checklist, cta, esc, note, page, pagehead,
+from layout import (article, hero_page, checklist, cta, esc, note, page, pagehead,
                     rail, record, steps, table, ul)
 
 HUB = "using-coverage.html"
@@ -53,13 +53,11 @@ def _hub():
         f'<span class="door__go">Section {i + 1} &rarr;</span></a>'
         for i, (href, title, blurb) in enumerate(SECTIONS)
     )
-    body = pagehead(
-        "",
-        "Understanding and using your coverage",
-        "Six sections, from recognizing the need through filing a claim and keeping benefits flowing.",
-    ) + banner("using-coverage.jpg",
-               "Three older people sit together on a bench beside the water, looking out.",
-               "center 54%") + f"""<section class="band">
+    body = hero_page("using-coverage.jpg",
+                   "An older couple sit close together on a weathered bench, looking out over the sea.",
+                   "Understanding and using your coverage",
+                   "Six sections, from recognizing the need through filing a claim and keeping benefits flowing.",
+                   "center 45%") + f"""<section class="band">
 <div class="shell">
 {note("If there is no policy in the family",
       "<p>Most of this still applies — particularly Sections 1 and 4, which are about recognizing "
@@ -102,6 +100,7 @@ def _hub():
         "A six-part guide for families using a long-term care insurance policy: recognizing the "
         "need, reading the policy, filing a claim, choosing approved providers, and staying on claim.",
         body,
+        overlay=True,
     )
 
 

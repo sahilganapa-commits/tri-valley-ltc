@@ -26,6 +26,28 @@
     });
   }
 
+  /* ------------------------------- sticky header past the hero -------- */
+  /* The bar rides transparently on the hero photograph, then detaches and
+     follows the reader as a solid bar once the photo has scrolled by. */
+  var overlayBar = document.querySelector('[data-masthead]');
+  var coverHero = document.querySelector('.hero--cover');
+  if (overlayBar && coverHero) {
+    var stuck = false;
+    var sync = function () {
+      var past = coverHero.getBoundingClientRect().bottom <= 0;
+      if (past !== stuck) {
+        stuck = past;
+        overlayBar.classList.toggle('is-stuck', stuck);
+      }
+    };
+    // Called straight from the scroll event: it reads one rect and flips one
+    // class, so it is cheap enough not to need frame throttling — and this way
+    // the final state can never be dropped with a skipped frame.
+    window.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync);
+    sync();
+  }
+
   /* ------------------------------------------------------- checklists -- */
   /* Families are told throughout this guide to keep records. The checklists
      remember what you ticked so you can come back and print them. */
@@ -165,13 +187,40 @@
     try { choice = localStorage.getItem(KEY); } catch (err) { choice = 'skip'; }
     if (!choice) {
       cookie.hidden = false;
+      // Publish its height so the hero can reserve exactly that much space
+      // instead of guessing, and reclaim it the moment the bar is dismissed.
+      var setBarHeight = function () {
+        var h = cookie.hidden ? 0 : cookie.getBoundingClientRect().height;
+        document.documentElement.style.setProperty('--cookiebar-h', Math.round(h) + 'px');
+      };
+      setBarHeight();
+      window.addEventListener('resize', setBarHeight);
       Array.prototype.forEach.call(cookie.querySelectorAll('[data-cookie-choice]'), function (btn) {
         btn.addEventListener('click', function () {
           try { localStorage.setItem(KEY, btn.getAttribute('data-cookie-choice')); } catch (err) { /* noop */ }
           cookie.hidden = true;
+          setBarHeight();
         });
       });
     }
+  }
+
+  /* ----------------------------------------------- print open accordions -- */
+  /* A closed <details> prints as just its question. Anyone printing the FAQ
+     wants the answers, so open them for the print and put them back after. */
+  var faqItems = document.querySelectorAll('.faq__item');
+  if (faqItems.length && window.matchMedia) {
+    var reopened = [];
+    window.addEventListener('beforeprint', function () {
+      reopened = [];
+      Array.prototype.forEach.call(faqItems, function (d) {
+        if (!d.open) { d.open = true; reopened.push(d); }
+      });
+    });
+    window.addEventListener('afterprint', function () {
+      reopened.forEach(function (d) { d.open = false; });
+      reopened = [];
+    });
   }
 
   /* ------------------------------------------------------------ forms -- */

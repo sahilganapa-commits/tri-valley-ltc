@@ -113,8 +113,9 @@ def nav_html(current):
 
 
 def header_html(current, overlay=False):
-    """`overlay` lifts the header onto the hero photo (home page only). It turns
-    solid again once the visitor scrolls past the hero — see site.js."""
+    """`overlay` lifts the header onto the hero photograph. The bar carries its
+    own gradient and white type, so it stays legible over any picture without
+    per-page tuning."""
     cls = "masthead masthead--overlay" if overlay else "masthead"
     attr = " data-masthead" if overlay else ""
     return f"""<header class="{cls}"{attr}>
@@ -233,16 +234,36 @@ def record(rows, dark=False):
 
 
 
-def banner(name, alt, focus="center 50%"):
-    """A wide photographic strip under a page header. Uses <img> rather than a
-    CSS background so it carries alt text and can be lazy-loaded. `focus` is the
-    object-position keeping the subject in frame once the crop goes wide."""
-    return (
-        f'<figure class="banner">'
-        f'<img class="banner__img" src="assets/{name}?v={asset_version(name)}" '
-        f'alt="{esc(alt)}" style="object-position:{focus}" loading="lazy" decoding="async">'
-        f'</figure>'
-    )
+def hero_page(name, alt, title, lede, focus="center 45%"):
+    """Full-screen photographic header for an interior page — same treatment as
+    the home page. The picture fills the viewport, the nav rides on top of it,
+    and the page title sits over the bottom."""
+    return f"""<section class="hero hero--cover hero--page">
+<img class="hero__img" src="assets/{name}?v={asset_version(name)}" alt="{esc(alt)}"
+style="object-position:{focus}">
+<div class="shell hero__inner">
+<h1 class="hero__headline">{esc(title)}</h1>
+<p class="hero__sub">{lede}</p>
+</div>
+</section>"""
+
+
+
+def faq_list(items, open_first=False):
+    """Tap-to-expand questions. Built on <details>/<summary>, so it works with
+    no JavaScript, is keyboard operable, and screen readers announce the
+    expanded state for free."""
+    out = ['<div class="faq">']
+    for i, (question, answer) in enumerate(items):
+        is_open = " open" if (open_first and i == 0) else ""
+        out.append(
+            f'<details class="faq__item"{is_open}>'
+            f'<summary class="faq__q">{esc(question)}</summary>'
+            f'<div class="faq__a">{answer}</div>'
+            "</details>"
+        )
+    out.append("</div>")
+    return "".join(out)
 
 
 def note(title, body, kind=""):

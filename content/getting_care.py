@@ -5,7 +5,7 @@ start planning, how families pay, insurance basics, Medicare / Medi-Cal / VA,
 and the questions families should ask.
 """
 
-from layout import (banner, checklist, cta, note, page, pagehead, rail, record,
+from layout import (hero_page, checklist, cta, note, page, pagehead, rail, record,
                     seq, steps, table, ul)
 
 SECTIONS = [
@@ -53,11 +53,11 @@ ADL_ITEMS = [
 
 
 def build(**_):
-    body = pagehead(
-        "",
-        "Getting long-term care",
-        "What long-term care is, how to tell when it is time, what the options are, and how people pay for it.",
-    ) + banner("getting-care.jpg", "A woman walks slowly beside an older woman using forearm crutches along a quiet street.", "center 46%") + f"""<section class="band">
+    body = hero_page("getting-care.jpg",
+                   "An older person in a wheelchair and a younger companion look out over a park lake and flowerbeds.",
+                   "Getting long-term care",
+                   "What long-term care is, how to tell when it is time, what the options are, and how people pay for it.",
+                   "center 60%") + f"""<section class="band">
 <div class="shell layout">
 {rail("On this page", SECTIONS, None)}
 <div class="prose">
@@ -281,4 +281,5 @@ that follows.</p>
         "What long-term care is, how to tell when it is time, the levels of care available, "
         "how families pay for it, and what Medicare, Medi-Cal, and VA benefits do and do not cover.",
         body,
+        overlay=True,
     )

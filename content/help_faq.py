@@ -1,6 +1,6 @@
 """Looking for help, frequently asked questions, and the white paper."""
 
-from layout import (PROGRAM_EMAIL, VERIFIED, banner, esc, note, page, pagehead,
+from layout import (PROGRAM_EMAIL, VERIFIED, faq_list, hero_page, esc, note, page, pagehead,
                     rail, record, table, ul)
 
 FAQS = [
@@ -66,11 +66,11 @@ FAQS = [
 
 
 def _help():
-    body = pagehead(
-        "",
-        "Tell us where you are, and we will point you somewhere useful",
-        "Describe your situation and we will point you to the right next step. No obligation, and never a sales call.",
-    ) + banner("help.jpg", "A younger hand and an older hand clasped together.", "center 50%") + f"""<section class="band">
+    body = hero_page("help.jpg",
+                   "A younger hand and an older hand clasped together.",
+                   "Tell us where you are, and we will point you somewhere useful",
+                   "Describe your situation and we will point you to the right next step. No obligation, and never a sales call.",
+                   "center 50%") + f"""<section class="band">
 <div class="shell layout">
 <aside class="rail" aria-label="What to expect">
 <p class="rail__title">What to expect</p>
@@ -190,15 +190,12 @@ spouse are commonly referred to:</p>
         "Ask the Tri-Valley Long Term Care Community Program a question about using a policy, "
         "planning for care costs, or finding local care. Free, nonprofit, and never a sales call.",
         body,
+        overlay=True,
     )
 
 
 def _faq():
-    items = "".join(
-        f'<div class="record__row"><dt class="record__label">Question</dt>'
-        f'<dd class="record__value"><h3 style="margin-bottom:.5rem">{esc(q)}</h3>{a}</dd></div>'
-        for q, a in FAQS
-    )
+    items = faq_list(FAQS)
 
     body = pagehead(
         "",
@@ -207,7 +204,7 @@ def _faq():
     ) + f"""<section class="band">
 <div class="shell">
 <div class="prose" style="max-width:74ch">
-<dl class="record">{items}</dl>
+{items}
 
 <h2 id="white-paper">Download the 2026 white paper</h2>
 <p><em>Planning for Long-Term Care in a Changing Insurance Market</em> covers costs, coverage

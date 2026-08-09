@@ -5,7 +5,7 @@ page explains approaches, it does not recommend a product. The carrier-specific
 illustration from the source material has been genericised — see README.
 """
 
-from layout import (banner, checklist, cta, note, page, pagehead, rail, record,
+from layout import (hero_page, checklist, cta, note, page, pagehead, rail, record,
                     seq, steps, table, ul)
 
 SECTIONS = [
@@ -32,11 +32,11 @@ READINESS = [
 
 
 def build(**_):
-    body = pagehead(
-        "",
-        "Paying for the cost of care",
-        "A plan made in advance decides where care is received, how it is paid for, and which assets are protected.",
-    ) + banner("paying-for-care.jpg", "An older couple sit together on a weathered bench looking out over the sea.", "center 52%") + f"""<section class="band">
+    body = hero_page("paying-for-care.jpg",
+                   "An older man and a younger man sit together on a sofa, going through paperwork and smiling.",
+                   "Paying for the cost of care",
+                   "A plan made in advance decides where care is received, how it is paid for, and which assets are protected.",
+                   "center 42%") + f"""<section class="band">
 <div class="shell layout">
 {rail("On this page", SECTIONS, None)}
 <div class="prose">
@@ -298,4 +298,5 @@ insurance, and we are not paid by anyone whose products are described on this pa
         "Estimate long-term care costs in California, compare funding options, protect a spouse, "
         "and build a coordinated financial plan before care is needed.",
         body,
+        overlay=True,
     )

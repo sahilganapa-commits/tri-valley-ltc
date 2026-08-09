@@ -4,7 +4,7 @@ Every listing is rendered into the HTML, so the full directory is readable
 with JavaScript disabled or when printed. Search and filters only hide rows.
 """
 
-from layout import (DIRECTORY_DISCLAIMER, VERIFIED, banner, esc, note, page,
+from layout import (DIRECTORY_DISCLAIMER, VERIFIED, hero_page, esc, note, page,
                     pagehead, record, slug, table, ul)
 
 CORE_CITIES = ["Dublin", "Pleasanton", "Livermore", "San Ramon", "Danville"]
@@ -125,13 +125,13 @@ def build(directory, questions, regulatory, **_):
                 "these is free and public.",
     )
 
-    body = pagehead(
-        "",
-        "Tri-Valley care directory",
-        f"{len(directory)} organizations and programs across {len(CATEGORY_ORDER)} categories of "
+    body = hero_page("directory.jpg",
+                   "An older couple sit close together on a garden bench, reading something in the afternoon sun.",
+                   "Tri-Valley care directory",
+                   f"{len(directory)} organizations and programs across {len(CATEGORY_ORDER)} categories of "
         "care in Dublin, Pleasanton, Livermore, San&nbsp;Ramon, Danville, and the surrounding "
         f"East&nbsp;Bay. Compiled from public sources and verified {esc(VERIFIED)}.",
-    ) + banner("directory.jpg", "An older couple sit talking on a bench in a shaded stone courtyard.", "center 66%") + f"""<section class="band" data-directory>
+                   "center 48%") + f"""<section class="band" data-directory>
 <div class="shell">
 
 {note("This directory is informational only", f"<p>{esc(DIRECTORY_DISCLAIMER)}</p>", "plain")}
@@ -205,4 +205,5 @@ of any provider.</p>
         "Assisted living, memory care, in-home care, adult day programs, skilled nursing, "
         "hospice, and care management across Dublin, Pleasanton, Livermore, San Ramon, and Danville.",
         body,
+        overlay=True,
     )
