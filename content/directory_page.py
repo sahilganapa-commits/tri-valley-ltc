@@ -4,8 +4,8 @@ Every listing is rendered into the HTML, so the full directory is readable
 with JavaScript disabled or when printed. Search and filters only hide rows.
 """
 
-from layout import (DIRECTORY_DISCLAIMER, VERIFIED, esc, note, page, pagehead,
-                    record, slug, table, ul)
+from layout import (DIRECTORY_DISCLAIMER, VERIFIED, banner, esc, note, page,
+                    pagehead, record, slug, table, ul)
 
 CORE_CITIES = ["Dublin", "Pleasanton", "Livermore", "San Ramon", "Danville"]
 
@@ -44,7 +44,8 @@ def _contact(rec):
             label = f'<span class="data">{esc(part)}</span>'
             bits.append(f'<a href="tel:{digits}">{label}</a>' if len(digits) >= 10 else label)
     if rec["website"]:
-        host = rec["website"].split("//")[-1].rstrip("/")
+        host = rec["website"].split("//")[-1].split("/")[0]
+        host = host[4:] if host.startswith("www.") else host
         bits.append(f'<a href="{esc(rec["website"])}">{esc(host)}</a>')
     return "<br>".join(bits)
 
@@ -69,12 +70,14 @@ def _listing(rec):
          f'<br>Verified {esc(rec["verified"])}</p>'),
     ])
 
+    name = esc(rec["name"])
+    if rec["website"]:
+        name = f'<a href="{esc(rec["website"])}">{name}</a>'
+
     return f"""<article class="listing" data-listing data-cats="{esc(cats)}" data-city="{esc(city)}" data-text="{esc(haystack)}">
-<div class="listing__top">
-<h3 class="listing__name">{esc(rec["name"])}</h3>
-<span class="listing__city">{esc(rec["city"])}</span>
-</div>
 <span class="listing__cat">{esc(rec["primary_category"])}</span>
+<h3 class="listing__name">{name}</h3>
+<p class="listing__city">{esc(rec["city"])}</p>
 <p class="listing__summary">{esc(rec["services"])}</p>
 <p class="listing__contact">{_contact(rec)}</p>
 <details class="listing__more">
@@ -123,12 +126,12 @@ def build(directory, questions, regulatory, **_):
     )
 
     body = pagehead(
-        "Part four of the guide",
+        "",
         "Tri-Valley care directory",
         f"{len(directory)} organizations and programs across {len(CATEGORY_ORDER)} categories of "
         "care in Dublin, Pleasanton, Livermore, San&nbsp;Ramon, Danville, and the surrounding "
         f"East&nbsp;Bay. Compiled from public sources and verified {esc(VERIFIED)}.",
-    ) + f"""<section class="band" data-directory>
+    ) + banner("directory.jpg", "An older couple sit talking on a bench in a shaded stone courtyard.", "center 66%") + f"""<section class="band" data-directory>
 <div class="shell">
 
 {note("This directory is informational only", f"<p>{esc(DIRECTORY_DISCLAIMER)}</p>", "plain")}
@@ -169,7 +172,7 @@ or <a href="help.html">ask us</a> — we keep track of providers that are not ye
 {qtable}
 {note("Five requests to make in writing, of any provider",
       ul([
-        "An itemised all-in price estimate based on the senior&rsquo;s current needs.",
+        "An itemized all-in price estimate based on the senior&rsquo;s current needs.",
         "The most recent license, inspection, complaint, deficiency, and correction reports.",
         "A sample contract, admission agreement, discharge policy, and rate-increase history.",
         "Staffing by shift, nurse availability, turnover, call-response expectations, and backup plan.",

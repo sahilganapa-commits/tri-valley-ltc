@@ -1,7 +1,7 @@
 """Looking for help, frequently asked questions, and the white paper."""
 
-from layout import (PROGRAM_EMAIL, VERIFIED, esc, note, page, pagehead, rail,
-                    record, table, ul)
+from layout import (PROGRAM_EMAIL, VERIFIED, banner, esc, note, page, pagehead,
+                    rail, record, table, ul)
 
 FAQS = [
     ("Does Medicare pay for long-term care?",
@@ -67,12 +67,10 @@ FAQS = [
 
 def _help():
     body = pagehead(
-        "Looking for help",
+        "",
         "Tell us where you are, and we will point you somewhere useful",
-        "Whether you are trying to understand a policy, start a claim, compare care options, or "
-        "work out how to pay for years of care — describe the situation and we will help you find "
-        "the right next step. No obligation. It is a conversation, not a sales call.",
-    ) + f"""<section class="band">
+        "Describe your situation and we will point you to the right next step. No obligation, and never a sales call.",
+    ) + banner("help.jpg", "A younger hand and an older hand clasped together.", "center 50%") + f"""<section class="band">
 <div class="shell layout">
 <aside class="rail" aria-label="What to expect">
 <p class="rail__title">What to expect</p>
@@ -203,7 +201,7 @@ def _faq():
     )
 
     body = pagehead(
-        "Frequently asked questions",
+        "",
         "The questions families ask us most",
         "Short answers, with a link to the longer version where there is one.",
     ) + f"""<section class="band">
@@ -338,7 +336,7 @@ optional inflation protection.</p>
 ])}
 <p>Premium increases generally apply to a class of similar policies after state regulatory review;
 they are not based on one policyholder becoming older, sicker, or filing a claim.
-<strong>Guaranteed renewable</strong> means coverage cannot be individually cancelled if premiums
+<strong>Guaranteed renewable</strong> means coverage cannot be individually canceled if premiums
 are paid, but it does not mean the premium is guaranteed never to increase.</p>
 {note("A balanced historical conclusion",
       "<p>The premium-increase experience does not mean traditional policies failed. Many "
@@ -422,7 +420,7 @@ than market dominance.</p>
             "carrier.",
 )}
 <p>A richer design with a larger monthly benefit, five-year or shared benefits, stronger inflation
-protection, or less favourable underwriting may cost more. A leaner design may cost less.
+protection, or less favorable underwriting may cost more. A leaner design may cost less.
 California buyers should obtain current carrier illustrations and review each insurer&rsquo;s rate
 history, because traditional premiums may be increased for a policy class after regulatory
 approval.</p>
@@ -472,7 +470,7 @@ expense.</p>
     "Cash-indemnity designs can provide a fixed monthly benefit after claim approval without "
     "monthly reimbursement paperwork; reimbursement designs pay eligible actual expenses.",
     "A properly executed Section 1035 exchange may allow certain life insurance or annuity values "
-    "to move into qualified long-term care coverage without recognising current gain, subject to "
+    "to move into qualified long-term care coverage without recognizing current gain, subject to "
     "tax rules and direct-transfer requirements.",
 ])}
 
@@ -613,7 +611,7 @@ Annuities may have surrender charges and tax consequences. A Section 1035 exchan
 legal requirements and generally should be completed directly between carriers.</p>"""
 
     body = pagehead(
-        "White paper &middot; 2026",
+        "White paper · 2026",
         "Planning for long-term care in a changing insurance market",
         "Costs, coverage options, provider landscape, and asset-based strategies. Prepared by "
         "Tri-Valley LTC for nonprofit consumer education.",

@@ -33,6 +33,7 @@
   --control:     #7f8aad;
 
   /* Type */
+  --brand:   "Poppins", "Century Gothic", "Avenir Next", "Segoe UI", sans-serif;
   --display: "Newsreader", "Iowan Old Style", Georgia, "Times New Roman", serif;
   --body:    "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --data:    "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
@@ -180,12 +181,17 @@ strong, b { font-weight: 700; }
   z-index: 40;
 }
 
+/* The bar runs edge to edge — brand hard left, nav hard right — rather than
+   sitting inside the 1180px content column. Overrides .shell, which it also
+   carries; this rule comes later so it wins. */
 .masthead__bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1.25rem;
   padding-block: .85rem;
+  max-width: none;
+  padding-inline: clamp(1.25rem, 3vw, 3rem);
 }
 
 .brand {
@@ -199,11 +205,11 @@ strong, b { font-weight: 700; }
 }
 .brand__mark { width: 46px; flex: 0 0 auto; }
 .brand__name {
-  font-family: var(--display);
-  font-size: 1.15rem;
+  font-family: var(--brand);   /* matches the geometric sans in the logo artwork */
+  font-size: 1.1rem;
   font-weight: 600;
-  line-height: 1.1;
-  letter-spacing: -.01em;
+  line-height: 1.15;
+  letter-spacing: -.015em;
   display: block;
 }
 .brand__sub {
@@ -241,7 +247,7 @@ strong, b { font-weight: 700; }
   .brand__sub { font-size: .55rem; letter-spacing: .15em; }
   .navtoggle { padding: .6rem .8rem; font-size: .9rem; }
 }
-@media (min-width: 62rem) { .navtoggle { display: none; } }
+@media (min-width: 72rem) { .navtoggle { display: none; } }
 
 .nav { display: none; }
 .nav[data-open="true"] {
@@ -263,6 +269,7 @@ strong, b { font-weight: 700; }
 }
 .nav__link {
   display: block;
+  white-space: nowrap;
   padding: .8rem 0;
   border-bottom: 1px solid var(--rule);
   text-decoration: none;
@@ -284,7 +291,11 @@ strong, b { font-weight: 700; }
   border-radius: var(--radius);
 }
 
-@media (min-width: 62rem) {
+@media (min-width: 72rem) {
+  /* Room for one line each once the full nav is showing. */
+  .brand { flex: 0 0 auto; }
+  .brand__name, .nav__cta { white-space: nowrap; }
+
   .nav, .nav[data-open="true"] {
     display: block;
     position: static;
@@ -293,7 +304,7 @@ strong, b { font-weight: 700; }
     box-shadow: none;
     padding: 0;
   }
-  .nav__list { flex-direction: row; align-items: center; gap: 1.6rem; }
+  .nav__list { flex-direction: row; align-items: center; gap: 1.4rem; }
   .nav__link {
     padding: .35rem 0;
     border-bottom: 2px solid transparent;
@@ -318,6 +329,103 @@ strong, b { font-weight: 700; }
 .band__head { margin-bottom: 2.25rem; }
 .band__head p { color: var(--muted); margin-top: .75rem; }
 .band--navy .band__head p { color: #c3cbe8; }
+
+/* ------------------------------------------------------- OVERLAY HEADER -- */
+/* Home only: the bar sits directly on the hero photograph with no background
+   of its own. Type keeps the same navy/gold as every other page — the top of
+   the photograph is light enough to carry it. */
+
+.masthead--overlay {
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, .35);
+  transition: background .3s var(--ease), border-color .3s var(--ease);
+}
+
+/* Mobile menu panel still needs a solid surface behind it. */
+.masthead--overlay .nav[data-open="true"] {
+  background: var(--card);
+  border-bottom-color: var(--rule);
+}
+
+/* --------------------------------------------------------- COVER HERO --- */
+/* Full-bleed photograph with the headline anchored bottom-left. The gradient
+   is painted under the photo, so the hero still reads as designed before the
+   image is dropped in (or if it ever fails to load). */
+
+/* The photograph is shown WHOLE — nothing cropped. The section takes its
+   height from the image's own proportions rather than forcing the image into
+   a fixed frame, so the hero is as tall as the picture needs. */
+.hero.hero--cover {
+  position: relative;
+  display: block;
+  padding: 0;
+  border-bottom: 0;
+  background: var(--navy-deep);
+  isolation: isolate;   /* keeps the scrim above the photo, below the text */
+}
+
+.hero__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 0;
+}
+
+/* No overlay on the photograph — it is shown exactly as supplied. The nav
+   gets its own translucent bar so it stays legible on its own. */
+
+/* The hero runs to the edges too, so the headline sits on one line the way
+   the approved mockup does. */
+.hero__inner {
+  max-width: none;
+  padding-inline: clamp(1.5rem, 4vw, 4.5rem);
+}
+
+/* Headline sits over the bottom of the photograph on wider screens. */
+@media (min-width: 46rem) {
+  .hero__inner {
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 2;
+    padding-block: clamp(2rem, 4vw, 4rem);
+  }
+}
+
+/* On a phone the picture is too short to carry overlaid text, so the words sit
+   below it on solid navy rather than fighting the image. */
+@media (max-width: 45.99rem) {
+  .hero.hero--cover { background: var(--navy-deep); }
+  .hero__inner { padding-block: 1.75rem 2.25rem; }
+  .hero__scrim { display: none; }
+}
+
+.hero__headline {
+  font-family: var(--brand);
+  font-weight: 600;
+  font-size: clamp(2.2rem, .9rem + 4.35vw, 5.2rem);
+  line-height: 1.06;
+  letter-spacing: -.025em;
+  color: #fff;
+  text-wrap: balance;
+  text-shadow: 0 2px 24px rgba(9, 11, 26, .45);
+  margin: 0;
+}
+
+.hero__sub {
+  margin: 1.25rem 0 0;
+  max-width: 74ch;
+  font-size: clamp(1.05rem, .95rem + .6vw, 1.45rem);
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(255, 255, 255, .94);
+  text-shadow: 0 1px 14px rgba(9, 11, 26, .5);
+  text-wrap: pretty;
+}
 
 /* ---------------------------------------------------------------- hero -- */
 
@@ -638,6 +746,28 @@ strong, b { font-weight: 700; }
 .table tbody th { font-weight: 600; color: var(--navy); }
 .table td.num { font-family: var(--data); font-size: .9rem; white-space: nowrap; }
 
+/* --------------------------------------------------------- BANNER ------- */
+/* A photographic strip below a page header. Deliberately shallow — it sets a
+   tone without pushing the actual guidance below the fold. */
+
+/* Most of these sources are portrait, so the band has to be deep enough that
+   cropping to it does not decapitate the subject. */
+.banner {
+  margin: 0;
+  width: 100%;
+  height: clamp(220px, 32vw, 440px);
+  overflow: hidden;
+  background: var(--navy-deep);
+  border-bottom: 3px solid var(--gold);
+}
+
+.banner__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* --------------------------------------------------- article + rail ----- */
 
 .pagehead {
@@ -783,28 +913,43 @@ textarea.field__input { min-height: 8rem; line-height: 1.6; resize: vertical; }
 .results { font-size: .95rem; color: var(--muted); margin: 0 0 1.5rem; }
 .results b { color: var(--navy); font-family: var(--data); }
 
-.listings { display: grid; gap: 1.25rem; }
+/* Three boxes across, wrapping down the page. Two up on tablets, one on
+   phones — three columns of this much text is unreadable below ~68rem. */
+.listings {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+}
+@media (min-width: 46rem) { .listings { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 68rem) { .listings { grid-template-columns: repeat(3, 1fr); gap: 1.75rem; } }
 
 .listing {
+  display: flex;
+  flex-direction: column;
   background: var(--card);
   border: 1px solid var(--rule);
-  border-left: 4px solid var(--blue);
+  border-top: 4px solid var(--blue);
   border-radius: var(--radius);
-  padding: 1.5rem;
+  padding: 1.4rem 1.4rem 1.1rem;
+  transition: border-top-color .2s var(--ease), box-shadow .2s var(--ease);
+}
+.listing:hover {
+  border-top-color: var(--gold);
+  box-shadow: 0 12px 28px -22px rgba(27, 30, 69, .55);
 }
 .listing[hidden] { display: none; }
-.listing__top { display: flex; flex-wrap: wrap; gap: .5rem 1rem; align-items: baseline; justify-content: space-between; }
-.listing__top > * { min-width: 0; }
-.listing__name { margin: 0; font-size: 1.3rem; }
+.listing__name { margin: 0 0 .3rem; font-size: 1.18rem; line-height: 1.25; }
+.listing__name a { color: inherit; text-decoration: none; }
+.listing__name a:hover { color: var(--gold-ink); text-decoration: underline; }
 .listing__city {
-  font-size: .88rem;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
+  margin: 0 0 .8rem;
+  font-size: .85rem;
   color: var(--muted);
   overflow-wrap: anywhere;
 }
 .listing__cat {
+  align-self: flex-start;
   display: inline-block;
   font-size: .72rem;
   font-weight: 700;
@@ -814,12 +959,12 @@ textarea.field__input { min-height: 8rem; line-height: 1.6; resize: vertical; }
   background: var(--gold-wash);
   padding: .25rem .6rem;
   border-radius: 3px;
-  margin: .7rem 0 .9rem;
+  margin: 0 0 .7rem;
 }
-.listing__contact { margin: 0 0 1rem; font-size: .96rem; overflow-wrap: anywhere; }
+.listing__contact { margin: 0 0 1rem; font-size: .9rem; line-height: 1.5; overflow-wrap: anywhere; }
 .listing__contact a { color: var(--navy); }
-.listing__summary { margin: 0 0 1rem; color: var(--ink); }
-.listing__more { margin-top: .5rem; border-top: 1px solid var(--rule); }
+.listing__summary { margin: 0 0 .9rem; font-size: .95rem; line-height: 1.55; color: var(--ink); }
+.listing__more { margin-top: auto; border-top: 1px solid var(--rule); }
 .listing__more summary {
   cursor: pointer;
   font-size: .88rem;
@@ -914,20 +1059,30 @@ textarea.field__input { min-height: 8rem; line-height: 1.6; resize: vertical; }
 
 /* --------------------------------------------------------------- cookie -- */
 
+/* Dark and compact. A white bar here would cut a bright band across the
+   bottom of the full-bleed hero photograph. */
 .cookie {
   position: fixed;
   inset-inline: 0;
   bottom: 0;
   z-index: 60;
-  background: var(--card);
-  border-top: 3px solid var(--gold);
-  box-shadow: 0 -10px 30px -18px rgba(27, 30, 69, .6);
-  padding: 1.25rem 0;
+  background: rgba(20, 22, 52, .96);
+  backdrop-filter: blur(6px);
+  border-top: 2px solid var(--gold);
+  color: #dfe4f4;
+  padding: .7rem 0;
 }
 .cookie[hidden] { display: none; }
-.cookie__inner { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; justify-content: space-between; }
-.cookie__text { margin: 0; font-size: .95rem; max-width: 48rem; }
-.cookie__actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+.cookie a { color: #fff; }
+.cookie a:hover { color: var(--gold); }
+.cookie :focus-visible { outline-color: var(--gold); }
+.cookie__inner { display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; align-items: center; justify-content: space-between; }
+.cookie__text { margin: 0; font-size: .875rem; line-height: 1.5; max-width: 58rem; }
+.cookie__actions { display: flex; flex-wrap: wrap; gap: .5rem; }
+.cookie .btn--primary { background: #fff; color: var(--navy); }
+.cookie .btn--primary:hover { background: var(--blue-wash); color: var(--navy); }
+.cookie .btn--ghost { background: transparent; color: #fff; border-color: rgba(255, 255, 255, .55); }
+.cookie .btn--ghost:hover { border-color: #fff; color: #fff; }
 
 /* --------------------------------------------------------------- motion -- */
 
@@ -955,6 +1110,11 @@ textarea.field__input { min-height: 8rem; line-height: 1.6; resize: vertical; }
   body { background: #fff; font-size: 11pt; }
   .masthead, .nav, .cookie, .rail, .seq, .band--navy, .footer__cols, .check__actions, .filters, .hero__actions { display: none !important; }
   .band, .hero, .pagehead { padding-block: 0 1rem; border: 0; }
+  /* The cover hero prints as plain type, not a full page of dark ink. */
+  .hero.hero--cover { min-height: 0; background: none; display: block; }
+  .hero__img, .hero__scrim { display: none; }
+  .hero__inner { padding: 0 0 1rem; }
+  .hero__headline, .hero__sub { color: #000; text-shadow: none; }
   .card, .listing, .check, .note { break-inside: avoid; border: 1px solid #999; }
   .layout { display: block; }
   a { text-decoration: none; color: #000; }

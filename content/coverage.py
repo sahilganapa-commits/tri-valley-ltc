@@ -6,8 +6,8 @@ Numbering is used here because the order genuinely matters — each step
 depends on the one before it.
 """
 
-from layout import (article, checklist, cta, esc, note, page, pagehead, rail,
-                    record, steps, table, ul)
+from layout import (article, banner, checklist, cta, esc, note, page, pagehead,
+                    rail, record, steps, table, ul)
 
 HUB = "using-coverage.html"
 
@@ -19,7 +19,7 @@ SECTIONS = [
     ("using-coverage-filing-a-claim.html", "Filing a claim",
      "Five steps from the first phone call to the first benefit payment — and what to do if it is denied."),
     ("using-coverage-approved-providers.html", "Approved providers: your care options",
-     "How policies pay, and the three home care pathways carriers recognise."),
+     "How policies pay, and the three home care pathways carriers recognize."),
     ("using-coverage-staying-on-claim.html", "Staying on claim",
      "The monthly routine that keeps benefits flowing, and what to do when they stall."),
     ("using-coverage-carrier-landscape.html", "The carrier and program landscape",
@@ -54,15 +54,15 @@ def _hub():
         for i, (href, title, blurb) in enumerate(SECTIONS)
     )
     body = pagehead(
-        "Part two of the guide",
+        "",
         "Understanding and using your coverage",
-        "Your family holds a long-term care policy and it may be time to use it. Six sections "
-        "walk from &ldquo;do we need help?&rdquo; through filing a claim and keeping benefits "
-        "flowing month after month.",
-    ) + f"""<section class="band">
+        "Six sections, from recognizing the need through filing a claim and keeping benefits flowing.",
+    ) + banner("using-coverage.jpg",
+               "Three older people sit together on a bench beside the water, looking out.",
+               "center 54%") + f"""<section class="band">
 <div class="shell">
 {note("If there is no policy in the family",
-      "<p>Most of this still applies — particularly Sections 1 and 4, which are about recognising "
+      "<p>Most of this still applies — particularly Sections 1 and 4, which are about recognizing "
       "care needs and comparing providers regardless of who pays. For funding without insurance, "
       "start with <a href=\"paying-for-care.html\">Paying for care</a>.</p>", "info")}
 <div class="doors" style="grid-template-columns:1fr">{cards}</div>
@@ -80,7 +80,7 @@ def _hub():
      "<p>Sixty to ninety days or more commonly pass between the first phone call and the first "
      "benefit payment. You can open a claim before choosing a provider.</p>"),
     ("Get provider rules in writing",
-     "<p>Care from a provider your policy does not recognise is generally not reimbursable, even "
+     "<p>Care from a provider your policy does not recognize is generally not reimbursable, even "
      "when the care was exactly right.</p>"),
     ("Keep records from day one",
      "<p>Including during the waiting period. Most interrupted claims are caused by paperwork, not "
@@ -99,7 +99,7 @@ def _hub():
     return page(
         HUB,
         "Understanding and using your coverage",
-        "A six-part guide for families using a long-term care insurance policy: recognising the "
+        "A six-part guide for families using a long-term care insurance policy: recognizing the "
         "need, reading the policy, filing a claim, choosing approved providers, and staying on claim.",
         body,
     )
@@ -172,7 +172,7 @@ across the Tri-Valley, see the <a href="directory.html">care directory</a>.</p>
                    "levels of care available.",
                    _rail(SECTIONS[0][0]), prose, prev, nxt)
     return page(SECTIONS[0][0], SECTIONS[0][1],
-                "How to recognise when an older adult needs help, how care needs are measured "
+                "How to recognize when an older adult needs help, how care needs are measured "
                 "through activities of daily living, and the levels of care available.",
                 body, current=HUB)
 
@@ -189,7 +189,7 @@ POLICY_ITEMS = [
      "What has to be certified before the policy pays."),
     ("Find the elimination period — and how it is counted",
      "Calendar days or service days. The difference can be months."),
-    ("Find today&rsquo;s benefit amount",
+    ("Find today’s benefit amount",
      "From the latest annual statement, not the original policy, if there is an inflation rider."),
     ("Find the benefit period or pool",
      "A set number of years, or a total pool of money."),
@@ -278,7 +278,7 @@ def _section_3():
      "<p>Between the claim paperwork, the carrier&rsquo;s assessment, and the elimination period, it "
      "is common for 60 to 90 days or more to pass between the first phone call and the first "
      "benefit payment. If a decline in health is underway — a dementia diagnosis, a fall, a "
-     "hospitalisation — contact the carrier promptly rather than waiting until care is urgent. "
+     "hospitalization — contact the carrier promptly rather than waiting until care is urgent. "
      "<strong>You can begin a claim before you have chosen a care provider.</strong></p>"),
     ("Request the claim packet",
      "<p>Call the claims number for your carrier or its administrator. Ask them to send the full "
@@ -292,7 +292,7 @@ def _section_3():
         "Do you require invoices, caregiver notes, or timesheets, and on what schedule?",
         "Is my premium waived while I am on claim?",
      ])),
-    ("Get the physician&rsquo;s certification and plan of care",
+    ("Get the physician’s certification and plan of care",
      "<p>Benefits require certification from a licensed health practitioner that the benefit trigger "
      "has been met, along with a plan of care describing the services needed. Your parent&rsquo;s "
      "primary care physician can usually provide this. The carrier&rsquo;s care coordinator, if "
@@ -392,7 +392,7 @@ throughout the claim.</p>
       "costs and cash flow, see <a href=\"paying-for-care.html\">Paying for care</a>.</p>")}
 
 <h2>The three home care pathways</h2>
-<p>When policies cover home care, they generally recognise one or more of the following
+<p>When policies cover home care, they generally recognize one or more of the following
 arrangements. Your policy&rsquo;s definitions — not general industry practice — control which
 of these applies to you.</p>
 
@@ -406,14 +406,14 @@ policy that covers home care covers licensed agency care. The agency, rather tha
 typically decides which caregiver is assigned and handles replacement when needed.</p>
 
 <h3>Pathway B: Caregivers arranged through a referral agency</h3>
-<p>California law separately recognises <strong>domestic referral agencies</strong> — companies
+<p>California law separately recognizes <strong>domestic referral agencies</strong> — companies
 that recruit, screen, and refer independent caregivers to families but do not employ them.
 (Civil Code &sect;&nbsp;1812.5095 sets the criteria under which a referral agency is not the
 caregivers&rsquo; employer.) Under this model the family selects and directs the caregiver,
 typically pays a lower total hourly cost than agency care, and keeps the same caregiver as long
 as both parties wish; the referral agency provides screening, matching, and replacement
 referrals.</p>
-<p>Many carriers approve referral agencies as recognised home care providers, just as they
+<p>Many carriers approve referral agencies as recognized home care providers, just as they
 approve licensed agencies. When the referral agency is an approved provider, the claims
 experience is straightforward: the family pays for care as usual, and the referral
 agency&rsquo;s invoices and documentation support the reimbursement claim, without the family
@@ -428,7 +428,7 @@ needing to qualify the caregiver individually.</p>
 <p>Many policies — and some public programs — also cover care from an <strong>independent
 provider</strong>: an individual caregiver qualified in their own right rather than through an
 agency of either kind. This matters in two situations: when a family has found a caregiver
-entirely on their own, and as an alternative route when a carrier or program does not recognise
+entirely on their own, and as an alternative route when a carrier or program does not recognize
 referral agencies as providers. In that case, a caregiver referred by a referral agency may
 still qualify individually as an independent provider under the same policy. Qualification
 requirements vary by contract and may include:</p>
@@ -584,7 +584,7 @@ blocks, long periods of low interest rates reduced investment income, and some e
 offered rich benefits at prices that were difficult to sustain.</p>
 <p>Premium increases generally apply to a class of similar policies after state regulatory review.
 They are not based on one policyholder becoming older, sicker, or filing a claim.
-<strong>Guaranteed renewable</strong> means coverage cannot be individually cancelled if premiums
+<strong>Guaranteed renewable</strong> means coverage cannot be individually canceled if premiums
 are paid — it does not mean the premium is guaranteed never to increase.</p>
 {note("A balanced conclusion",
       "<p>The premium-increase experience does not mean traditional policies failed. Many "

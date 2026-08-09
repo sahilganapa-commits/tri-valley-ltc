@@ -1,12 +1,25 @@
 """Shared layout, tokens, and content components for the site build."""
 
+import hashlib
 import json
 import re
+from functools import lru_cache
 from pathlib import Path
 
 ROOT = Path(__file__).parent
 OUT = ROOT / "site"
 DATA = ROOT / "data"
+
+
+@lru_cache(maxsize=None)
+def asset_version(name):
+    """Short content hash appended to asset URLs. A changed file gets a new
+    URL, so a stale stylesheet can never be served from a browser cache."""
+    try:
+        return hashlib.sha256((ROOT / "assets" / name).read_bytes()).hexdigest()[:8]
+    except OSError:
+        return "dev"
+
 
 SITE_NAME = "Tri-Valley Long Term Care"
 TAGLINE = "Community Program"
@@ -99,8 +112,12 @@ def nav_html(current):
     )
 
 
-def header_html(current):
-    return f"""<header class="masthead">
+def header_html(current, overlay=False):
+    """`overlay` lifts the header onto the hero photo (home page only). It turns
+    solid again once the visitor scrolls past the hero — see site.js."""
+    cls = "masthead masthead--overlay" if overlay else "masthead"
+    attr = " data-masthead" if overlay else ""
+    return f"""<header class="{cls}"{attr}>
 <div class="shell masthead__bar">
 <a class="brand" href="index.html">{LOGO.format(uid='hdr')}
 <span><span class="brand__name">Tri-Valley Long Term Care</span><span class="brand__sub">{esc(TAGLINE)}</span></span>
@@ -146,9 +163,8 @@ services are provided.</p>
 
 COOKIE = """<div class="cookie" data-cookie hidden role="region" aria-label="Cookie notice">
 <div class="shell cookie__inner">
-<p class="cookie__text">This site uses a small amount of browser storage to remember your
-cookie choice and any checklists you fill in. Nothing is sent to us and nothing identifies you.
-Read the <a href="privacy.html">privacy policy</a>.</p>
+<p class="cookie__text">We store your cookie choice and any checklists you fill in on your
+own device. Nothing is sent to us. <a href="privacy.html">Privacy policy</a>.</p>
 <div class="cookie__actions">
 <button class="btn btn--primary btn--small" type="button" data-cookie-choice="accepted">Accept</button>
 <button class="btn btn--ghost btn--small" type="button" data-cookie-choice="declined">Decline</button>
@@ -157,7 +173,7 @@ Read the <a href="privacy.html">privacy policy</a>.</p>
 </div>"""
 
 
-def page(filename, title, description, body, current=None):
+def page(filename, title, description, body, current=None, overlay=False):
     """Wrap a page body in the shared shell and write it to site/."""
     current = current or filename
     full_title = title if title == SITE_NAME else f"{title} — {SITE_NAME}"
@@ -171,18 +187,18 @@ def page(filename, title, description, body, current=None):
 <link rel="icon" href="{FAVICON}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Poppins:wght@500;600;700&family=Public+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/styles.css?v={asset_version("styles.css")}">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-{header_html(current)}
+{header_html(current, overlay)}
 <main id="main">
 {body}
 </main>
 {footer_html()}
 {COOKIE}
-<script src="assets/site.js"></script>
+<script src="assets/site.js?v={asset_version("site.js")}"></script>
 </body>
 </html>
 """
@@ -214,6 +230,19 @@ def record(rows, dark=False):
         )
     out.append("</dl>")
     return "".join(out)
+
+
+
+def banner(name, alt, focus="center 50%"):
+    """A wide photographic strip under a page header. Uses <img> rather than a
+    CSS background so it carries alt text and can be lazy-loaded. `focus` is the
+    object-position keeping the subject in frame once the crop goes wide."""
+    return (
+        f'<figure class="banner">'
+        f'<img class="banner__img" src="assets/{name}?v={asset_version(name)}" '
+        f'alt="{esc(alt)}" style="object-position:{focus}" loading="lazy" decoding="async">'
+        f'</figure>'
+    )
 
 
 def note(title, body, kind=""):

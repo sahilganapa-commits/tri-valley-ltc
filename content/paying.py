@@ -5,8 +5,8 @@ page explains approaches, it does not recommend a product. The carrier-specific
 illustration from the source material has been genericised — see README.
 """
 
-from layout import (checklist, cta, note, page, pagehead, rail, record, seq,
-                    steps, table, ul)
+from layout import (banner, checklist, cta, note, page, pagehead, rail, record,
+                    seq, steps, table, ul)
 
 SECTIONS = [
     ("#why", "Why planning matters"),
@@ -33,13 +33,10 @@ READINESS = [
 
 def build(**_):
     body = pagehead(
-        "Part three of the guide",
+        "",
         "Paying for the cost of care",
-        "Long-term care can affect much more than health. It reshapes retirement income, taxes, "
-        "housing choices, family responsibilities, and the financial security of a spouse. A plan "
-        "made in advance decides where care may be received, how it may be paid for, and which "
-        "assets are protected.",
-    ) + f"""<section class="band">
+        "A plan made in advance decides where care is received, how it is paid for, and which assets are protected.",
+    ) + banner("paying-for-care.jpg", "An older couple sit together on a weathered bench looking out over the sea.", "center 52%") + f"""<section class="band">
 <div class="shell layout">
 {rail("On this page", SECTIONS, None)}
 <div class="prose">
@@ -145,7 +142,7 @@ solution.</p>
 
 <h2 id="cases">Illustrative case studies</h2>
 {note("Read these as illustrations, not offers",
-      "<p>These are anonymised and hypothetical, and are provided for educational discussion only. "
+      "<p>These are anonymized and hypothetical, and are provided for educational discussion only. "
       "They are not offers, guarantees, quotes, or recommendations. Actual benefits, premiums, tax "
       "treatment, underwriting, and product availability depend on the individual and the specific "
       "contract. No carrier or product named or implied here is endorsed by this program.</p>",

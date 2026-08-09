@@ -5,7 +5,11 @@ are not browsing — they are somewhere specific in a hard process and need to
 be pointed at one page, quickly.
 """
 
-from layout import VERIFIED, cta, esc, page, record
+from layout import VERIFIED, asset_version, cta, esc, page, record
+
+# Drop a licensed photograph at this path and it fills the hero. Until then
+# the hero falls back to the brand gradient, which is why nothing looks broken.
+HERO_IMAGE = "assets/hero.jpg"
 
 DOORS = [
     ("We're noticing changes.",
@@ -66,17 +70,20 @@ information and local resources easier to access.</p>
 </article>
 </div>"""
 
-    body = f"""<section class="hero">
+    body = f"""<section class="hero hero--cover">
+<img class="hero__img" src="{HERO_IMAGE}?v={asset_version('hero.jpg')}"
+alt="An older woman and a younger woman lean close together outdoors, talking and smiling.">
+<div class="shell hero__inner">
+<h1 class="hero__headline" data-reveal style="--i:0">Plan Ahead, Protect What Matters</h1>
+<p class="hero__sub" data-reveal style="--i:1">A trusted resource helping Tri-Valley seniors and
+families understand long term care and find local support</p>
+</div>
+</section>
+
+<section class="band band--card">
 <div class="shell">
-<p class="eyebrow" data-reveal style="--i:0">A nonprofit community program &middot; Tri-Valley, California</p>
-<h1 class="hero__title" data-reveal style="--i:1">Long-term care, explained for families.</h1>
-<div class="hero__rule" role="presentation"></div>
-<p class="lede hero__lede" data-reveal style="--i:2">Long-term care decisions arrive confusing,
-stressful, and expensive — usually all at once. This is a plain-English guide to what care
-costs, how it gets paid for, how to use a policy you already hold, and who provides care here
-in the Tri-Valley.</p>
-<p class="eyebrow" id="start" data-reveal style="--i:3;margin-top:2.75rem">Start where you are</p>
-<div class="doors">{doors}</div>
+<p class="eyebrow" id="start">Start where you are</p>
+<div class="doors" style="margin-top:1.25rem">{doors}</div>
 </div>
 </section>
 
@@ -84,8 +91,6 @@ in the Tri-Valley.</p>
 <div class="shell">
 <div class="band__head">
 <h2>What this program does</h2>
-<p>We are a small nonprofit, not a business. Everything here is free, and nothing on this site
-is trying to sell you anything.</p>
 </div>
 {program}
 </div>
@@ -95,8 +100,6 @@ is trying to sell you anything.</p>
 <div class="shell">
 <div class="band__head">
 <h2>Four things worth knowing before you start</h2>
-<p>Families tell us these are the facts that would have changed their decisions if they had
-known them a year earlier.</p>
 </div>
 <div class="grid grid--2">
 <article class="card">
@@ -132,8 +135,6 @@ price today. <a href="using-coverage-carrier-landscape.html">The carrier landsca
 <div class="shell">
 <div class="band__head">
 <h2>Our founders</h2>
-<p>This program was created by people who watched their own communities struggle with these
-decisions.</p>
 </div>
 {founders}
 </div>
@@ -150,4 +151,5 @@ decisions.</p>
         "A nonprofit community program helping Tri-Valley seniors and families understand "
         "long-term care options, use their coverage, plan for the cost, and find local providers.",
         body,
+        overlay=True,
     )

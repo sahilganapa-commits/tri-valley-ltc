@@ -17,7 +17,7 @@ REVIEW = note(
 
 def _privacy():
     body = pagehead(
-        "Privacy",
+        "",
         "Privacy policy",
         f"How the Tri-Valley Long Term Care Community Program handles information. "
         f"Last updated {VERIFIED}.",
@@ -120,10 +120,9 @@ about privacy go to <a href="mailto:{PROGRAM_EMAIL}">{PROGRAM_EMAIL}</a>.</p>
 
 def _accessibility():
     body = pagehead(
-        "Accessibility",
+        "",
         "Accessibility statement",
-        "This site is built for people reading it on a phone in a hospital corridor, and for "
-        "people who need larger text than the average website provides. Both matter to us.",
+        "How this site supports readable type, keyboard use, screen readers, and printing.",
     ) + f"""<section class="band">
 <div class="shell">
 <div class="prose">
@@ -140,8 +139,8 @@ about it and fix it.</p>
      "<p>Body text starts at 17 to 18 pixels and scales up with your browser or system settings, "
      "with generous line spacing. Nothing here uses the small grey type common on financial "
      "websites.</p>"),
-    ("Colour contrast",
-     "<p>Text meets or exceeds WCAG AA contrast ratios against its background. Colour is never the "
+    ("Color contrast",
+     "<p>Text meets or exceeds WCAG AA contrast ratios against its background. Color is never the "
      "only way information is conveyed.</p>"),
     ("Keyboard navigation",
      "<p>Every link, button, form field, and filter can be reached and operated with a keyboard, "
@@ -167,7 +166,7 @@ about it and fix it.</p>
 {ul([
     "This site is currently available in English only. Language access is a priority for the next "
     "phase; in the meantime, the Alameda County ADRC provides free multilingual navigation at "
-    "<a href=\"https://alameda.my-adrc.org/\">alameda.my-adrc.org</a> or by dialling 2-1-1.",
+    "<a href=\"https://alameda.my-adrc.org/\">alameda.my-adrc.org</a> or by dialing 2-1-1.",
     "Documents and links on other organizations&rsquo; websites are outside our control and may "
     "not meet the same standard.",
     "This statement reflects our own testing. A full independent audit has not yet been "
