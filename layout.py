@@ -47,7 +47,7 @@ FOOTER_GUIDE = [
 ]
 
 FOOTER_MORE = [
-    ("help.html", "Looking for help"),
+    ("help.html", "Contact us"),
     ("faq.html", "Frequently asked questions"),
     ("white-paper.html", "2026 white paper"),
     ("privacy.html", "Privacy policy"),
@@ -107,7 +107,7 @@ def nav_html(current):
     return (
         '<nav class="nav" id="sitenav" data-nav data-open="false" aria-label="Main">'
         '<ul class="nav__list">' + "".join(items) +
-        f'<li><a class="nav__cta" href="help.html"{cur_help}>Looking for help</a></li>'
+        f'<li><a class="nav__cta" href="help.html"{cur_help}>Contact us</a></li>'
         "</ul></nav>"
     )
 
@@ -369,7 +369,7 @@ def seq(prev=None, nxt=None):
     return f'<nav class="seq" aria-label="Guide sections">{"".join(parts)}</nav>'
 
 
-def cta(heading, body, label="Looking for help", href="help.html"):
+def cta(heading, body, label="Contact us", href="help.html"):
     return f"""<section class="band band--navy">
 <div class="shell cta">
 <div class="cta__text"><h2>{esc(heading)}</h2><p>{esc(body)}</p></div>

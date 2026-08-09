@@ -1,4 +1,4 @@
-"""Looking for help, frequently asked questions, and the white paper."""
+"""Contact, frequently asked questions, and the white paper."""
 
 from layout import (PROGRAM_EMAIL, VERIFIED, faq_list, hero_page, esc, note, page, pagehead,
                     rail, record, table, ul)
@@ -186,7 +186,7 @@ spouse are commonly referred to:</p>
 
     return page(
         "help.html",
-        "Looking for help",
+        "Contact us",
         "Ask the Tri-Valley Long Term Care Community Program a question about using a policy, "
         "planning for care costs, or finding local care. Free, nonprofit, and never a sales call.",
         body,
