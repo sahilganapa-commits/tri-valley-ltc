@@ -363,7 +363,10 @@ strong, b { font-weight: 700; }
 }
 .masthead--overlay :focus-visible { outline-color: var(--gold); }
 .masthead--overlay .nav[data-open="true"] { background: var(--navy-deep); border-bottom-color: transparent; }
-.masthead--overlay .nav[data-open="true"] .nav__link { border-bottom-color: rgba(255, 255, 255, .2); }
+.masthead--overlay .nav[data-open="true"] .nav__link {
+  border-bottom-color: rgba(255, 255, 255, .2);
+  text-shadow: none;   /* solid panel behind it — no halo needed */
+}
 
 @media (min-width: 72rem) {
   .masthead--overlay .nav__link:hover,
@@ -399,14 +402,6 @@ strong, b { font-weight: 700; }
 @media (min-width: 72rem) {
     }
 
-/* Once scrolled past the hero the bar is solid white again, so the dark-photo
-   overrides must stop applying. */
-
-/* Mobile menu panel still needs a solid surface behind it. */
-.masthead--overlay .nav[data-open="true"] {
-  background: var(--card);
-  border-bottom-color: var(--rule);
-}
 
 /* --------------------------------------------------------- COVER HERO --- */
 /* Full-bleed photograph with the headline anchored bottom-left. The gradient
