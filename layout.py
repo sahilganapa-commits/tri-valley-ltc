@@ -36,7 +36,7 @@ NAV = [
     ("using-coverage.html", "Using your coverage"),
     ("paying-for-care.html", "Paying for care"),
     ("directory.html", "Care directory"),
-    ("faq.html", "Questions"),
+    ("faq.html", "Q&A"),
 ]
 
 FOOTER_GUIDE = [
