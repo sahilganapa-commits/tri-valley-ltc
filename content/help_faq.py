@@ -67,10 +67,10 @@ FAQS = [
 
 def _help():
     body = hero_page("help.jpg",
-                   "A younger hand and an older hand clasped together.",
+                   "An older couple walk away down a tree-lined path, side by side.",
                    "Tell us where you are, and we will point you somewhere useful",
                    "Describe your situation and we will point you to the right next step. No obligation, and never a sales call.",
-                   "center 50%") + f"""<section class="band">
+                   "center 58%") + f"""<section class="band">
 <div class="shell layout">
 <aside class="rail" aria-label="What to expect">
 <p class="rail__title">What to expect</p>
@@ -197,11 +197,11 @@ spouse are commonly referred to:</p>
 def _faq():
     items = faq_list(FAQS)
 
-    body = pagehead(
-        "",
-        "The questions families ask us most",
-        "Short answers, with a link to the longer version where there is one.",
-    ) + f"""<section class="band">
+    body = hero_page("faq.jpg",
+                   "A younger hand and an older hand clasped together.",
+                   "The questions families ask us most",
+                   "Short answers, with a link to the longer version where there is one.",
+                   "center 50%") + f"""<section class="band">
 <div class="shell">
 <div class="prose" style="max-width:74ch">
 {items}
@@ -241,6 +241,7 @@ sent. <a href="white-paper.html">Read the white paper here</a> in the meantime, 
         "Answers to the long-term care questions families ask most: Medicare coverage, when to "
         "plan, legacy policies, claim timelines, and the California Partnership program.",
         body,
+        overlay=True,
     )
 
 
