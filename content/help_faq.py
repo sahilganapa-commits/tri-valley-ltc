@@ -66,12 +66,7 @@ FAQS = [
 
 
 def _help():
-    body = pagehead(
-        "",
-        "Tell us where you are, and we will point you somewhere useful",
-        "Describe your situation and we will point you to the right next step. No obligation, "
-        "and never a sales call.",
-    ) + f"""<section class="band">
+    body = f"""<section class="band">
 <div class="shell layout">
 <aside class="rail" aria-label="What to expect">
 <p class="rail__title">What to expect</p>
@@ -85,7 +80,7 @@ def _help():
 </aside>
 <div class="prose">
 
-<h2>Send us a message</h2>
+<h1>Send us a message</h1>
 <form class="form" data-form>
 <div class="form__row">
 <label class="field"><span class="field__label">Your name</span>
