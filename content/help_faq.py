@@ -66,11 +66,12 @@ FAQS = [
 
 
 def _help():
-    body = hero_page("help.jpg",
-                   "An older couple walk away down a tree-lined path, side by side.",
-                   "Tell us where you are, and we will point you somewhere useful",
-                   "Describe your situation and we will point you to the right next step. No obligation, and never a sales call.",
-                   "center 58%") + f"""<section class="band">
+    body = pagehead(
+        "",
+        "Tell us where you are, and we will point you somewhere useful",
+        "Describe your situation and we will point you to the right next step. No obligation, "
+        "and never a sales call.",
+    ) + f"""<section class="band">
 <div class="shell layout">
 <aside class="rail" aria-label="What to expect">
 <p class="rail__title">What to expect</p>
@@ -190,7 +191,6 @@ spouse are commonly referred to:</p>
         "Ask the Tri-Valley Long Term Care Community Program a question about using a policy, "
         "planning for care costs, or finding local care. Free, nonprofit, and never a sales call.",
         body,
-        overlay=True,
     )
 
 
