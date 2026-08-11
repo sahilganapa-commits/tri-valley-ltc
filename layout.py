@@ -297,15 +297,18 @@ def ul(items, plain=False):
     return f'<ul class="{cls}">' + "".join(f"<li>{i}</li>" for i in items) + "</ul>"
 
 
-def steps(items):
+def steps(items, level=3):
+    """`level` must make the page's heading outline continuous — a numbered list
+    sitting directly under the h1 is h2, one nested inside a section is h3."""
     out = ['<ol class="steps">']
     for title, body in items:
-        out.append(f'<li class="step"><h3 class="step__title">{esc(title)}</h3>{body}</li>')
+        out.append(f'<li class="step"><h{level} class="step__title">{esc(title)}</h{level}>{body}</li>')
     out.append("</ol>")
     return "".join(out)
 
 
-def checklist(cid, title, intro, items, trigger=None, rest_text="", trigger_text=""):
+def checklist(cid, title, intro, items, trigger=None, rest_text="", trigger_text="",
+              level=3):
     """A checklist that remembers what you ticked. `items` are (bold, hint)."""
     lis = []
     for i, (bold, hint) in enumerate(items):
@@ -321,13 +324,13 @@ def checklist(cid, title, intro, items, trigger=None, rest_text="", trigger_text
     tally = ""
     if trigger:
         tally = (
-            '<div class="check__tally" data-tally hidden>'
+            '<div class="check__tally" data-tally hidden role="status" aria-live="polite">'
             f'<p><span class="check__count" data-count>0 of {len(items)}</span> checked.</p>'
             f'<p class="check__verdict" data-verdict data-triggered="false">{rest_text}</p>'
             "</div>"
         )
     return f"""<div class="check" data-check{attrs}>
-<div class="check__head"><h3 class="check__title">{esc(title)}</h3></div>
+<div class="check__head"><h{level} class="check__title">{esc(title)}</h{level}></div>
 {intro}
 <ul class="check__items">{"".join(lis)}</ul>
 {tally}

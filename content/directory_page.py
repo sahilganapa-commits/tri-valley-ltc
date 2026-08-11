@@ -153,7 +153,7 @@ def build(directory, questions, regulatory, **_):
 <div class="chips" role="group" aria-label="Filter by care type">{chips}</div>
 </div>
 
-<p class="results">Showing <b data-count-results>{len(directory)}</b> of {len(directory)} listings.
+<p class="results" role="status" aria-live="polite">Showing <b data-count-results>{len(directory)}</b> of {len(directory)} listings.
 <button class="btn btn--ghost btn--small" type="button" data-reset>Clear filters</button></p>
 
 <div class="listings">{listings}</div>

@@ -112,7 +112,7 @@ buy anything.</span>
 <button class="btn btn--primary" type="submit">Send message</button>
 <p class="form__note">We use your information only to respond to your inquiry. See the
 <a href="privacy.html">privacy policy</a>.</p>
-<p class="note note--info" data-form-status hidden tabindex="-1">
+<p class="note note--info" data-form-status hidden tabindex="-1" role="status" aria-live="polite">
 <strong>This form is not connected yet.</strong> The site is still being set up, so nothing was
 sent. In the meantime, email <a href="mailto:{PROGRAM_EMAIL}">{PROGRAM_EMAIL}</a> and we will
 reply within one business day.</p>
@@ -221,7 +221,7 @@ and every message has an unsubscribe link.</span>
 <button class="btn btn--primary" type="submit">Send me the white paper</button>
 <p class="form__note">Your address is used to send the paper and, if you tick the box, program
 updates. See the <a href="privacy.html">privacy policy</a>.</p>
-<p class="note note--info" data-form-status hidden tabindex="-1">
+<p class="note note--info" data-form-status hidden tabindex="-1" role="status" aria-live="polite">
 <strong>This form is not connected yet.</strong> The site is still being set up, so nothing was
 sent. <a href="white-paper.html">Read the white paper here</a> in the meantime, or email
 <a href="mailto:{PROGRAM_EMAIL}">{PROGRAM_EMAIL}</a>.</p>

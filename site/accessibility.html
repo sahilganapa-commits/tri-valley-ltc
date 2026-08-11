@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Accessibility statement — Tri-Valley Long Term Care</title>
-<meta name="description" content="How this site supports readable type, keyboard navigation, screen readers, reduced motion, and printing — and the gaps we are still working on.">
+<meta name="description" content="What the Tri-Valley Long Term Care site has been tested for against WCAG 2.1 AA, what has not yet been tested, and how to report a problem.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 168 92'%3E%3Cdefs%3E%3Cpath id='h' d='M50 88C50 88 8 60 8 34 8 18 20 8 32 8c8 0 15 4 18 12 3-8 10-12 18-12 12 0 26 10 26 26 0 26-42 54-42 54Z'/%3E%3C/defs%3E%3Cuse href='%23h' transform='translate(70 0) scale(.95)' fill='%23b9cff2'/%3E%3Cuse href='%23h' transform='translate(35 9) scale(.82)' fill='%235c7fc0'/%3E%3Cuse href='%23h' transform='translate(0 20) scale(.7)' fill='%2326295b'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Poppins:wght@500;600;700&family=Public+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/styles.css?v=a3a1310b">
+<link rel="stylesheet" href="assets/styles.css?v=35679c59">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -31,29 +31,32 @@
 <section class="pagehead">
 <div class="shell">
 <h1 class="pagehead__title">Accessibility statement</h1>
-<p class="lede">How this site supports readable type, keyboard use, screen readers, and printing.</p>
+<p class="lede">What we have tested, what we have not, and how to tell us when something does not work.</p>
 </div>
 </section><section class="band">
 <div class="shell">
 <div class="prose">
-<aside class="note note--plain"><p class="note__title">Draft pending legal review</p><p>This page was drafted from the program&rsquo;s stated practices and has not yet been reviewed by counsel. Have it reviewed before launch, and update it whenever the site starts collecting information it does not collect today.</p></aside>
 
-<h2>What we aim for</h2>
-<p>We aim to meet the Web Content Accessibility Guidelines (WCAG) 2.1 at Level AA. That is a
-standard, not a certificate — if something on this site does not work for you, we want to hear
-about it and fix it.</p>
+<h2>The standard we hold ourselves to</h2>
+<p>We aim to meet the Web Content Accessibility Guidelines (WCAG) 2.1 at Level AA, the benchmark
+used for public websites in the United States. This page describes what we have actually
+measured rather than what we hope is true, because a statement you cannot rely on is worse than
+no statement at all.</p>
+<p>Last tested July 27, 2026.</p>
 
-<h2>What we have built in</h2>
-<dl class="record"><div class="record__row"><dt class="record__label">Readable type</dt><dd class="record__value"><p>Body text starts at 17 to 18 pixels and scales up with your browser or system settings, with generous line spacing. Nothing here uses the small grey type common on financial websites.</p></dd></div><div class="record__row"><dt class="record__label">Color contrast</dt><dd class="record__value"><p>Text meets or exceeds WCAG AA contrast ratios against its background. Color is never the only way information is conveyed.</p></dd></div><div class="record__row"><dt class="record__label">Keyboard navigation</dt><dd class="record__value"><p>Every link, button, form field, and filter can be reached and operated with a keyboard, and the focus indicator is always visible. A &ldquo;skip to content&rdquo; link is the first thing you reach on each page.</p></dd></div><div class="record__row"><dt class="record__label">Screen readers</dt><dd class="record__value"><p>Pages use real headings, landmarks, lists, and tables with row and column headers, so a screen reader can navigate the structure rather than reading everything top to bottom.</p></dd></div><div class="record__row"><dt class="record__label">Reduced motion</dt><dd class="record__value"><p>If your device is set to reduce motion, the small entrance animations do not play.</p></dd></div><div class="record__row"><dt class="record__label">Works without JavaScript</dt><dd class="record__value"><p>Every directory listing is present in the page itself. With JavaScript disabled you lose the search and filters, not the information.</p></dd></div><div class="record__row"><dt class="record__label">Printable</dt><dd class="record__value"><p>Every page prints cleanly, and checklists print with your answers filled in — useful for a doctor&rsquo;s appointment or a call with a carrier.</p></dd></div><div class="record__row"><dt class="record__label">Tables on small screens</dt><dd class="record__value"><p>Wide tables scroll horizontally within their own frame, so the page itself never scrolls sideways.</p></dd></div></dl>
+<h2>What we have measured</h2>
+<dl class="record"><div class="record__row"><dt class="record__label">Text contrast</dt><dd class="record__value"><p>Every heading, paragraph, label, and navigation link has been measured against the exact background behind it. Where text sits over a photograph, we sample the lightest pixel of the picture underneath and compute the ratio against that worst case. All text meets at least 4.5:1, and large display text at least 3:1. These checks run again whenever the site is rebuilt, so a new photograph cannot quietly break them.</p></dd></div><div class="record__row"><dt class="record__label">Readable type</dt><dd class="record__value"><p>Body text starts at 17 to 18 pixels and grows with your browser or system text-size setting. Zooming to 200% does not cut anything off.</p></dd></div><div class="record__row"><dt class="record__label">Keyboard use</dt><dd class="record__value"><p>Every link, button, form field, filter, and expandable question can be reached and operated from the keyboard alone. The focus indicator is always visible, and measured at 3:1 or better against every surface it appears on. A &ldquo;skip to content&rdquo; link is the first thing you reach on each page.</p></dd></div><div class="record__row"><dt class="record__label">Structure for screen readers</dt><dd class="record__value"><p>Each page has one main heading, headings descend in order without skipping levels, and the page is divided into standard landmarks. Tables carry real row and column headers. Every image has alternative text. Form fields are joined to their labels.</p></dd></div><div class="record__row"><dt class="record__label">Things that change without reloading</dt><dd class="record__value"><p>The directory result count, the checklist tally, and form messages are announced to screen readers when they update, rather than changing silently.</p></dd></div><div class="record__row"><dt class="record__label">Small screens</dt><dd class="record__value"><p>The site reflows to a single column down to 320 pixels wide with no sideways scrolling. Wide tables scroll within their own frame so the page itself never does. Tap targets are at least 44 pixels.</p></dd></div><div class="record__row"><dt class="record__label">Reduced motion</dt><dd class="record__value"><p>If your device is set to reduce motion, the entrance animations do not play.</p></dd></div><div class="record__row"><dt class="record__label">Without JavaScript</dt><dd class="record__value"><p>Every directory listing and every question and answer is in the page itself. With JavaScript switched off you lose the search and filters, not the information.</p></dd></div><div class="record__row"><dt class="record__label">Printing</dt><dd class="record__value"><p>Every page prints cleanly. Checklists print with your answers filled in, and the questions print with their answers open.</p></dd></div></dl>
 
-<h2>Known gaps</h2>
-<ul class="list"><li>This site is currently available in English only. Language access is a priority for the next phase; in the meantime, the Alameda County ADRC provides free multilingual navigation at <a href="https://alameda.my-adrc.org/">alameda.my-adrc.org</a> or by dialing 2-1-1.</li><li>Documents and links on other organizations&rsquo; websites are outside our control and may not meet the same standard.</li><li>This statement reflects our own testing. A full independent audit has not yet been commissioned.</li></ul>
+<h2>What we have not done</h2>
+<p>Being straightforward about this matters more than sounding finished.</p>
+<ul class="list"><li><strong>No testing with real screen readers yet.</strong> Our checks confirm the markup is correct; they cannot confirm the experience is good. Testing with VoiceOver and NVDA, and with people who use them daily, is the next step.</li><li><strong>No independent audit.</strong> Everything described above is our own measurement.</li><li><strong>English only.</strong> Until that changes, the Alameda County ADRC offers free multilingual help at <a href="https://alameda.my-adrc.org/">alameda.my-adrc.org</a> or by dialing 2-1-1.</li><li><strong>Other organizations&rsquo; websites.</strong> The directory links out to providers and agencies we do not control, and those sites may not meet this standard.</li></ul>
 
 <h2>Tell us what is not working</h2>
 <p>If any part of this site is difficult to use, email
-<a href="mailto:hello@trivalleyltc.org">hello@trivalleyltc.org</a> with the page and what happened. We treat
-accessibility problems as bugs, not as feature requests, and we will also give you the information
-you were looking for by another route while we fix it.</p>
+<a href="mailto:hello@trivalleyltc.org">hello@trivalleyltc.org</a> and say which page you were on and what
+happened. We treat accessibility problems as faults to be fixed, not as requests to be
+considered. We will also get you the information you were after by another route while we
+fix it &mdash; you should not have to wait for a code change to get an answer.</p>
 </div>
 </div>
 </section>

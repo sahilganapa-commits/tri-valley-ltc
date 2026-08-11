@@ -209,7 +209,7 @@ inventory first.</p>
 {checklist("policy", "Policy inventory",
            "<p>Work through these in order. Ticks are saved in this browser only, so you can come "
            "back to a half-finished inventory, and print it to take to a phone call.</p>",
-           POLICY_ITEMS)}
+           POLICY_ITEMS, level=2)}
 
 {note("A carrier leaving the sales market does not cancel your policy",
       "<p>Claims on existing policies are still paid. See "
@@ -272,7 +272,7 @@ qualify. It gets its own section:
 
 def _section_3():
     prev, nxt = _prev_next(2)
-    prose = f"""{steps([
+    prose = f"""{steps(level=2, items=[
     ("Start earlier than feels necessary",
      "<p>Between the claim paperwork, the carrier&rsquo;s assessment, and the elimination period, it "
      "is common for 60 to 90 days or more to pass between the first phone call and the first "

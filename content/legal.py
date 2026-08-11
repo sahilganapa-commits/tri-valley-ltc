@@ -4,7 +4,8 @@ Both are drafts for legal review, and say so — a nonprofit publishing a
 privacy policy it has not had reviewed is worse than publishing none.
 """
 
-from layout import DISCLAIMER, PROGRAM_EMAIL, VERIFIED, note, page, pagehead, record, ul
+from layout import (DISCLAIMER, PROGRAM_EMAIL, VERIFIED, esc, note, page, pagehead,
+                    record, ul)
 
 REVIEW = note(
     "Draft pending legal review",
@@ -122,62 +123,76 @@ def _accessibility():
     body = pagehead(
         "",
         "Accessibility statement",
-        "How this site supports readable type, keyboard use, screen readers, and printing.",
+        "What we have tested, what we have not, and how to tell us when something "
+        "does not work.",
     ) + f"""<section class="band">
 <div class="shell">
 <div class="prose">
-{REVIEW}
 
-<h2>What we aim for</h2>
-<p>We aim to meet the Web Content Accessibility Guidelines (WCAG) 2.1 at Level AA. That is a
-standard, not a certificate — if something on this site does not work for you, we want to hear
-about it and fix it.</p>
+<h2>The standard we hold ourselves to</h2>
+<p>We aim to meet the Web Content Accessibility Guidelines (WCAG) 2.1 at Level AA, the benchmark
+used for public websites in the United States. This page describes what we have actually
+measured rather than what we hope is true, because a statement you cannot rely on is worse than
+no statement at all.</p>
+<p>Last tested {esc(VERIFIED)}.</p>
 
-<h2>What we have built in</h2>
+<h2>What we have measured</h2>
 {record([
+    ("Text contrast",
+     "<p>Every heading, paragraph, label, and navigation link has been measured against the exact "
+     "background behind it. Where text sits over a photograph, we sample the lightest pixel of the "
+     "picture underneath and compute the ratio against that worst case. All text meets at least "
+     "4.5:1, and large display text at least 3:1. These checks run again whenever the site is "
+     "rebuilt, so a new photograph cannot quietly break them.</p>"),
     ("Readable type",
-     "<p>Body text starts at 17 to 18 pixels and scales up with your browser or system settings, "
-     "with generous line spacing. Nothing here uses the small grey type common on financial "
-     "websites.</p>"),
-    ("Color contrast",
-     "<p>Text meets or exceeds WCAG AA contrast ratios against its background. Color is never the "
-     "only way information is conveyed.</p>"),
-    ("Keyboard navigation",
-     "<p>Every link, button, form field, and filter can be reached and operated with a keyboard, "
-     "and the focus indicator is always visible. A &ldquo;skip to content&rdquo; link is the first "
-     "thing you reach on each page.</p>"),
-    ("Screen readers",
-     "<p>Pages use real headings, landmarks, lists, and tables with row and column headers, so a "
-     "screen reader can navigate the structure rather than reading everything top to bottom.</p>"),
+     "<p>Body text starts at 17 to 18 pixels and grows with your browser or system text-size "
+     "setting. Zooming to 200% does not cut anything off.</p>"),
+    ("Keyboard use",
+     "<p>Every link, button, form field, filter, and expandable question can be reached and "
+     "operated from the keyboard alone. The focus indicator is always visible, and measured at "
+     "3:1 or better against every surface it appears on. A &ldquo;skip to content&rdquo; link is "
+     "the first thing you reach on each page.</p>"),
+    ("Structure for screen readers",
+     "<p>Each page has one main heading, headings descend in order without skipping levels, and "
+     "the page is divided into standard landmarks. Tables carry real row and column headers. "
+     "Every image has alternative text. Form fields are joined to their labels.</p>"),
+    ("Things that change without reloading",
+     "<p>The directory result count, the checklist tally, and form messages are announced to "
+     "screen readers when they update, rather than changing silently.</p>"),
+    ("Small screens",
+     "<p>The site reflows to a single column down to 320 pixels wide with no sideways scrolling. "
+     "Wide tables scroll within their own frame so the page itself never does. Tap targets are at "
+     "least 44 pixels.</p>"),
     ("Reduced motion",
-     "<p>If your device is set to reduce motion, the small entrance animations do not play.</p>"),
-    ("Works without JavaScript",
-     "<p>Every directory listing is present in the page itself. With JavaScript disabled you lose "
-     "the search and filters, not the information.</p>"),
-    ("Printable",
-     "<p>Every page prints cleanly, and checklists print with your answers filled in — useful for "
-     "a doctor&rsquo;s appointment or a call with a carrier.</p>"),
-    ("Tables on small screens",
-     "<p>Wide tables scroll horizontally within their own frame, so the page itself never scrolls "
-     "sideways.</p>"),
+     "<p>If your device is set to reduce motion, the entrance animations do not play.</p>"),
+    ("Without JavaScript",
+     "<p>Every directory listing and every question and answer is in the page itself. With "
+     "JavaScript switched off you lose the search and filters, not the information.</p>"),
+    ("Printing",
+     "<p>Every page prints cleanly. Checklists print with your answers filled in, and the "
+     "questions print with their answers open.</p>"),
 ])}
 
-<h2>Known gaps</h2>
+<h2>What we have not done</h2>
+<p>Being straightforward about this matters more than sounding finished.</p>
 {ul([
-    "This site is currently available in English only. Language access is a priority for the next "
-    "phase; in the meantime, the Alameda County ADRC provides free multilingual navigation at "
-    "<a href=\"https://alameda.my-adrc.org/\">alameda.my-adrc.org</a> or by dialing 2-1-1.",
-    "Documents and links on other organizations&rsquo; websites are outside our control and may "
-    "not meet the same standard.",
-    "This statement reflects our own testing. A full independent audit has not yet been "
-    "commissioned.",
+    "<strong>No testing with real screen readers yet.</strong> Our checks confirm the markup is "
+    "correct; they cannot confirm the experience is good. Testing with VoiceOver and NVDA, and "
+    "with people who use them daily, is the next step.",
+    "<strong>No independent audit.</strong> Everything described above is our own measurement.",
+    "<strong>English only.</strong> Until that changes, the Alameda County ADRC offers free "
+    "multilingual help at <a href=\"https://alameda.my-adrc.org/\">alameda.my-adrc.org</a> or by "
+    "dialing 2-1-1.",
+    "<strong>Other organizations&rsquo; websites.</strong> The directory links out to providers "
+    "and agencies we do not control, and those sites may not meet this standard.",
 ])}
 
 <h2>Tell us what is not working</h2>
 <p>If any part of this site is difficult to use, email
-<a href="mailto:{PROGRAM_EMAIL}">{PROGRAM_EMAIL}</a> with the page and what happened. We treat
-accessibility problems as bugs, not as feature requests, and we will also give you the information
-you were looking for by another route while we fix it.</p>
+<a href="mailto:{PROGRAM_EMAIL}">{PROGRAM_EMAIL}</a> and say which page you were on and what
+happened. We treat accessibility problems as faults to be fixed, not as requests to be
+considered. We will also get you the information you were after by another route while we
+fix it &mdash; you should not have to wait for a code change to get an answer.</p>
 </div>
 </div>
 </section>"""
@@ -185,8 +200,8 @@ you were looking for by another route while we fix it.</p>
     return page(
         "accessibility.html",
         "Accessibility statement",
-        "How this site supports readable type, keyboard navigation, screen readers, reduced "
-        "motion, and printing — and the gaps we are still working on.",
+        "What the Tri-Valley Long Term Care site has been tested for against WCAG 2.1 AA, "
+        "what has not yet been tested, and how to report a problem.",
         body,
     )
 

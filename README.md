@@ -114,3 +114,26 @@ and every page prints cleanly.
 6. **Re-verify the directory.** Listings are marked verified 2026-07-27.
    Re-check before launch and set an annual review, along with the cost
    figures, tax references, and program links.
+
+## Accessibility
+
+Two checkers guard WCAG 2.1 AA. Run both after any visual change, and
+especially after swapping a hero photograph:
+
+```bash
+python3 tools/check_a11y.py       # markup: headings, labels, landmarks, alt, ids
+python3 tools/check_contrast.py   # renders pages and measures text on photos
+```
+
+`check_contrast.py` needs the preview server running (`python3 serve.py`). It
+hides each piece of text, samples the photograph exactly where that text sits,
+and computes contrast against the lightest pixel — the worst case. This cannot
+be reasoned about from CSS, because it depends on the image in place. A
+brighter sky in a new photo can push the navigation below the threshold with
+nothing in the stylesheet changing.
+
+Thresholds: 4.5:1 normal text, 3:1 large display text.
+
+Not covered by either tool, and still outstanding: testing with real screen
+readers (VoiceOver, NVDA) and an independent audit. The accessibility
+statement says so plainly — keep it that way, and update it when that changes.
