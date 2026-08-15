@@ -339,19 +339,18 @@ strong, b { font-weight: 700; }
   position: absolute;
   inset-inline: 0;
   top: 0;
-  /* Opacity here is set by measurement, not taste. White body text needs 4.5:1
-     (WCAG 1.4.3); against the lightest photograph on the site that required
-     ~0.64, so 0.72 leaves margin. Critically it must hold across the whole
-     band the links occupy — 23% to 76% of the bar — which the previous
-     gradient did not; it had faded to ~0.21 by the underside of the text.
-     tools/check_contrast.py re-measures this and fails if a photo swap
-     ever breaks it. */
+  /* A band across the top that fades into the photograph. Opacity is set by
+     measurement, not taste: white text needs 4.5:1 (WCAG 1.4.3) against the
+     lightest pixel beneath it. Measured floor is between .58 (fails Getting
+     care at 4.44:1) and .66 (passes at 5.85:1), and it has to hold across the
+     whole band the links occupy — roughly 23% to 76% of the bar — hence the
+     long plateau before the fade. tools/check_contrast.py re-measures this and
+     fails if a photograph swap ever breaks it. */
   background: linear-gradient(to bottom,
     rgba(10, 12, 30, .72) 0%,
     rgba(10, 12, 30, .70) 80%,
     rgba(10, 12, 30, .34) 92%,
     rgba(10, 12, 30, 0) 100%);
-  border-bottom: 1px solid rgba(255, 255, 255, .22);
   transition: background .3s var(--ease), border-color .3s var(--ease);
 }
 
@@ -1262,3 +1261,46 @@ textarea.field__input { min-height: 8rem; line-height: 1.6; resize: vertical; }
   .faq__q::after { display: none; }
   .faq__q { padding-bottom: .3rem; }
 }
+
+/* --- About us profiles ---------------------------------------------------
+   The photo slot holds its space before any headshot exists, so dropping the
+   real images in later cannot reflow the page. */
+
+.people--profiles { grid-template-columns: 1fr; }
+@media (min-width: 46rem) { .people--profiles { grid-template-columns: 1fr 1fr; } }
+
+.person--profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.1rem;
+  align-content: start;
+}
+@media (min-width: 30rem) {
+  .person--profile { grid-template-columns: 5.5rem 1fr; gap: 1.4rem; }
+}
+
+.person__photo {
+  margin: 0;
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--blue-wash);
+  border: 1px solid var(--rule);
+  color: var(--navy);
+  font-family: var(--brand);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+}
+
+.person__photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.person--profile .person__name { font-size: 1.2rem; }
+.person--profile .person__bio { font-size: .98rem; line-height: 1.65; }

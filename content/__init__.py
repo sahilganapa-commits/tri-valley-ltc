@@ -1,6 +1,6 @@
 """Page content for the Tri-Valley Long Term Care site."""
 
-from . import coverage, directory_page, getting_care, help_faq, home, legal, paying
+from . import about, coverage, directory_page, getting_care, help_faq, home, legal, paying
 
 
 def build(directory, questions, regulatory):
@@ -8,7 +8,7 @@ def build(directory, questions, regulatory):
     ctx = {"directory": directory, "questions": questions, "regulatory": regulatory}
 
     built = []
-    for module in (home, getting_care, coverage, paying, directory_page, help_faq, legal):
+    for module in (home, getting_care, coverage, paying, directory_page, help_faq, legal, about):
         result = module.build(**ctx)
         built.extend(result if isinstance(result, list) else [result])
     return built

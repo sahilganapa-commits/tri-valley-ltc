@@ -12,7 +12,7 @@ show a half-old page, which looks like a rendering bug rather than a stale file.
 
 import sys
 from functools import partial
-from http.server import HTTPServer, SimpleHTTPRequestHandler
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
 SITE = Path(__file__).parent / "site"
@@ -38,7 +38,10 @@ def main():
     port = int(sys.argv[1]) if len(sys.argv) > 1 else 8000
     if not SITE.is_dir():
         sys.exit("site/ not found — run `python3 build.py` first.")
-    server = HTTPServer(("127.0.0.1", port), partial(Handler, directory=str(SITE)))
+    # Threaded: a single stalled connection (a headless browser that never
+    # closes, say) must not be able to block every other request.
+    server = ThreadingHTTPServer(("127.0.0.1", port), partial(Handler, directory=str(SITE)))
+    server.daemon_threads = True
     print(f"Serving {SITE.name}/ at http://localhost:{port}  (Ctrl-C to stop)")
     server.serve_forever()
 

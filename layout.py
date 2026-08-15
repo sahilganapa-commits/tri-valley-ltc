@@ -37,6 +37,7 @@ NAV = [
     ("paying-for-care.html", "Paying for care"),
     ("directory.html", "Care directory"),
     ("faq.html", "Q&A"),
+    ("about.html", "About us"),
 ]
 
 FOOTER_GUIDE = [
@@ -47,6 +48,7 @@ FOOTER_GUIDE = [
 ]
 
 FOOTER_MORE = [
+    ("about.html", "About us"),
     ("help.html", "Contact us"),
     ("faq.html", "Frequently asked questions"),
     ("white-paper.html", "2026 white paper"),
