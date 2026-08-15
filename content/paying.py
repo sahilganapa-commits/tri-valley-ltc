@@ -277,9 +277,9 @@ insurance, and we are not paid by anyone whose products are described on this pa
 ])}
 {note("Where a referral goes",
       "<p>With your consent, a financial-planning inquiry may be routed to a licensed professional "
-      "you select. The financial professional provides separate disclosures regarding services, "
-      "licensing, affiliations, fees, and insurance compensation before any engagement. See "
-      "<a href=\"help.html#referrals\">how referrals work</a> for the full disclosure.</p>", "info")}
+      "you select. That professional provides separate disclosures regarding services, licensing, "
+      "affiliations, fees, and insurance compensation before any engagement begins. "
+      "<a href=\"help.html\">Send us a message</a> to start.</p>", "info")}
 
 {seq(prev=("using-coverage.html", "Understanding and using your coverage"),
      nxt=("directory.html", "Tri-Valley care directory"))}

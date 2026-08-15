@@ -118,64 +118,6 @@ sent. In the meantime, email <a href="mailto:{PROGRAM_EMAIL}">{PROGRAM_EMAIL}</a
 reply within one business day.</p>
 </form>
 
-<h2 id="referrals">How referrals work</h2>
-<p>Some questions are ours to answer. Others need a licensed professional — an insurance agent,
-a financial adviser, a tax professional, an elder law attorney, or a care manager. Here is
-exactly what happens in that case.</p>
-{record([
-    ("1. You send the inquiry",
-     "<p>Through this form, or by email. Nothing goes anywhere else at this stage.</p>"),
-    ("2. We work out what kind of question it is",
-     "<p>Financial planning, care management, or care settings. Often we can simply answer it, or "
-     "point you at the right section of this guide.</p>"),
-    ("3. You choose, and you consent",
-     "<p>If a licensed professional would help, we tell you who and why. With your consent, the "
-     "inquiry is routed to the professional you select. You are never routed anywhere "
-     "automatically.</p>"),
-    ("4. They disclose, before anything else",
-     "<p>The professional provides their own disclosures about services, licensing, affiliations, "
-     "fees, and any insurance compensation, before any engagement begins.</p>"),
-])}
-{note("Affiliation disclosure",
-      "<p>The Tri-Valley Long Term Care Resource Program provides general education and referrals. "
-      "Any professional you may be referred to operates a separate business, which is not part of "
-      "this nonprofit. A referral does not require you to purchase a product or engage a particular "
-      "professional. Any advisory fees, insurance commissions, affiliations, or compensation "
-      "arrangements are disclosed to you before services are provided. This program receives no "
-      "compensation for referrals.</p>")}
-
-<h2>Financial planning contact</h2>
-<p>Families with questions about funding care, reviewing an existing policy, or protecting a
-spouse are commonly referred to:</p>
-{record([
-    ("Professional", "<p>Dr. Sherry Hu, CFP&reg;<br>Peace of Mind Finance</p>"),
-    ("Website", '<p><a href="https://pomfinance.com">POMFinance.com</a></p>'),
-    ("Email", '<p><a href="mailto:sherry.hu@pomfinance.com">sherry.hu@pomfinance.com</a></p>'),
-    ("Phone", '<p><a href="tel:9255582712"><span class="data">(925) 558-2712</span></a></p>'),
-    ("Appointments",
-     '<p><a href="https://calendly.com/drsherryhu/peace-of-mind-finance-consulting-30min">'
-     'Book a 30-minute consultation</a></p>'),
-    ("Please note",
-     "<p>Peace of Mind Finance is a separate financial-services business, not part of this "
-     "nonprofit program. A referral does not require you to purchase anything.</p>"),
-])}
-
-<h2>Other places to get free help</h2>
-{record([
-    ("Alameda County ADRC",
-     '<p>Free multilingual navigation for Medi-Cal, IHSS, caregiver supports, adult day programs, '
-     'transportation, housing, and legal resources.<br>'
-     '<a href="https://alameda.my-adrc.org/">alameda.my-adrc.org</a> &middot; dial '
-     '<span class="data">2-1-1</span></p>'),
-    ("Long-Term Care Ombudsman",
-     '<p>Free, independent help with resident rights and complaints in licensed long-term care '
-     'settings.<br><a href="https://aging.ca.gov/Programs_and_Services/Long-Term_Care_Ombudsman/">'
-     'aging.ca.gov</a></p>'),
-    ("California Dept. of Insurance",
-     '<p>Regulates long-term care insurance and helps consumers with claim delays and disputes.<br>'
-     '<a href="https://www.insurance.ca.gov/">insurance.ca.gov</a> &middot; '
-     '<span class="data">1-800-927-4357</span></p>'),
-])}
 </div>
 </div>
 </section>"""
