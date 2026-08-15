@@ -124,7 +124,6 @@ price today. <a href="using-coverage-carrier-landscape.html">The carrier landsca
 <div class="shell">
 <div class="band__head">
 <h2>The people behind this program</h2>
-<p>More about each of us on the <a href="about.html">About us</a> page.</p>
 </div>
 {founders}
 </div>

@@ -2,38 +2,37 @@
 
 Headshots are not supplied yet. Each card reserves the space and shows the
 person's initials, so the page is presentable now and a photograph drops in
-later without the layout shifting. Roles are drawn from each person's own
-biography rather than invented.
+later without the layout shifting.
 """
 
 from layout import cta, esc, page, pagehead
 
 PEOPLE = [
-    ("Dr. Sherry Hu", "Co-founder &middot; Board of Directors",
+    ("Dr. Sherry Hu", "Co-founder",
      "Dr. Sherry Hu is a retirement-planning professional, nonprofit founder, community leader, "
      "and Mayor of Dublin, California. After seeing many families struggle to understand and "
      "prepare for long-term care, she helped create this program to make reliable information and "
      "local resources easier to access."),
 
-    ("Dominic Scotto", "Co-founder &middot; Board of Directors",
+    ("Dominic Scotto", "Co-founder",
      "Dominic Scotto is President of From The Heart, a Bay Area caregiver referral agency serving "
      "families since 2002, with a prior career in health insurance and employee benefits and later "
      "in technology product leadership. He helped create this program to give families clear, "
      "practical guidance on arranging and paying for care before a crisis forces the decision."),
 
-    ("Amanda Scotto", "Diablo Valley Marketing &middot; From the Heart Home Care",
+    ("Amanda Scotto", "Co-founder",
      "Amanda Scotto is a digital marketing professional, founder of Diablo Valley Marketing, and a "
      "leader at From the Heart Home Care, where she helps connect families with trusted care "
      "resources and support throughout the Bay Area. She is passionate about making complex senior "
      "care information easy to understand and accessible for seniors, families, and caregivers."),
 
-    ("Milo Takemoto", "Research and outreach",
+    ("Milo Takemoto", "Co-founder",
      "Milo is a local high school student, researcher at a leading energy think tank, founder of a "
      "Tri-Valley nonprofit consulting firm, and an internationally ranked Ethics Bowl competitor. "
      "With relatives facing neurodegenerative disease, Milo joined Tri-Valley LTC to ensure seniors "
      "understand long-term care costs before any crisis."),
 
-    ("Sahil Ganapa", "Lead website developer",
+    ("Sahil Ganapa", "Co-founder",
      "Sahil is a student at Foothill High School with a strong interest in computer science and UX "
      "design. He is a five-time hackathon winner and the founder of California STEM Innovators, an "
      "organization dedicated to expanding STEM knowledge through webinars, hackathons, and "

@@ -67,17 +67,7 @@ FAQS = [
 
 def _help():
     body = f"""<section class="band">
-<div class="shell layout">
-<aside class="rail" aria-label="What to expect">
-<p class="rail__title">What to expect</p>
-{record([
-    ("Response time", "<p>Usually within one business day.</p>"),
-    ("Cost", "<p>Free. We are a nonprofit program.</p>"),
-    ("What we do not do",
-     "<p>We do not sell insurance, care, or placement services, and we accept no referral fees "
-     "from providers.</p>"),
-])}
-</aside>
+<div class="shell">
 <div class="prose">
 
 <h1>Send us a message</h1>
