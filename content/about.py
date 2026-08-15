@@ -48,19 +48,25 @@ def _initials(name):
     return "".join(p[0] for p in parts[:2]).upper()
 
 
-def build(**_):
+def people_cards(heading_level=2):
+    """The five profile cards. Shared with the home page so the biographies
+    live in exactly one place and cannot drift apart."""
+    h = f"h{heading_level}"
     cards = []
     for name, role, bio in PEOPLE:
         cards.append(
             '<article class="person person--profile">'
             f'<p class="person__photo" aria-hidden="true">{esc(_initials(name))}</p>'
             '<div class="person__text">'
-            f'<h2 class="person__name">{esc(name)}</h2>'
+            f'<{h} class="person__name">{esc(name)}</{h}>'
             f'<p class="person__role">{role}</p>'
             f'<p class="person__bio">{esc(bio)}</p>'
             "</div></article>"
         )
+    return f'<div class="people people--profiles">{"".join(cards)}</div>'
 
+
+def build(**_):
     body = pagehead(
         "",
         "About us",
@@ -78,7 +84,7 @@ accept no referral fees from the providers in our
 <a href="directory.html">directory</a>.</p>
 </div>
 
-<div class="people people--profiles">{"".join(cards)}</div>
+{people_cards()}
 </div>
 </section>
 

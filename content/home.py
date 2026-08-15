@@ -7,6 +7,9 @@ be pointed at one page, quickly.
 
 from layout import VERIFIED, asset_version, cta, esc, page, record
 
+# One source of truth for the biographies, shared with the About us page.
+from .about import people_cards
+
 # Drop a licensed photograph at this path and it fills the hero. Until then
 # the hero falls back to the brand gradient, which is why nothing looks broken.
 HERO_IMAGE = "assets/hero.jpg"
@@ -54,21 +57,7 @@ def build(directory, **_):
          "insurance carrier. We help you arrive at those conversations prepared."),
     ])
 
-    founders = """<div class="people">
-<article class="person">
-<h3 class="person__name">Dr. Sherry Hu</h3>
-<p class="person__role">Co-founder &middot; Board of Directors</p>
-<p class="person__bio">Dr. Sherry Hu is a retirement-planning professional, nonprofit founder,
-community leader, and Mayor of Dublin, California. After seeing many families struggle to
-understand and prepare for long-term care, she helped create this program to make reliable
-information and local resources easier to access.</p>
-</article>
-<article class="person">
-<h3 class="person__name">Dominic Scotto</h3>
-<p class="person__role">Co-founder &middot; Board of Directors</p>
-<p class="person__bio todo">Biography to be added before launch.</p>
-</article>
-</div>"""
+    founders = people_cards(heading_level=3)
 
     body = f"""<section class="hero hero--cover">
 <img class="hero__img" src="{HERO_IMAGE}?v={asset_version('hero.jpg')}"
@@ -134,7 +123,8 @@ price today. <a href="using-coverage-carrier-landscape.html">The carrier landsca
 <section class="band">
 <div class="shell">
 <div class="band__head">
-<h2>Our founders</h2>
+<h2>The people behind this program</h2>
+<p>More about each of us on the <a href="about.html">About us</a> page.</p>
 </div>
 {founders}
 </div>
