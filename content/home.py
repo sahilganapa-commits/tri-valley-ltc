@@ -123,7 +123,7 @@ price today. <a href="using-coverage.html">Using your coverage</a></p>
 <section class="band">
 <div class="shell">
 <div class="band__head">
-<h2>The people behind this program</h2>
+<h2>About us</h2>
 </div>
 {founders}
 </div>
