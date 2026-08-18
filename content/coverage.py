@@ -22,8 +22,6 @@ SECTIONS = [
      "What policies typically cover, how benefits are paid, and what to ask any home care provider."),
     ("using-coverage-staying-on-claim.html", "Staying on claim",
      "The monthly routine that keeps benefits flowing, and what to do when they stall."),
-    ("using-coverage-carrier-landscape.html", "The carrier and program landscape",
-     "Why your carrier stopped selling policies, and why that does not affect your claim."),
 ]
 
 RAIL_LINKS = [(href, title) for href, title, _ in SECTIONS]
@@ -34,7 +32,7 @@ def _rail(current):
 
 
 def _eyebrow(n):
-    return f"Using your coverage · Section {n} of 6"
+    return f"Using your coverage · Section {n} of 5"
 
 
 def _prev_next(i):
@@ -56,37 +54,10 @@ def _hub():
     body = hero_page("using-coverage.jpg",
                    "An older couple sit close together on a weathered bench, looking out over the sea.",
                    "Understanding and using your coverage",
-                   "Six sections, from recognizing the need through filing a claim and keeping benefits flowing.",
+                   "Five sections, from recognizing the need through filing a claim and keeping benefits flowing.",
                    "center 45%") + f"""<section class="band">
 <div class="shell">
-{note("If there is no policy in the family",
-      "<p>Most of this still applies — particularly Sections 1 and 4, which are about recognizing "
-      "care needs and comparing providers regardless of who pays. For funding without insurance, "
-      "start with <a href=\"paying-for-care.html\">Paying for care</a>.</p>", "info")}
 <div class="doors" style="grid-template-columns:1fr">{cards}</div>
-</div>
-</section>
-
-<section class="band band--card">
-<div class="shell">
-<div class="band__head"><h2>The shortest possible version</h2></div>
-{record([
-    ("Find the contract",
-     "<p>Not the annual statement — the full policy, riders, and amendments. You are entitled to a "
-     "copy from the carrier if you cannot find it.</p>"),
-    ("Start early",
-     "<p>Sixty to ninety days or more commonly pass between the first phone call and the first "
-     "benefit payment. You can open a claim before choosing a provider.</p>"),
-    ("Get provider rules in writing",
-     "<p>Care from a provider your policy does not recognize is generally not reimbursable, even "
-     "when the care was exactly right.</p>"),
-    ("Keep records from day one",
-     "<p>Including during the waiting period. Most interrupted claims are caused by paperwork, not "
-     "by health.</p>"),
-    ("Claim the premium waiver",
-     "<p>Most policies stop charging premiums while you are on claim — but it usually has to be "
-     "requested rather than happening automatically.</p>"),
-])}
 </div>
 </section>
 
@@ -97,7 +68,7 @@ def _hub():
     return page(
         HUB,
         "Understanding and using your coverage",
-        "A six-part guide for families using a long-term care insurance policy: recognizing the "
+        "A five-part guide for families using a long-term care insurance policy: recognizing the "
         "need, reading the policy, filing a claim, choosing approved providers, and staying on claim.",
         body,
         overlay=True,
@@ -408,78 +379,6 @@ in writing if it is unresolved.</p>
                 body, current=HUB)
 
 
-def _section_6():
-    prev, nxt = _prev_next(5)
-    prose = f"""<p>Families are often confused to discover that their carrier &ldquo;no longer
-sells long-term care insurance.&rdquo; Understanding the landscape prevents two costly mistakes:
-assuming an old policy is worthless, and cancelling coverage that could never be replaced
-today.</p>
-
-<h2>Carriers currently selling coverage</h2>
-<p>Only a small number of insurers still sell new stand-alone long-term care policies — roughly
-a half dozen nationally — with names including Mutual of Omaha, National Guardian Life, New York
-Life, and Northwestern Mutual, alongside hybrid life-insurance-plus-LTC products from companies
-such as Nationwide, Lincoln Financial, OneAmerica, Securian, and Brighthouse. Purchasing
-decisions are covered in <a href="paying-for-care.html">Paying for care</a> and the
-<a href="white-paper.html">2026 white paper</a>.</p>
-
-<h2>Legacy carriers still servicing and paying claims</h2>
-<p>This is the list most relevant to families using this guide, because most policies held by
-Tri-Valley seniors were purchased 15 to 25 years ago. Companies including Genworth, John Hancock,
-Transamerica, CNA, MetLife, Unum, Prudential, and Bankers Life stopped selling new individual
-policies but continue to administer existing ones and pay claims — sometimes through third-party
-administrators, so the name on your claim correspondence may differ from the name on your
-policy.</p>
-{note("Two points that matter more than any other on this page",
-      "<p><strong>Your policy remains valid and claims are payable</strong> even though the carrier "
-      "exited the sales market.</p>"
-      "<p><strong>Do not cancel a legacy policy without professional advice.</strong> Older "
-      "policies often contain benefits — lifetime benefit periods, strong inflation riders — that "
-      "cannot be purchased at any price today. Even when facing a steep premium increase, options "
-      "such as reduced-benefit alternatives or contingent nonforfeiture are usually better than "
-      "walking away. Consult a financial adviser before making any change.</p>")}
-
-<h2>Why premiums rose on older policies</h2>
-<p>Several assumptions used in early pricing proved inaccurate: more policyholders kept their
-coverage than insurers expected, claims and care duration ran higher than projected for some
-blocks, long periods of low interest rates reduced investment income, and some early products
-offered rich benefits at prices that were difficult to sustain.</p>
-<p>Premium increases generally apply to a class of similar policies after state regulatory review.
-They are not based on one policyholder becoming older, sicker, or filing a claim.
-<strong>Guaranteed renewable</strong> means coverage cannot be individually canceled if premiums
-are paid — it does not mean the premium is guaranteed never to increase.</p>
-{note("A balanced conclusion",
-      "<p>The premium-increase experience does not mean traditional policies failed. Many "
-      "policyholders received valuable benefits that protected families and paid for years of care. "
-      "It does mean consumers should understand premium stability, benefit-reduction options, "
-      "carrier history, inflation design, and the difference between guaranteed coverage and "
-      "guaranteed pricing.</p>", "plain")}
-
-<h2>Other programs that may help pay for care</h2>
-<p>Beyond private long-term care insurance, some families qualify for help through government
-programs. These have their own rules and application processes.</p>
-{record([
-    ("VA benefits",
-     "<p>For wartime veterans and surviving spouses who meet service, medical, and financial "
-     "criteria. <a href=\"https://www.va.gov/\">va.gov</a></p>"),
-    ("Medi-Cal and IHSS",
-     "<p>Long-term services and supports, and In-Home Supportive Services, for those who meet "
-     "eligibility rules. Start with your county IHSS office or the "
-     "<a href=\"https://alameda.my-adrc.org/\">Alameda County ADRC</a>.</p>"),
-    ("Public-employee programs",
-     "<p>Such as CalPERS Long-Term Care. Contact your program&rsquo;s plan administrator.</p>"),
-])}"""
-
-    body = article(_eyebrow(6), "The carrier and program landscape",
-                   "Why your carrier stopped selling policies, why that does not affect your "
-                   "claim, and why cancelling an old policy is usually a mistake.",
-                   _rail(SECTIONS[5][0]), prose, prev, nxt)
-    return page(SECTIONS[5][0], SECTIONS[5][1],
-                "Why long-term care carriers left the market, why legacy policies remain valid "
-                "and payable, why premiums rose, and other programs that help pay for care.",
-                body, current=HUB)
-
-
 def build(**_):
     return [_hub(), _section_1(), _section_2(), _section_3(),
-            _section_4(), _section_5(), _section_6()]
+            _section_4(), _section_5()]

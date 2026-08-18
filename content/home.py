@@ -114,7 +114,7 @@ before it feels urgent. <a href="using-coverage-filing-a-claim.html">Filing a cl
 <h3 class="card__title">Do not cancel an old policy without advice</h3>
 <p>A carrier leaving the market does not cancel your policy. Older policies often contain
 benefits — lifetime benefit periods, strong inflation riders — that cannot be bought at any
-price today. <a href="using-coverage-carrier-landscape.html">The carrier landscape</a></p>
+price today. <a href="using-coverage.html">Using your coverage</a></p>
 </article>
 </div>
 </div>

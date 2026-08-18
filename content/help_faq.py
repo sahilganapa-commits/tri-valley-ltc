@@ -43,7 +43,7 @@ FAQS = [
      "policies are still paid — sometimes through a third-party administrator, so the name on your "
      "correspondence may differ from the name on your policy. Do not cancel a legacy policy without "
      "professional advice; older policies often contain benefits that cannot be bought at any price "
-     "today. See <a href=\"using-coverage-carrier-landscape.html\">the carrier landscape</a>.</p>"),
+     "today.</p>"),
     ("How long does a claim take?",
      "<p>Commonly 60 to 90 days or more between the first phone call and the first benefit payment, "
      "once you account for claim paperwork, the carrier&rsquo;s assessment, and the elimination "
