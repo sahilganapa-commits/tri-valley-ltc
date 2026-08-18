@@ -57,7 +57,7 @@ def build(directory, **_):
          "insurance carrier. We help you arrive at those conversations prepared."),
     ])
 
-    founders = people_cards(heading_level=3)
+    founders = people_cards()
 
     body = f"""<section class="hero hero--cover">
 <img class="hero__img" src="{HERO_IMAGE}?v={asset_version('hero.jpg')}"

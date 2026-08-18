@@ -1304,3 +1304,20 @@ textarea.field__input { min-height: 8rem; line-height: 1.6; resize: vertical; }
 
 .person--profile .person__name { font-size: 1.2rem; }
 .person--profile .person__bio { font-size: .98rem; line-height: 1.65; }
+
+/* --- About us: group headings within the leadership band ----------------- */
+
+.people__group {
+  margin: 2.5rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  font-size: 1.15rem;
+}
+.people__group:first-of-type { margin-top: 0; padding-top: 0; border-top: 0; }
+.people__groupnote { margin: .6rem 0 0; color: var(--muted); max-width: 62ch; }
+.people__group + .people--profiles,
+.people__groupnote + .people--profiles { margin-top: 1.5rem; }
+
+/* A heading that sits outside the measured prose column. */
+.band__standalone { margin-top: 3rem; }
+.band__standalone-note { margin: .6rem 0 0; color: var(--muted); max-width: 62ch; }
