@@ -8,7 +8,7 @@ be pointed at one page, quickly.
 from layout import VERIFIED, asset_version, cta, esc, page, record
 
 # One source of truth for the biographies, shared with the About us page.
-from .about import people_cards
+from .about import about_sections
 
 # Drop a licensed photograph at this path and it fills the hero. Until then
 # the hero falls back to the brand gradient, which is why nothing looks broken.
@@ -57,7 +57,6 @@ def build(directory, **_):
          "insurance carrier. We help you arrive at those conversations prepared."),
     ])
 
-    founders = people_cards()
 
     body = f"""<section class="hero hero--cover">
 <img class="hero__img" src="{HERO_IMAGE}?v={asset_version('hero.jpg')}"
@@ -120,12 +119,12 @@ price today. <a href="using-coverage.html">Using your coverage</a></p>
 </div>
 </section>
 
-<section class="band">
+<section class="band" id="about">
 <div class="shell">
 <div class="band__head">
 <h2>About us</h2>
 </div>
-{founders}
+{about_sections(level=3)}
 </div>
 </section>
 

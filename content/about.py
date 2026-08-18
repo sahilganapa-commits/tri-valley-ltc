@@ -67,27 +67,25 @@ def people_cards(people=None, heading_level=3):
     return f'<div class="people people--profiles">{"".join(cards)}</div>'
 
 
-def build(**_):
-    body = pagehead(
-        "",
-        "About us",
-        "Who we are, who we serve, and how we help families approach long-term care with "
-        "knowledge and preparation.",
-    ) + f"""<section class="band">
-<div class="shell">
-<div class="prose" style="max-width:72ch">
+def about_sections(level=2):
+    """Mission, vision, who we serve, what we do, and the leadership — shared
+    between the About us page and the home page so there is one source of
+    truth. `level` shifts the headings: the About us page runs them at h2
+    under its h1, the home page at h3 under its section h2."""
+    h, sub = f"h{level}", f"h{level + 1}"
+    return f"""<div class="prose" style="max-width:72ch">
 
-<h2>Mission</h2>
+<{h}>Mission</{h}>
 <p>Tri-Valley LTC empowers families to plan for, understand, and navigate long-term care with
 confidence. We provide trusted education, practical resources, and community support to help
 families understand long-term care options, prepare financially, access appropriate care, and
 make informed decisions throughout the aging journey.</p>
 
-<h2>Vision</h2>
+<{h}>Vision</{h}>
 <p>A community where every family can approach long-term care with knowledge, preparation,
 dignity, and peace of mind.</p>
 
-<h2>Who we serve</h2>
+<{h}>Who we serve</{h}>
 {ul([
     "Adults planning for their future care needs",
     "Families caring for aging parents or loved ones",
@@ -99,7 +97,7 @@ dignity, and peace of mind.</p>
 beyond the region.</p>
 </div>
 
-<h2 class="band__standalone">What we do</h2>
+<{h} class="band__standalone">What we do</{h}>
 <p class="band__standalone-note">Tri-Valley LTC organizes its work around four areas.</p>
 {record([
     ("Learn",
@@ -119,16 +117,11 @@ beyond the region.</p>
      "senior organizations, volunteers, students, and other partners serving individuals and their "
      "families.</p>"),
 ])}
-</div>
-</section>
 
-<section class="band band--card">
-<div class="shell">
-<div class="band__head">
-<h2>Our leadership</h2>
-<p>Tri-Valley LTC brings together community, care, financial, and technology experience to
-provide families with practical long-term care education and resources.</p>
-</div>
+<{h} class="band__standalone">Our leadership</{h}>
+<p class="band__standalone-note">Tri-Valley LTC brings together community, care, financial, and
+technology experience to provide families with practical long-term care education and
+resources.</p>
 
 <figure class="teamphoto">
 <img src="assets/leadership.jpg?v={asset_version('leadership.jpg')}"
@@ -136,13 +129,24 @@ alt="The four members of Tri-Valley Long Term Care standing side by side with th
 beneath a wall sign reading Tri-Valley Long Term Care.">
 </figure>
 
-<h3 class="people__group">Co-founders</h3>
-{people_cards(CO_FOUNDERS, heading_level=4)}
+<{sub} class="people__group">Co-founders</{sub}>
+{people_cards(CO_FOUNDERS, heading_level=level + 2)}
 
-<h3 class="people__group">Student community leaders</h3>
+<{sub} class="people__group">Student community leaders</{sub}>
 <p class="people__groupnote">Our student community leaders support outreach, share educational
 information with the community, and help make long-term care resources easier to access.</p>
-{people_cards(STUDENT_LEADERS, heading_level=4)}
+{people_cards(STUDENT_LEADERS, heading_level=level + 2)}"""
+
+
+def build(**_):
+    body = pagehead(
+        "",
+        "About us",
+        "Who we are, who we serve, and how we help families approach long-term care with "
+        "knowledge and preparation.",
+    ) + f"""<section class="band">
+<div class="shell">
+{about_sections(level=2)}
 </div>
 </section>
 
