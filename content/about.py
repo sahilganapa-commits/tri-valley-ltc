@@ -5,7 +5,7 @@ are not supplied yet, so each card reserves the space and shows the person's
 initials; dropping a photograph in later cannot shift the layout.
 """
 
-from layout import cta, esc, page, pagehead, record, ul
+from layout import asset_version, cta, esc, page, pagehead, record, ul
 
 CO_FOUNDERS = [
     ("Dr. Sherry Hu, CFP®", "Co-Founder",
@@ -129,6 +129,12 @@ beyond the region.</p>
 <p>Tri-Valley LTC brings together community, care, financial, and technology experience to
 provide families with practical long-term care education and resources.</p>
 </div>
+
+<figure class="teamphoto">
+<img src="assets/leadership.jpg?v={asset_version('leadership.jpg')}"
+alt="The four members of Tri-Valley Long Term Care standing side by side with their hands joined,
+beneath a wall sign reading Tri-Valley Long Term Care.">
+</figure>
 
 <h3 class="people__group">Co-founders</h3>
 {people_cards(CO_FOUNDERS, heading_level=4)}

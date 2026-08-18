@@ -1321,3 +1321,18 @@ textarea.field__input { min-height: 8rem; line-height: 1.6; resize: vertical; }
 /* A heading that sits outside the measured prose column. */
 .band__standalone { margin-top: 3rem; }
 .band__standalone-note { margin: .6rem 0 0; color: var(--muted); max-width: 62ch; }
+
+/* --- Team photograph on About us ---------------------------------------- */
+
+.teamphoto {
+  margin: 0 0 2.5rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+}
+.teamphoto img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
