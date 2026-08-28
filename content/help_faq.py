@@ -1,6 +1,6 @@
 """Contact, frequently asked questions, and the white paper."""
 
-from layout import (PROGRAM_EMAIL, VERIFIED, faq_list, hero_page, esc, note, page, pagehead,
+from layout import (FORM_ENDPOINT, PROGRAM_EMAIL, VERIFIED, faq_list, hero_page, esc, note, page, pagehead,
                     rail, record, table, ul)
 
 FAQS = [
@@ -71,7 +71,9 @@ def _help():
 <div class="prose">
 
 <h1>Send us a message</h1>
-<form class="form" data-form>
+<form class="form" data-form action="{FORM_ENDPOINT}" method="POST">
+<input type="hidden" name="_subject" value="Tri-Valley LTC — contact form">
+<input class="form__gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
 <div class="form__row">
 <label class="field"><span class="field__label">Your name</span>
 <input class="field__input" type="text" name="name" autocomplete="name" required></label>
@@ -102,10 +104,7 @@ buy anything.</span>
 <button class="btn btn--primary" type="submit">Send message</button>
 <p class="form__note">We use your information only to respond to your inquiry. See the
 <a href="privacy.html">privacy policy</a>.</p>
-<p class="note note--info" data-form-status hidden tabindex="-1" role="status" aria-live="polite">
-<strong>This form is not connected yet.</strong> The site is still being set up, so nothing was
-sent. In the meantime, email <a href="mailto:{PROGRAM_EMAIL}">{PROGRAM_EMAIL}</a> and we will
-reply within one business day.</p>
+<p class="note note--info" data-form-status hidden tabindex="-1" role="status" aria-live="polite"></p>
 </form>
 
 </div>
@@ -140,7 +139,9 @@ with full source citations.</p>
 <p>You can <a href="white-paper.html">read the whole thing on this site</a>, free and with no
 email address required. If you would rather have a copy sent to you, leave an address below.</p>
 
-<form class="form" data-form>
+<form class="form" data-form action="{FORM_ENDPOINT}" method="POST">
+<input type="hidden" name="_subject" value="Tri-Valley LTC — white paper request">
+<input class="form__gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
 <label class="field"><span class="field__label">Email address</span>
 <input class="field__input" type="email" name="email" autocomplete="email" required></label>
 <label class="field"><span class="field__label">Name (optional)</span>
@@ -153,10 +154,7 @@ and every message has an unsubscribe link.</span>
 <button class="btn btn--primary" type="submit">Send me the white paper</button>
 <p class="form__note">Your address is used to send the paper and, if you tick the box, program
 updates. See the <a href="privacy.html">privacy policy</a>.</p>
-<p class="note note--info" data-form-status hidden tabindex="-1" role="status" aria-live="polite">
-<strong>This form is not connected yet.</strong> The site is still being set up, so nothing was
-sent. <a href="white-paper.html">Read the white paper here</a> in the meantime, or email
-<a href="mailto:{PROGRAM_EMAIL}">{PROGRAM_EMAIL}</a>.</p>
+<p class="note note--info" data-form-status hidden tabindex="-1" role="status" aria-live="polite"></p>
 </form>
 </div>
 </div>

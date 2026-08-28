@@ -108,9 +108,12 @@ statement says so plainly — keep it that way, and update it when that changes.
 
 ## Before this goes live
 
-1. **Wire up the forms.** Both the contact form and the white-paper download
-   are unconnected and say so on screen. Replace the `data-form` handler in
-   `assets/site.js`, or drop the fields into Squarespace form blocks.
+1. **Confirm where form submissions land.** Both forms post to Formspree
+   (`FORM_ENDPOINT` in `layout.py`). Check the notification address on the
+   Formspree form is one someone actually reads, and note the free tier caps
+   submissions at 50 a month. `assets/site.js` posts in the background so the
+   visitor stays on the page; with JavaScript off the form submits natively
+   to the same endpoint and Formspree shows its own confirmation.
 2. **Set the program's real email address.** `PROGRAM_EMAIL` in `layout.py` is
    a placeholder (`hello@trivalleyltc.org`) and appears on several pages.
 3. **Fill in Dominic Scotto's biography** in `content/home.py`. The source

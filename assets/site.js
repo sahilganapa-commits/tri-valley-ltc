@@ -7,6 +7,9 @@
 
   document.documentElement.classList.add('is-ready');
 
+  // Shown as the fallback whenever a form post fails.
+  var CONTACT_EMAIL = 'hello@trivalleyltc.org';
+
   /* ------------------------------------------------------------ nav ---- */
   var toggle = document.querySelector('[data-navtoggle]');
   var nav = document.querySelector('[data-nav]');
@@ -224,16 +227,49 @@
   }
 
   /* ------------------------------------------------------------ forms -- */
-  /* No back end yet. Rather than silently drop a family's message, the form
-     says plainly what to do instead. */
+  /* Posts to the form service in the background so the visitor stays on the
+     page. With JavaScript off the form submits natively to the same endpoint
+     and the service shows its own confirmation — nothing is lost either way. */
   Array.prototype.forEach.call(document.querySelectorAll('[data-form]'), function (form) {
+    var status = form.querySelector('[data-form-status]');
+    var button = form.querySelector('button[type="submit"]');
+    if (!status || !form.getAttribute('action')) { return; }
+
+    function say(message, ok) {
+      status.hidden = false;
+      status.className = 'note ' + (ok ? 'note--info' : 'note');
+      status.innerHTML = message;
+      status.focus();
+    }
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var status = form.querySelector('[data-form-status]');
-      if (status) {
-        status.hidden = false;
-        status.focus();
-      }
+      var label = button ? button.textContent : '';
+      if (button) { button.disabled = true; button.textContent = 'Sending…'; }
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      }).then(function (res) {
+        if (res.ok) {
+          form.reset();
+          say('<strong>Thank you.</strong> Your message has been sent. We reply within one ' +
+              'business day.', true);
+        } else {
+          return res.json().then(function (data) {
+            var why = (data && data.errors) ? data.errors.map(function (x) { return x.message; }).join(', ')
+                                            : 'Something went wrong at our end.';
+            say('<strong>That did not send.</strong> ' + why +
+                ' Please email <a href="mailto:' + CONTACT_EMAIL + '">' + CONTACT_EMAIL + '</a> instead.');
+          });
+        }
+      }).catch(function () {
+        say('<strong>That did not send.</strong> Check your connection, or email ' +
+            '<a href="mailto:' + CONTACT_EMAIL + '">' + CONTACT_EMAIL + '</a> instead.');
+      }).then(function () {
+        if (button) { button.disabled = false; button.textContent = label; }
+      });
     });
   });
 })();

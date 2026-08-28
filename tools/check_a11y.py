@@ -146,6 +146,12 @@ def check(path):
     for tag, a, wrapped in p.fields:
         if a.get("type") in ("hidden", "submit", "button"):
             continue
+        # aria-hidden removes the control from the accessibility tree entirely,
+        # so no assistive technology can reach it and a label would be pointless.
+        # The spam honeypot is the only such field on this site; it is also
+        # display:none and tabindex=-1, so no visitor meets it either.
+        if a.get("aria-hidden") == "true":
+            continue
         fid = a.get("id")
         labelled = wrapped or (fid and fid in p.labels_for) \
             or "aria-label" in a or "aria-labelledby" in a

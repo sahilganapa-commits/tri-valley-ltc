@@ -1336,3 +1336,7 @@ textarea.field__input { min-height: 8rem; line-height: 1.6; resize: vertical; }
   width: 100%;
   height: auto;
 }
+
+/* Honeypot: a field only a bot fills in. Hidden from sight and from the
+   accessibility tree, so no real visitor ever encounters it. */
+.form__gotcha { display: none; }

@@ -29,6 +29,10 @@ VERIFIED = "July 27, 2026"
 # be obvious in review rather than to look finished.
 PROGRAM_EMAIL = "hello@trivalleyltc.org"
 
+# Formspree receives both form posts. Swapping providers means changing
+# this one line plus the fetch in assets/site.js.
+FORM_ENDPOINT = "https://formspree.io/f/mqpkkooj"
+
 # ---------------------------------------------------------------- navigation
 
 NAV = [

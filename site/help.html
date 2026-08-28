@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Poppins:wght@500;600;700&family=Public+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/styles.css?v=4a75590a">
+<link rel="stylesheet" href="assets/styles.css?v=8bca2855">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -33,7 +33,9 @@
 <div class="prose">
 
 <h1>Send us a message</h1>
-<form class="form" data-form>
+<form class="form" data-form action="https://formspree.io/f/mqpkkooj" method="POST">
+<input type="hidden" name="_subject" value="Tri-Valley LTC — contact form">
+<input class="form__gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
 <div class="form__row">
 <label class="field"><span class="field__label">Your name</span>
 <input class="field__input" type="text" name="name" autocomplete="name" required></label>
@@ -64,10 +66,7 @@ buy anything.</span>
 <button class="btn btn--primary" type="submit">Send message</button>
 <p class="form__note">We use your information only to respond to your inquiry. See the
 <a href="privacy.html">privacy policy</a>.</p>
-<p class="note note--info" data-form-status hidden tabindex="-1" role="status" aria-live="polite">
-<strong>This form is not connected yet.</strong> The site is still being set up, so nothing was
-sent. In the meantime, email <a href="mailto:hello@trivalleyltc.org">hello@trivalleyltc.org</a> and we will
-reply within one business day.</p>
+<p class="note note--info" data-form-status hidden tabindex="-1" role="status" aria-live="polite"></p>
 </form>
 
 </div>
@@ -112,6 +111,6 @@ own device. Nothing is sent to us. <a href="privacy.html">Privacy policy</a>.</p
 </div>
 </div>
 </div>
-<script src="assets/site.js?v=1381d8eb"></script>
+<script src="assets/site.js?v=b7f28155"></script>
 </body>
 </html>
