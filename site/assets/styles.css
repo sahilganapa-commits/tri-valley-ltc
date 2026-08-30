@@ -1079,6 +1079,9 @@ textarea.field__input { min-height: 8rem; line-height: 1.6; resize: vertical; }
 /* ---------------------------------------------------------------- forms -- */
 
 .form { display: grid; gap: 1.25rem; max-width: 38rem; }
+/* display:grid here outranks the browser's own [hidden] rule, so hiding the
+   form after a successful send needs saying explicitly. */
+.form[hidden] { display: none; }
 .form__row { display: grid; gap: 1.25rem; grid-template-columns: 1fr; }
 @media (min-width: 40rem) { .form__row { grid-template-columns: 1fr 1fr; } }
 .form__consent { display: flex; gap: .75rem; align-items: flex-start; font-size: .95rem; color: var(--muted); }
@@ -1370,4 +1373,48 @@ textarea.field__input { min-height: 8rem; line-height: 1.6; resize: vertical; }
    the contact details rather than crowding them. */
 @media (min-width: 64rem) {
   .layout--contact { grid-template-columns: 17rem 1fr; gap: 6.5rem; }
+}
+
+/* ------------------------------------------------------------- dialog -- */
+/* The sent confirmation, in the middle of the screen. A notice further down
+   the page is easy to miss, and someone who is not sure a message went
+   through sends it again. Opened with showModal(), so the browser handles
+   the focus trap, Escape, and making the page behind it inert. */
+.modal {
+  width: min(30rem, calc(100vw - 2rem));
+  max-height: calc(100vh - 2rem);
+  overflow: auto;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--ink);
+  box-shadow: 0 24px 60px rgba(26, 29, 51, .32);
+}
+.modal::backdrop { background: rgba(26, 29, 51, .58); }
+.modal__inner {
+  border-top: 4px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 2.1rem 2rem 1.8rem;
+  text-align: center;
+}
+.modal__title {
+  margin: 0 0 .7rem;
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(1.35rem, 1.1rem + .8vw, 1.7rem);
+  line-height: 1.25;
+  color: var(--navy);
+}
+.modal__body { margin: 0 0 1.6rem; color: var(--muted); }
+.modal [data-modal-close] { width: 100%; justify-content: center; }
+
+.modal[open] { animation: modal-in .22s var(--ease) both; }
+.modal[open]::backdrop { animation: backdrop-in .22s var(--ease) both; }
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(8px) scale(.97); }
+}
+@keyframes backdrop-in { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .modal[open], .modal[open]::backdrop { animation: none; }
 }

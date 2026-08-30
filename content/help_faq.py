@@ -116,7 +116,15 @@ buy anything.</span>
 <p class="form__note">We use your information only to respond to your inquiry. See the
 <a href="privacy.html">privacy policy</a>.</p>
 </form>
-<p class="note note--info" data-form-status hidden tabindex="-1" role="status" aria-live="polite"></p>
+<p class="note" data-form-status hidden tabindex="-1" role="status" aria-live="polite"></p>
+<dialog class="modal" data-form-modal aria-labelledby="sent-title">
+<div class="modal__inner">
+<h2 class="modal__title" id="sent-title">Thank you, your message has been sent.</h2>
+<p class="modal__body">We reply within one to two business days. If it is urgent, or you would
+rather speak to someone, email <a href="mailto:{PROGRAM_EMAIL}">{PROGRAM_EMAIL}</a>.</p>
+<button class="btn btn--primary" type="button" data-modal-close autofocus>Close</button>
+</div>
+</dialog>
 
 </div>
 </div>

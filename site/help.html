@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Poppins:wght@500;600;700&family=Public+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/styles.css?v=c5e621b9">
+<link rel="stylesheet" href="assets/styles.css?v=e30e04f8">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -71,7 +71,15 @@ buy anything.</span>
 <p class="form__note">We use your information only to respond to your inquiry. See the
 <a href="privacy.html">privacy policy</a>.</p>
 </form>
-<p class="note note--info" data-form-status hidden tabindex="-1" role="status" aria-live="polite"></p>
+<p class="note" data-form-status hidden tabindex="-1" role="status" aria-live="polite"></p>
+<dialog class="modal" data-form-modal aria-labelledby="sent-title">
+<div class="modal__inner">
+<h2 class="modal__title" id="sent-title">Thank you, your message has been sent.</h2>
+<p class="modal__body">We reply within one to two business days. If it is urgent, or you would
+rather speak to someone, email <a href="mailto:trivalleyltc@gmail.com">trivalleyltc@gmail.com</a>.</p>
+<button class="btn btn--primary" type="button" data-modal-close autofocus>Close</button>
+</div>
+</dialog>
 
 </div>
 </div>
@@ -115,6 +123,6 @@ own device. Nothing is sent to us. <a href="privacy.html">Privacy policy</a>.</p
 </div>
 </div>
 </div>
-<script src="assets/site.js?v=bc59ba76"></script>
+<script src="assets/site.js?v=e7eafae8"></script>
 </body>
 </html>

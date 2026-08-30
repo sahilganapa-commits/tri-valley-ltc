@@ -248,18 +248,53 @@
     // The status sits after the form, not inside it, so the form can be
     // removed on success while the confirmation stays.
     var status = form.parentNode.querySelector('[data-form-status]');
+    var modal = form.parentNode.querySelector('[data-form-modal]');
     var button = form.querySelector('button[type="submit"]');
     if (!status || !form.getAttribute('action')) { return; }
+
+    // Only treat the dialog as the confirmation if the browser can open it
+    // modally. Without showModal it is an ordinary block sitting in the page,
+    // which is the quiet inline notice we are moving away from.
+    var canPopUp = modal && typeof modal.showModal === 'function';
+
+    if (canPopUp) {
+      // Whichever way it was dismissed, put focus on the confirmation left
+      // behind rather than dropping it at the top of the document with no
+      // announcement of what just happened.
+      // Deferred by a task: on closing, the browser restores focus to whatever
+      // was focused when the dialog opened, which here is the submit button of
+      // the form we have just hidden. That restoration lands after the close
+      // event, so focusing from inside the handler is undone immediately.
+      var refocus = function () {
+        setTimeout(function () { status.focus(); }, 0);
+      };
+      var closer = modal.querySelector('[data-modal-close]');
+      if (closer) {
+        closer.addEventListener('click', function () { modal.close(); refocus(); });
+      }
+      // The dialog box fills only the panel, so a click that lands on the
+      // element itself came from the backdrop around it.
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) { modal.close(); refocus(); }
+      });
+      // Catches the dismissals the two handlers above do not see, Escape
+      // above all. Focusing twice is harmless.
+      modal.addEventListener('close', refocus);
+    }
 
     function say(message, ok) {
       status.hidden = false;
       status.className = ok ? 'formdone' : 'note';
       status.innerHTML = message;
+      if (!ok) { status.focus(); return; }
       // On success the form goes away entirely. Leaving a filled-in form on
       // screen under a small notice reads as though nothing was sent, and
       // invites people to submit a second time.
-      if (ok) { form.hidden = true; }
-      status.focus();
+      form.hidden = true;
+      // The message is easy to miss down the page, so say it in the middle of
+      // the screen. The written confirmation stays behind it either way, which
+      // is what closing the dialog returns you to.
+      if (canPopUp) { modal.showModal(); } else { status.focus(); }
     }
 
     form.addEventListener('submit', function (e) {
@@ -274,10 +309,13 @@
       }).then(function (res) {
         if (res.ok) {
           form.reset();
-          say('<strong>Thank you, your message has been sent.</strong>' +
-              '<span>We reply within one to two business days. If it is urgent, or you would rather ' +
-              'speak to someone, email <a href="mailto:' + CONTACT_EMAIL + '">' + CONTACT_EMAIL +
-              '</a>.</span>', true);
+          // Deliberately not the dialog's wording. The dialog is the
+          // announcement; this is the record it leaves behind, and the two
+          // sit on screen together while the dialog is open.
+          say('<strong>Message sent</strong>' +
+              '<span>We have your message and will reply within one to two business days. If it ' +
+              'is urgent, or you would rather speak to someone, email <a href="mailto:' +
+              CONTACT_EMAIL + '">' + CONTACT_EMAIL + '</a>.</span>', true);
         } else {
           return res.json().then(function (data) {
             var why = (data && data.errors) ? data.errors.map(function (x) { return x.message; }).join(', ')
