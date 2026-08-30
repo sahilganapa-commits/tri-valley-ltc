@@ -31,13 +31,13 @@ nav, edit `NAV` in `layout.py` — it updates every page at once.
 **The guide** — `index.html`, `getting-care.html`, `using-coverage.html` plus
 six numbered section pages, `paying-for-care.html`, `directory.html`.
 
-**Everything else** — `help.html`, `faq.html`, `white-paper.html`,
-`privacy.html`, `accessibility.html`.
+**Everything else** - `help.html`, `faq.html`, `about.html`, `privacy.html`,
+`accessibility.html`.
 
 This maps the Phase 1 outline (Getting LTC / Using LTC / Care Directory,
 plus privacy, cookie consent, accessibility, disclaimers) onto the five
 sections named in the homepage document, and folds in the financial-planning
-and white-paper content.
+content.
 
 ## Where the content came from
 
@@ -47,7 +47,7 @@ and white-paper content.
 | `Tri-Valley LTC Program.pdf` | Phase 1 page outline, directory requirements, legal/accessibility scope |
 | `Webpage mockups with copy review.zip` | The six "using your coverage" sections and the contact page — copy carried over close to verbatim |
 | `Long_Term_Care_Financial_Planning_Webpage_Content_Revised.docx` | `paying-for-care.html`, FAQ, referral workflow and disclosures |
-| `Long_Term_Care_Industry_White_Paper_2026_Revised.docx` | `white-paper.html` |
+| `Long_Term_Care_Industry_White_Paper_2026_Revised.docx` | Background for the funding and carrier-landscape copy. The white paper page itself was removed. |
 | `Tri-Valley_Senior_Care_Resource_Directory_2026.xlsx` | All 38 directory listings, family tour questions, regulatory links |
 | `TVLTC_Logo_Concepts_v3.pdf` | Logo and brand colours |
 
@@ -114,8 +114,9 @@ statement says so plainly — keep it that way, and update it when that changes.
    submissions at 50 a month. `assets/site.js` posts in the background so the
    visitor stays on the page; with JavaScript off the form submits natively
    to the same endpoint and Formspree shows its own confirmation.
-2. **Set the program's real email address.** `PROGRAM_EMAIL` in `layout.py` is
-   a placeholder (`hello@trivalleyltc.org`) and appears on several pages.
+2. **Confirm the Formspree notification address.** Submissions should reach
+   `trivalleyltc@gmail.com`, which is what `PROGRAM_EMAIL` in `layout.py` now
+   shows on the site as the fallback contact.
 3. **Fill in Dominic Scotto's biography** in `content/home.py`. The source
    document also had an unnamed third co-founder; that slot was left out
    rather than shipped as `[Co-Founder's Name]` — add it back if needed.
@@ -123,7 +124,7 @@ statement says so plainly — keep it that way, and update it when that changes.
    drafts and are labelled as such on the page.
 5. **Compliance review of the case studies** on `paying-for-care.html`. The
    source document says not to publish carrier-specific illustrations without
-   compliance approval and full disclosures, and the white paper says the
+   compliance approval and full disclosures, and the source white paper says the
    adviser-supplied illustration should be matched against the carrier's
    approved version before publication. The first case study has therefore
    been genericised — the carrier and product names were removed and it reads

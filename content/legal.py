@@ -60,7 +60,6 @@ rather not have that happen, the fonts can be self-hosted; ask us.</p>
 <h2>How we use it</h2>
 {ul([
     "To answer your question and follow up about it.",
-    "To send you the white paper, if you requested it.",
     "To send occasional program updates, but only if you affirmatively opted in. Every message "
     "includes an unsubscribe link.",
     "To route your inquiry to a licensed professional, but only one you selected, and only with "

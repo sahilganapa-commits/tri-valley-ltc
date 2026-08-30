@@ -25,9 +25,7 @@ SITE_NAME = "Tri-Valley Long Term Care"
 TAGLINE = "Community Program"
 VERIFIED = "July 27, 2026"
 
-# Program contact details are not yet settled; these placeholders are meant to
-# be obvious in review rather than to look finished.
-PROGRAM_EMAIL = "hello@trivalleyltc.org"
+PROGRAM_EMAIL = "trivalleyltc@gmail.com"
 
 # Formspree receives both form posts. Swapping providers means changing
 # this one line plus the fetch in assets/site.js.
@@ -54,7 +52,6 @@ FOOTER_MORE = [
     ("about.html", "About us"),
     ("help.html", "Contact us"),
     ("faq.html", "Frequently asked questions"),
-    ("white-paper.html", "2026 white paper"),
     ("privacy.html", "Privacy policy"),
     ("accessibility.html", "Accessibility"),
 ]

@@ -8,7 +8,7 @@
   document.documentElement.classList.add('is-ready');
 
   // Shown as the fallback whenever a form post fails.
-  var CONTACT_EMAIL = 'hello@trivalleyltc.org';
+  var CONTACT_EMAIL = 'trivalleyltc@gmail.com';
 
   /* ------------------------------------------------------------ nav ---- */
   var toggle = document.querySelector('[data-navtoggle]');
