@@ -1,5 +1,30 @@
 [
  {
+  "id": 0,
+  "pin": true,
+  "primary_category": "In-home care",
+  "all_categories": [
+   "In-home care",
+   "Senior placement and referral services"
+  ],
+  "name": "From the Heart Senior Services",
+  "city": "Pleasanton / Tri-Valley / Greater Bay Area",
+  "address": "4695 Chabot Drive, Suite 200, Pleasanton, CA 94588",
+  "phone": "925-803-0663",
+  "website": "https://fromthehearthomecare.com/",
+  "levels": "Nonmedical personal care, bathing, medication reminders, housekeeping, errands, transportation, respite, dementia support.",
+  "services": "Referral agency matching families with screened independent caregivers. Personal care, companionship, homemaker help, and respite since 2002.",
+  "pricing": "Rates from March 2026: $68/hr up to one hour, $49/hr for two to three, $39/hr for four or more. Twelve-hour awake shift $395, sleeping $350. No minimums.",
+  "payment": "Private pay. The quoted rate includes the agency commission, so there is no separate client fee. Long-term care insurance may apply; Medicare does not.",
+  "languages": "Office weekdays 8:30 to 4:00, with a 24-hour on-call line. Ask about language matching and dementia training.",
+  "quality": "A domestic referral agency, not a licensed Home Care Organization, so caregivers are independent contractors and there is no HCO licence to verify. Background checks and caregiver liability insurance required. Verify caregivers on the California Home Care Aide Registry.",
+  "questions": "Who is the employer of record, and does workers' compensation apply? If the assigned caregiver is unavailable, how quickly is a backup found?",
+  "sources": [
+   "https://fromthehearthomecare.com/"
+  ],
+  "verified": "2026-08-15"
+ },
+ {
   "id": 1,
   "primary_category": "Independent senior living",
   "all_categories": [
@@ -18,7 +43,7 @@
   "pricing": "Life Plan Community structure. Ask for current entrance-fee choices, monthly service fees, refundability, and second-person fees.",
   "payment": "Primarily private pay; long-term care insurance may apply to qualifying future care services.",
   "languages": "Ask about interpretation and culturally specific programming. Broad lifestyle and wellness programming.",
-  "quality": "Review residency contract, audited financial disclosures, occupancy, and CreekView\u2019s current Medicare and state inspection record.",
+  "quality": "Review residency contract, audited financial disclosures, occupancy, and CreekView’s current Medicare and state inspection record.",
   "questions": "What portion of the entrance fee is refundable? How have monthly fees increased? What care is guaranteed at CreekView, and at what rate?",
   "sources": [
    "https://stoneridgecreek.com/",
@@ -417,7 +442,7 @@
   "phone": "925-838-3020",
   "website": "https://www.brookdale.com/en/communities/brookdale-danville.html",
   "levels": "Memory care",
-  "services": "Person-centered Alzheimer\u2019s and dementia care, structured activities, dining, housekeeping, and private apartments.",
+  "services": "Person-centered Alzheimer’s and dementia care, structured activities, dining, housekeeping, and private apartments.",
   "pricing": "As of July 26, 2026, published base rent starts at $8,995/month. Care costs and other fees may be additional.",
   "payment": "Private pay; long-term care insurance and VA benefits may help. Confirm any public-payment participation.",
   "languages": "Ask about multilingual staff, dementia-specialist credentials, behavior management, and family support.",
@@ -544,8 +569,8 @@
   "services": "Bathing, dressing, meal preparation, transportation, companionship, household help, respite, and care coordination.",
   "pricing": "Usually hourly with minimum shifts; ask for weekday, overnight, weekend, holiday, mileage, and cancellation rates.",
   "payment": "Private pay; long-term care insurance and VA benefits may reimburse eligible services. Ask whether any IHSS arrangements are accepted.",
-  "languages": "Ask for caregiver language matching and experience with dementia, Parkinson\u2019s, mobility, and cultural preferences.",
-  "quality": "Verify the agency and assigned aides through California\u2019s Home Care Services Registry. Ask about W-2 employment, background checks, bonding, supervision, and backup coverage.",
+  "languages": "Ask for caregiver language matching and experience with dementia, Parkinson’s, mobility, and cultural preferences.",
+  "quality": "Verify the agency and assigned aides through California’s Home Care Services Registry. Ask about W-2 employment, background checks, bonding, supervision, and backup coverage.",
   "questions": "Are caregivers employees? Who replaces a call-out? Is there nurse supervision? What are minimum hours, overtime, and cancellation terms?",
   "sources": [
    "https://www.firstlighthomecare.com/home-healthcare-san-ramon/",
@@ -564,7 +589,7 @@
   "address": "4900 Hopyard Road, Suite 100, Pleasanton, CA 94588",
   "phone": "925-392-7643",
   "website": "https://www.seniorhelpers.com/ca/pleasanton/",
-  "levels": "Nonmedical personal care; companion care; respite; dementia and Parkinson\u2019s support",
+  "levels": "Nonmedical personal care; companion care; respite; dementia and Parkinson’s support",
   "services": "Daily-living help, companionship, meal preparation, transportation, respite, and specialized care programs.",
   "pricing": "Hourly or shift-based private-pay pricing; ask for minimum hours and all premium rates.",
   "payment": "Private pay; long-term care insurance and VA benefits may apply. Confirm IHSS compatibility.",
@@ -594,7 +619,7 @@
   "payment": "Private pay; long-term care insurance and VA benefits may apply. Verify the exact service area for Dublin, Pleasanton, and San Ramon.",
   "languages": "Ask about caregiver language matching and specialized dementia or mobility experience.",
   "quality": "Verify state registration, background checks, employment status, bonding, supervision, and backup staffing.",
-  "questions": "Do you serve the senior\u2019s exact ZIP code? Are caregivers employees? What are the minimum shift and 24-hour-care billing rules?",
+  "questions": "Do you serve the senior’s exact ZIP code? Are caregivers employees? What are the minimum shift and 24-hour-care billing rules?",
   "sources": [
    "https://www.visitingangels.com/livermore/home",
    "https://www.ccld.dss.ca.gov/hcsregistry/registrysearch.aspx"
@@ -685,11 +710,11 @@
   "address": "Serves Pleasanton and surrounding East Bay communities",
   "phone": "925-401-5261",
   "website": "https://www.rightathome.net/east-bay",
-  "levels": "Nonmedical personal care; companion care; respite; Alzheimer\u2019s and Parkinson\u2019s support",
+  "levels": "Nonmedical personal care; companion care; respite; Alzheimer’s and Parkinson’s support",
   "services": "Bathing, dressing, meals, transportation, companionship, household assistance, respite, and condition-specific support.",
   "pricing": "Hourly or shift-based; request all minimums, overtime, holiday, mileage, and cancellation charges.",
   "payment": "Private pay; long-term care insurance and VA benefits may reimburse eligible care.",
-  "languages": "Ask about multilingual caregivers and experience with dementia, Parkinson\u2019s, diabetes, and mobility needs.",
+  "languages": "Ask about multilingual caregivers and experience with dementia, Parkinson’s, diabetes, and mobility needs.",
   "quality": "Confirm California registration, caregiver background checks, employee status, supervision, insurance, and emergency backup.",
   "questions": "Who supervises the care plan? Can family view visit notes? What is the backup plan when the assigned caregiver is unavailable?",
   "sources": [
@@ -728,13 +753,13 @@
   "all_categories": [
    "Adult day programs"
   ],
-  "name": "Alzheimer\u2019s Services of the East Bay (ASEB)",
+  "name": "Alzheimer’s Services of the East Bay (ASEB)",
   "city": "Fremont / Hayward / Berkeley; regional option",
   "address": "Nearest centers include Fremont and Hayward",
   "phone": "Fremont 510-656-1329; Hayward 510-888-1411; Berkeley 510-644-8292",
   "website": "https://aseb.org/daytime-care/",
   "levels": "Adult day health care; dementia-specific daytime care; caregiver support",
-  "services": "Daytime health and social services for people with Alzheimer\u2019s disease or related dementias, plus caregiver support.",
+  "services": "Daytime health and social services for people with Alzheimer’s disease or related dementias, plus caregiver support.",
   "pricing": "Ask about assessment fees, daily rates, Medi-Cal coverage, scholarships, attendance schedule, and transportation.",
   "payment": "Potential private pay and public coverage depending on program eligibility; confirm with the center.",
   "languages": "Ask each center about languages, meals, nursing, behavioral support, and transportation.",
@@ -754,7 +779,7 @@
    "Adult day programs",
    "Care-management services"
   ],
-  "name": "PACE Tri-Valley, Center for Elders\u2019 Independence",
+  "name": "PACE Tri-Valley, Center for Elders’ Independence",
   "city": "Livermore; serves five Tri-Valley cities",
   "address": "2441 Constitution Drive, Livermore, CA 94551",
   "phone": "Center 925-505-4700; enrollment 844-319-1150; TDD 510-433-1165",
@@ -862,7 +887,7 @@
   "services": "Organizes medical information, appointments, medications, portals, insurance and billing, care transitions, and family communication.",
   "pricing": "Published tiers: concierge care management $25,000/year; 90-day navigation $3,800, then optional ongoing support at $600 every four weeks; seven-day planning blueprint advertised as free.",
   "payment": "Private pay. Ask whether any long-term care insurance policy reimburses care-management services.",
-  "languages": "Ask about language access, emergency availability, geographic travel, and experience with the senior\u2019s diagnoses.",
+  "languages": "Ask about language access, emergency availability, geographic travel, and experience with the senior’s diagnoses.",
   "quality": "Family-owned, RN-led team reporting 40+ years of combined hospital experience. Service is nonclinical and does not replace medical care.",
   "questions": "Who is assigned to the case? What is available 24/7? Are there referral fees or financial relationships with providers? How is progress documented?",
   "sources": [
@@ -935,7 +960,7 @@
   "pricing": "Information and referral are free. Referred services have separate eligibility and cost rules.",
   "payment": "Public and nonprofit resource navigation, including Medi-Cal and county-supported programs.",
   "languages": "2-1-1 offers multilingual assistance; confirm specific language and accessibility needs.",
-  "quality": "Public referral gateway. Ask for several options and verify each provider\u2019s license, availability, cost, and inspection history independently.",
+  "quality": "Public referral gateway. Ask for several options and verify each provider’s license, availability, cost, and inspection history independently.",
   "questions": "Which programs can help with Medi-Cal, IHSS, housing, transportation, adult day care, or caregiver respite? Who can help complete applications?",
   "sources": [
    "https://alameda.my-adrc.org/",

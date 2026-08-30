@@ -112,10 +112,15 @@ def build(directory, **_):
     cities = sorted({_city_key(r["city"]) for r in directory})
     options = "".join(f'<option value="{esc(c)}">{esc(c)}</option>' for c in cities)
 
+    # Category, then any pinned listing, then alphabetical. "pin" exists so a
+    # listing can be placed at the head of its category by hand.
     order = {c: i for i, c in enumerate(CATEGORY_ORDER)}
     listings = "".join(
         _listing(r) for r in sorted(
-            directory, key=lambda r: (order.get(r["primary_category"], 99), r["name"])
+            directory,
+            key=lambda r: (order.get(r["primary_category"], 99),
+                           0 if r.get("pin") else 1,
+                           r["name"]),
         )
     )
 
