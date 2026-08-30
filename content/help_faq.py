@@ -67,7 +67,18 @@ FAQS = [
 
 def _help():
     body = f"""<section class="band">
-<div class="shell">
+<div class="shell layout">
+<aside class="rail" aria-label="Contact details">
+<p class="rail__title">Contact</p>
+{record([
+    ("Email",
+     f'<p><a href="mailto:{PROGRAM_EMAIL}">{PROGRAM_EMAIL}</a></p>'),
+    ("Address",
+     "<p>4695 Chabot Dr STE 200<br>Pleasanton, CA 94588</p>"),
+    ("Response time",
+     "<p>Usually within one business day.</p>"),
+])}
+</aside>
 <div class="prose">
 
 <h1>Send us a message</h1>
