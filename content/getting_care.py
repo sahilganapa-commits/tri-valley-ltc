@@ -165,18 +165,6 @@ exists, and public benefits if eligibility is met.</p>
     [["Income and savings",
       "Retirement income, Social Security, pensions, investments, and dedicated reserves. Maximum "
       "flexibility, no underwriting — but the full cost and the longevity risk stay with the family."],
-     ["Long-term care insurance",
-      "A defined pool of benefits for qualifying care, once the policy&rsquo;s trigger and waiting "
-      "period are met. Only helps if a policy already exists or can still be underwritten."],
-     ["Life insurance or annuity with LTC benefits",
-      "Care benefits drawn from a policy that also carries a death benefit or contract value. "
-      "Now the most common form of newly purchased coverage."],
-     ["Medi-Cal (Medicaid in California)",
-      "Long-term services and supports for people who meet financial and functional eligibility "
-      "rules. A major source of nursing-facility funding."],
-     ["VA benefits",
-      "Aid and Attendance and related benefits for wartime veterans and surviving spouses who "
-      "meet service, medical, and financial criteria."],
      ["Home equity",
       "Sale proceeds, downsizing, a home-equity strategy, or a reverse mortgage where appropriate. "
       "Affects housing security and heirs."],
@@ -186,6 +174,8 @@ exists, and public benefits if eligibility is met.</p>
     caption="Most families use several of these at once. See "
             "<a href=\"paying-for-care.html\">Paying for care</a> for how to combine them.",
 )}
+<p>The other two sources have enough detail to need their own sections: <strong>insurance</strong>
+is next, and <strong>Medicare, Medi-Cal, and VA</strong> follow it.</p>
 
 <h2 id="insurance">Long-term care insurance basics</h2>
 <p>If you are reading a policy for the first time, five terms decide almost everything. They are

@@ -53,9 +53,13 @@ def _contact(rec):
 def _listing(rec):
     cats = "|" + "|".join(slug(c) for c in rec["all_categories"]) + "|"
     city = _city_key(rec["city"])
+    # Only the fields that classify a provider — name, place, category, level of
+    # care. The services and payment prose was in here too, which made the
+    # search useless: nearly every listing says "care" somewhere in a sentence,
+    # so common words matched almost everything.
     haystack = " ".join([
-        rec["name"], rec["city"], rec["levels"], rec["services"],
-        " ".join(rec["all_categories"]), rec["payment"],
+        rec["name"], rec["city"], rec["levels"],
+        " ".join(rec["all_categories"]),
     ]).lower()
 
     detail = record([
@@ -87,7 +91,7 @@ def _listing(rec):
 </article>"""
 
 
-def build(directory, questions, regulatory, **_):
+def build(directory, **_):
     counts = {}
     for rec in directory:
         for cat in rec["all_categories"]:
@@ -107,22 +111,6 @@ def build(directory, questions, regulatory, **_):
         _listing(r) for r in sorted(
             directory, key=lambda r: (order.get(r["primary_category"], 99), r["name"])
         )
-    )
-
-    # Family interview questions, minus the five universal requests at the end.
-    qrows = [q for q in questions if not q["care_type"].isdigit()]
-    qtable = table(
-        ["Care type", "Costs and contract", "Care, staffing, and safety", "Quality and fit"],
-        [[esc(q["care_type"]), esc(q["costs"]), esc(q["care"]), esc(q["quality"])] for q in qrows],
-        caption="What to ask before you tour, and what to ask while you are there.",
-    )
-
-    reg = table(
-        ["Resource", "Use it for", "What to check"],
-        [[f'<a href="{esc(r["url"])}">{esc(r["resource"])}</a>', esc(r["use"]), esc(r["check"])]
-         for r in regulatory],
-        caption="Check licensing, inspections, complaints, and ratings yourself — every one of "
-                "these is free and public.",
     )
 
     body = hero_page("directory.jpg",
@@ -160,42 +148,6 @@ def build(directory, questions, regulatory, **_):
 
 <p class="empty" data-empty hidden>No listings match those filters. Try clearing the search box,
 or <a href="help.html">ask us</a> — we keep track of providers that are not yet listed here.</p>
-</div>
-</section>
-
-<section class="band band--card">
-<div class="shell">
-<div class="band__head">
-<h2>What to ask before you choose</h2>
-<p>Bring the relevant questions to every call and every tour, and request the answers in writing.</p>
-</div>
-{qtable}
-{note("Five requests to make in writing, of any provider",
-      ul([
-        "An itemized all-in price estimate based on the senior&rsquo;s current needs.",
-        "The most recent license, inspection, complaint, deficiency, and correction reports.",
-        "A sample contract, admission agreement, discharge policy, and rate-increase history.",
-        "Staffing by shift, nurse availability, turnover, call-response expectations, and backup plan.",
-        "A written explanation of what the provider cannot safely do, and what triggers transfer "
-        "or discharge.",
-      ]))}
-</div>
-</section>
-
-<section class="band">
-<div class="shell">
-<div class="band__head">
-<h2>Check the public record yourself</h2>
-<p>Published prices and ratings are snapshots. These sources are current, free, and independent
-of any provider.</p>
-</div>
-{reg}
-{note("A note on referral and placement services",
-      "<p>A senior placement or referral service may be free to your family because the facility "
-      "pays the referral fee. That is a legitimate business model, and it also means the service "
-      "has a financial interest in where you land. Ask for written compensation and conflict "
-      "disclosures, and ask whether facilities that do not pay referral fees are shown to you at "
-      "all.</p>")}
 </div>
 </section>"""
 

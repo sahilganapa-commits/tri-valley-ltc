@@ -134,8 +134,22 @@
     var reset = dir.querySelector('[data-reset]');
     var activeCat = '';
 
+    /* Every word typed has to match, and each has to match from the start of a
+       word. Loose substring matching over one long string meant "care" hit
+       almost every listing and a two-word query quietly matched nothing. */
+    function matcher(query) {
+      var terms = query.split(/\s+/).filter(Boolean).map(function (t) {
+        var safe = t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        return new RegExp('(^|[^a-z0-9])' + safe, 'i');
+      });
+      return function (haystack) {
+        return terms.every(function (re) { return re.test(haystack); });
+      };
+    }
+
     function apply() {
       var q = (search && search.value || '').trim().toLowerCase();
+      var matches = q ? matcher(q) : null;
       var city = (citySel && citySel.value) || '';
       var shown = 0;
 
@@ -143,7 +157,7 @@
         var haystack = el.getAttribute('data-text') || '';
         var cats = el.getAttribute('data-cats') || '';
         var elCity = el.getAttribute('data-city') || '';
-        var ok = (!q || haystack.indexOf(q) !== -1) &&
+        var ok = (!matches || matches(haystack)) &&
                  (!activeCat || cats.indexOf('|' + activeCat + '|') !== -1) &&
                  (!city || elCity === city);
         el.hidden = !ok;

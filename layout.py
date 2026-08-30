@@ -37,8 +37,8 @@ FORM_ENDPOINT = "https://formspree.io/f/mqpkkooj"
 
 NAV = [
     ("getting-care.html", "Getting care"),
-    ("using-coverage.html", "Using your coverage"),
     ("paying-for-care.html", "Paying for care"),
+    ("using-coverage.html", "Using your coverage"),
     ("directory.html", "Care directory"),
     ("faq.html", "Q&A"),
 ]
