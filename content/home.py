@@ -95,7 +95,7 @@ families understand long term care and find local support</p>
 <p>Medicare covers medically necessary acute care and limited skilled services. The ongoing,
 non-medical help most families actually need — bathing, dressing, supervision — is generally
 paid privately, by a qualifying insurance policy, or by Medi-Cal after eligibility rules are
-met. <a href="getting-care.html#paying">How families pay for care</a></p>
+met. <a href="paying-for-care.html">Paying for care</a></p>
 </article>
 <article class="card">
 <h3 class="card__title">The odds are higher than people expect</h3>

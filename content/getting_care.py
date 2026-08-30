@@ -14,9 +14,6 @@ SECTIONS = [
     ("#adls", "The daily activities check"),
     ("#levels", "The levels of care"),
     ("#when", "When to start planning"),
-    ("#paying", "How families pay for care"),
-    ("#insurance", "Long-term care insurance basics"),
-    ("#public", "Medicare, Medi-Cal, and VA"),
     ("#ask", "Questions families should ask"),
 ]
 
@@ -155,84 +152,6 @@ rather than among insurance policies.</p>
      ["People turning 65 who may need care longer than five years", "About 20%"]],
     caption="Source: Administration for Community Living, &ldquo;How Much Care Will You Need?&rdquo;",
 )}
-
-<h2 id="paying">How families pay for care</h2>
-<p>Almost no family pays for care from a single source. The common combination is personal
-income and savings, a family caregiver providing unpaid hours, an insurance policy if one
-exists, and public benefits if eligibility is met.</p>
-{table(
-    ["Source", "What it typically covers"],
-    [["Income and savings",
-      "Retirement income, Social Security, pensions, investments, and dedicated reserves. Maximum "
-      "flexibility, no underwriting — but the full cost and the longevity risk stay with the family."],
-     ["Home equity",
-      "Sale proceeds, downsizing, a home-equity strategy, or a reverse mortgage where appropriate. "
-      "Affects housing security and heirs."],
-     ["Family caregiving",
-      "Unpaid or partially paid support from relatives. Preserves familiar care and reduces cash "
-      "cost, at real time, income, health, and relationship cost to the caregiver."]],
-    caption="Most families use several of these at once. See "
-            "<a href=\"paying-for-care.html\">Paying for care</a> for how to combine them.",
-)}
-<p>The other two sources have enough detail to need their own sections: <strong>insurance</strong>
-is next, and <strong>Medicare, Medi-Cal, and VA</strong> follow it.</p>
-
-<h2 id="insurance">Long-term care insurance basics</h2>
-<p>If you are reading a policy for the first time, five terms decide almost everything. They are
-covered in depth in <a href="using-coverage-know-your-policy.html">Know your policy</a>.</p>
-{record([
-    ("Benefit trigger",
-     "<p>What has to be true before the policy pays. Usually: a licensed health practitioner "
-     "certifies substantial assistance is needed with at least two of the six activities of daily "
-     "living, or supervision is needed due to cognitive impairment.</p>"),
-    ("Elimination period",
-     "<p>The waiting period before benefits begin — commonly 30, 60, 90, or 100 days. Check whether "
-     "your policy counts <em>calendar</em> days or <em>service</em> days; the difference can be "
-     "months.</p>"),
-    ("Benefit amount",
-     "<p>The daily or monthly maximum. If the policy has an inflation rider, today&rsquo;s figure "
-     "is on your latest annual statement, not on the original policy.</p>"),
-    ("Benefit period or pool",
-     "<p>Either a set number of years, or a total pool of money that lasts as long as it lasts. "
-     "Spending below the daily maximum stretches a pool.</p>"),
-    ("Covered providers",
-     "<p>Which caregivers and settings qualify. The section families skip most often, and the one "
-     "that determines how you can actually use the benefits.</p>"),
-])}
-{note("If you are buying rather than using",
-      "<p>The market changed substantially. In 2024 new-policy data, 92% of individual solutions "
-      "were life-insurance-based combination products and 8% were traditional stand-alone "
-      "long-term care policies. What that does and does not mean is covered in the "
-      "<a href=\"white-paper.html\">2026 white paper</a>.</p>")}
-
-<h2 id="public">Medicare, Medi-Cal, and VA</h2>
-{record([
-    ("Medicare",
-     "<p>Covers medically necessary acute care and limited skilled services — for example, a short "
-     "skilled-nursing stay after a qualifying hospital admission, or intermittent home health care "
-     "under specific conditions. It does <strong>not</strong> generally pay for ongoing custodial "
-     "care, which is what most long-term care actually is. "
-     "<a href=\"https://www.medicare.gov/coverage/long-term-care\">medicare.gov</a></p>"),
-    ("Medi-Cal",
-     "<p>California&rsquo;s Medicaid program can finance extensive long-term services and supports "
-     "for people who meet financial and functional eligibility rules. Related programs include "
-     "In-Home Supportive Services (IHSS) and the Assisted Living Waiver, which is available in "
-     "Alameda and Contra Costa counties. "
-     "<a href=\"https://www.dhcs.ca.gov/services/ltc\">dhcs.ca.gov</a></p>"),
-    ("California Partnership",
-     "<p>A state program under which specifically approved policies include consumer protections "
-     "and may provide Medi-Cal asset protection equal to qualifying benefits paid. A Partnership "
-     "policy and an asset-based or hybrid policy are not automatically the same thing — verify "
-     "whether a specific contract is Partnership-approved.</p>"),
-    ("VA benefits",
-     "<p>Wartime veterans and surviving spouses may qualify for Aid and Attendance and related "
-     "benefits, subject to service, medical, and financial criteria. Start at "
-     "<a href=\"https://www.va.gov/\">va.gov</a>.</p>"),
-    ("Where to ask locally",
-     "<p>The Alameda County Aging and Disability Resource Connection provides free, multilingual "
-     "navigation for Medi-Cal, IHSS, caregiver supports, transportation, and housing. "
-     "<a href=\"https://alameda.my-adrc.org/\">alameda.my-adrc.org</a>, or dial 2-1-1.</p>"),
-])}
 
 <h2 id="ask">Questions families should ask</h2>
 <p>Ask these of each other before you ask them of a provider. The answers shape every decision
