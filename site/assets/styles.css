@@ -1365,3 +1365,9 @@ textarea.field__input { min-height: 8rem; line-height: 1.6; resize: vertical; }
 .formdone span { display: block; color: var(--muted); }
 .formdone:focus { outline: none; }
 .formdone:focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; }
+
+/* Contact us: a wider gutter than the guide pages, so the form sits clear of
+   the contact details rather than crowding them. */
+@media (min-width: 64rem) {
+  .layout--contact { grid-template-columns: 17rem 1fr; gap: 6.5rem; }
+}

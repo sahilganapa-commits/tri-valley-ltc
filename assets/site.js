@@ -275,7 +275,7 @@
         if (res.ok) {
           form.reset();
           say('<strong>Thank you, your message has been sent.</strong>' +
-              '<span>We reply within one business day. If it is urgent, or you would rather ' +
+              '<span>We reply within one to two business days. If it is urgent, or you would rather ' +
               'speak to someone, email <a href="mailto:' + CONTACT_EMAIL + '">' + CONTACT_EMAIL +
               '</a>.</span>', true);
         } else {

@@ -67,7 +67,7 @@ FAQS = [
 
 def _help():
     body = f"""<section class="band">
-<div class="shell layout">
+<div class="shell layout layout--contact">
 <aside class="rail" aria-label="Contact details">
 <p class="rail__title">Contact</p>
 {record([
@@ -76,7 +76,7 @@ def _help():
     ("Address",
      "<p>4695 Chabot Dr STE 200<br>Pleasanton, CA 94588</p>"),
     ("Response time",
-     "<p>Usually within one business day.</p>"),
+     "<p>Usually within one to two business days.</p>"),
 ])}
 </aside>
 <div class="prose">
