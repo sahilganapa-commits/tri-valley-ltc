@@ -51,7 +51,11 @@ def _contact(rec):
 
 
 def _listing(rec):
-    cats = "|" + "|".join(slug(c) for c in rec["all_categories"]) + "|"
+    # One category per listing — the same one shown on the card's badge. Chips
+    # used to match every category a provider claimed, so clicking "Assisted
+    # living" returned cards badged "Memory care" and the counts added up to
+    # far more than the number of listings.
+    cats = "|" + slug(rec["primary_category"]) + "|"
     city = _city_key(rec["city"])
     # Only the fields that classify a provider — name, place, category, level of
     # care. The services and payment prose was in here too, which made the
@@ -92,10 +96,12 @@ def _listing(rec):
 
 
 def build(directory, **_):
+    # Counted on the primary category alone, so the chip numbers sum to the
+    # number of listings and each one matches exactly what clicking it returns.
     counts = {}
     for rec in directory:
-        for cat in rec["all_categories"]:
-            counts[cat] = counts.get(cat, 0) + 1
+        cat = rec["primary_category"]
+        counts[cat] = counts.get(cat, 0) + 1
 
     chips = "".join(
         f'<button class="chip" type="button" data-chip="{slug(cat)}" aria-pressed="false">'
