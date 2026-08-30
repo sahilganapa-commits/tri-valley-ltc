@@ -1,7 +1,7 @@
 """Home page.
 
 The hero is the router, in the family's own words. Most people arriving here
-are not browsing — they are somewhere specific in a hard process and need to
+are not browsing, they are somewhere specific in a hard process and need to
 be pointed at one page, quickly.
 """
 
@@ -93,7 +93,7 @@ families understand long term care and find local support</p>
 <article class="card">
 <h3 class="card__title">Medicare does not pay for most of it</h3>
 <p>Medicare covers medically necessary acute care and limited skilled services. The ongoing,
-non-medical help most families actually need — bathing, dressing, supervision — is generally
+non-medical help most families actually need (bathing, dressing, supervision) is generally
 paid privately, by a qualifying insurance policy, or by Medi-Cal after eligibility rules are
 met. <a href="paying-for-care.html">Paying for care</a></p>
 </article>
@@ -112,7 +112,7 @@ before it feels urgent. <a href="using-coverage-filing-a-claim.html">Filing a cl
 <article class="card">
 <h3 class="card__title">Do not cancel an old policy without advice</h3>
 <p>A carrier leaving the market does not cancel your policy. Older policies often contain
-benefits — lifetime benefit periods, strong inflation riders — that cannot be bought at any
+benefits (lifetime benefit periods, strong inflation riders) that cannot be bought at any
 price today. <a href="using-coverage.html">Using your coverage</a></p>
 </article>
 </div>
@@ -129,8 +129,8 @@ price today. <a href="using-coverage.html">Using your coverage</a></p>
 </section>
 
 {cta("Not sure where to start?",
-     "Tell us where your family is in the process — understanding a policy, starting a claim, "
-     "finding care, or planning ahead — and we will point you to the right place. No obligation, "
+     "Tell us where your family is in the process: understanding a policy, starting a claim, "
+     "finding care, or planning ahead. We will point you to the right place. No obligation, "
      "and never a sales call.")}"""
 
     return page(

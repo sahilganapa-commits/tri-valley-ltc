@@ -1,8 +1,8 @@
-"""Understanding and Using Your Coverage — hub plus six guide sections.
+"""Understanding and Using Your Coverage, hub plus six guide sections.
 
 This follows the sequence in the approved mockups: notice the need, read the
 policy, file, choose a provider, stay on claim, understand the carrier.
-Numbering is used here because the order genuinely matters — each step
+Numbering is used here because the order genuinely matters, each step
 depends on the one before it.
 """
 
@@ -12,12 +12,12 @@ from layout import (article, hero_page, cta, esc, note, page, pagehead,
 HUB = "using-coverage.html"
 
 SECTIONS = [
-    ("using-coverage-do-we-need-help.html", "Do we need help — and what kind?",
+    ("using-coverage-do-we-need-help.html", "Do we need help, and what kind?",
      "The signs it may be time, and how care needs are measured through the daily activities."),
     ("using-coverage-know-your-policy.html", "Before you need it: know your policy",
      "The five things to find in the contract, and who actually services it today."),
     ("using-coverage-filing-a-claim.html", "Filing a claim",
-     "Four steps from the first phone call to the first benefit payment — and what to do if it is denied."),
+     "Four steps from the first phone call to the first benefit payment, and what to do if it is denied."),
     ("using-coverage-approved-providers.html", "Approved providers: your care options",
      "What policies typically cover, how benefits are paid, and what to ask any home care provider."),
     ("using-coverage-staying-on-claim.html", "Staying on claim",
@@ -84,16 +84,16 @@ def _section_1():
 taking a closer look:</p>
 {ul([
     "Missed medications, unpaid bills, or an empty refrigerator",
-    "A fall — or a new fear of falling",
+    "A fall, or a new fear of falling",
     "Changes in hygiene, memory, or how the house is kept",
     "A spouse or family caregiver who is exhausted, isolated, or unwell themselves",
 ])}
 <p>That last one matters as much as the others. Caregiver burnout is one of the most common
-reasons families seek help — and one of the best reasons to.</p>
+reasons families seek help, and one of the best reasons to.</p>
 
 <h2>The daily activities check</h2>
 <p>Care professionals, doctors, and insurance companies all measure care needs the same way:
-through six basic activities of daily living. Go through them honestly — not &ldquo;can they do
+through six basic activities of daily living. Go through them honestly, not &ldquo;can they do
 it on a good day,&rdquo; but &ldquo;can they do it safely and reliably, every day, without
 help.&rdquo;</p>
 {record([
@@ -116,24 +116,24 @@ help.&rdquo;</p>
     ("Eating",
      "<p>Feeding oneself once food is prepared. Needing help looks like: difficulty using utensils, "
      "trouble swallowing, or meals left mostly uneaten. Trouble <em>preparing</em> meals matters "
-     "too — it is one of the most common early needs, even when eating itself is fine.</p>"),
+     "too, it is one of the most common early needs, even when eating itself is fine.</p>"),
     ("Continence",
      "<p>Bladder and bowel control. Needing help looks like: accidents, hiding soiled clothing, or "
      "withdrawing from activities out of embarrassment.</p>"),
     ("Supervision",
      "<p>Not on the standard list. Some people can physically do all six activities but cannot "
-     "safely be alone — because of memory loss, confusion, wandering, or leaving the stove on. "
+     "safely be alone, because of memory loss, confusion, wandering, or leaving the stove on. "
      "Needing supervision due to cognitive changes is a care need in its own right, and care "
      "providers and long-term care insurance treat it as one.</p>"),
 ])}
 {note("Seeing needs on this list?",
-      "<p>In-home care — a caregiver coming to the home, from a few hours a week to around the "
-      "clock — is where most families start, and many never need more. If there is a long-term "
+      "<p>In-home care (a caregiver coming to the home, from a few hours a week to around the "
+      "clock) is where most families start, and many never need more. If there is a long-term "
       "care insurance policy in the family, needing help with two or more of these activities, or "
       "needing supervision, is typically what makes it pay. Keep your honest answers and continue "
       "to <a href=\"using-coverage-know-your-policy.html\">Section 2</a>.</p>")}"""
 
-    body = article(_eyebrow(1), "Do we need help — and what kind?",
+    body = article(_eyebrow(1), "Do we need help, and what kind?",
                    "Start here: the signs it may be time, and how care needs are measured.",
                    _rail(SECTIONS[0][0]), prose, prev, nxt)
     return page(SECTIONS[0][0], SECTIONS[0][1],
@@ -145,31 +145,31 @@ help.&rdquo;</p>
 def _section_2():
     prev, nxt = _prev_next(1)
     prose = f"""<h2>Locate the policy, and who services it today</h2>
-<p>Find the full policy contract — not the annual statement — including any riders and
+<p>Find the full policy contract, not the annual statement, including any riders and
 amendments. If you cannot find it, request a copy from the carrier; you are entitled to one.
 Then confirm who administers the policy now: many policies sold in the 1990s and 2000s are
 serviced by a different company than the one on the letterhead, and the customer service number
 on your most recent premium statement is usually the right starting point. A carrier leaving the
-sales market does not cancel your policy — claims on existing policies are still paid.</p>
+sales market does not cancel your policy; claims on existing policies are still paid.</p>
 
 <h2>Find these five things in your policy</h2>
 
 <h3>The benefit trigger</h3>
 <p>Most policies pay when a licensed health practitioner certifies that you need substantial
-assistance with at least <strong>two of six activities of daily living</strong> — bathing,
-dressing, toileting, transferring, eating, continence — or that you need supervision due to
+assistance with at least <strong>two of six activities of daily living</strong> (bathing,
+dressing, toileting, transferring, eating, continence), or that you need supervision due to
 cognitive impairment such as dementia. For tax-qualified policies, which is most policies sold
 after 1996, the condition must be expected to last at least 90 days. These are the same six
 activities from <a href="using-coverage-do-we-need-help.html">the daily activities check in
 Section 1</a>.</p>
 
 <h3>The elimination period</h3>
-<p>This is the waiting period — commonly 30, 60, 90, or 100 days — before benefits begin.
+<p>This is the waiting period (commonly 30, 60, 90, or 100 days) before benefits begin.
 Critically, check whether your policy counts <strong>calendar days</strong> or
 <strong>service days</strong>.</p>
 {note("Why this one question can cost you months",
-      "<p>Under a service-day elimination period, only days on which you actually receive — and "
-      "often pay for — covered care count toward the waiting period. A family receiving care three "
+      "<p>Under a service-day elimination period, only days on which you actually receive, and "
+      "often pay for, covered care count toward the waiting period. A family receiving care three "
       "days a week under a 90-service-day elimination period will wait 30 weeks before benefits "
       "begin, not 90 calendar days. Some policies count one service day as a full week; read "
       "yours.</p>")}
@@ -183,7 +183,7 @@ planning.</p>
 <h3>The benefit period or benefit pool</h3>
 <p>Some policies pay for a set period, for example three years. Most modern policies define a
 total pool of money that lasts as long as it lasts. If you spend less than the daily maximum,
-the pool stretches longer — an important fact when comparing care options in
+the pool stretches longer, an important fact when comparing care options in
 <a href="using-coverage-approved-providers.html">Section 4</a>.</p>
 
 <h3>The covered provider definitions</h3>
@@ -206,16 +206,16 @@ qualify. It gets its own section:
 def _section_3():
     prev, nxt = _prev_next(2)
     prose = f"""{steps(level=2, items=[
-    ("Start early — request the claim packet",
+    ("Start early: request the claim packet",
      "<p>It is common for 60 to 90 days or more to pass between the first phone call and the first "
-     "benefit payment, so contact the carrier promptly — <strong>you can begin a claim before "
+     "benefit payment, so contact the carrier promptly. <strong>You can begin a claim before "
      "choosing a care provider</strong>. Call the claims number for your carrier or its "
      "administrator, ask for the full claim packet, and ask these questions while you have them on "
      "the phone. Take notes, and get names.</p>" + ul([
         "What documentation do you require from the physician?",
         "Does my elimination period count calendar days or service days?",
         "What are your provider eligibility requirements for home care? "
-        "(<a href=\"using-coverage-approved-providers.html\">Section 4</a> — get the answer "
+        "(<a href=\"using-coverage-approved-providers.html\">Section 4</a>; get the answer "
         "<strong>in writing</strong>.)",
         "Do you require invoices, caregiver notes, or timesheets, and on what schedule?",
         "Is my premium waived while I am on claim?",
@@ -233,14 +233,14 @@ def _section_3():
      "certification of the benefit trigger, and approval of the provider.</p>"),
     ("Decision, the elimination period, and record-keeping",
      "<p>Once approved, the elimination period clock runs according to your policy&rsquo;s rules. "
-     "Keep every invoice and record of care <strong>from day one</strong> — even during the "
-     "elimination period — because carriers typically require proof of qualifying care during that "
+     "Keep every invoice and record of care <strong>from day one</strong>, even during the "
+     "elimination period, because carriers typically require proof of qualifying care during that "
      "window, and those records establish your service days.</p>"),
 ])}
 
 <h2>If the claim is denied</h2>
 <p>You have the right to appeal, and denials are frequently overturned when families supply
-better documentation — a more detailed physician statement, a fuller picture of the daily
+better documentation, a more detailed physician statement, a fuller picture of the daily
 activities where help is needed. Request the denial reason in writing, respond to it
 specifically, and consider involving a care manager or elder law attorney for a contested
 claim.</p>
@@ -252,7 +252,7 @@ claim.</p>
 ])}"""
 
     body = article(_eyebrow(3), "Filing a claim",
-                   "Four steps from the first phone call to the first benefit payment — and "
+                   "Four steps from the first phone call to the first benefit payment, and "
                    "what to do if the claim is denied.",
                    _rail(SECTIONS[2][0]), prose, prev, nxt)
     return page(SECTIONS[2][0], SECTIONS[2][1],
@@ -277,7 +277,7 @@ def _section_4():
 <a href="directory.html">care directory</a>.</p>
 
 <h2>How benefits are paid: reimbursement, indemnity, and cash</h2>
-<p>Before comparing providers, understand how your policy pays — it shapes your cash flow
+<p>Before comparing providers, understand how your policy pays. It shapes your cash flow
 throughout the claim.</p>
 {record([
     ("Reimbursement",
@@ -293,8 +293,8 @@ throughout the claim.</p>
      "arranged.</p>"),
 ])}
 {note("Know the payment timing",
-      "<p>Under reimbursement, you pay the provider during the elimination period — those costs are "
-      "not reimbursed — and then carry a typical 30 to 60 day gap between paying and being "
+      "<p>Under reimbursement, you pay the provider during the elimination period, those costs are "
+      "not reimbursed, and then carry a typical 30 to 60 day gap between paying and being "
       "reimbursed. That is normal, not a problem with your claim. For planning around cash flow, "
       "see <a href=\"paying-for-care.html\">Paying for care</a>.</p>")}
 
@@ -312,8 +312,8 @@ throughout the claim.</p>
 ])}"""
 
     body = article(_eyebrow(4), "Approved providers: your care options",
-                   "Care received from a non-qualifying provider is generally not reimbursable "
-                   "— even if the care itself was exactly what was needed.",
+                   "Care received from a non-qualifying provider is generally not reimbursable, "
+                   "even if the care itself was exactly what was needed.",
                    _rail(SECTIONS[3][0]), prose, prev, nxt)
     return page(SECTIONS[3][0], SECTIONS[3][1],
                 "What long-term care policies typically cover, how reimbursement, indemnity, and "
@@ -331,7 +331,7 @@ def _section_5():
      "payment and, if they pile up, can trigger a claim review.</p>"),
     ("Keep caregiver documentation",
      "<p>Most carriers require care notes or timesheets showing dates, hours, and services "
-     "performed, signed by the caregiver. Establish a simple daily log from the first shift — a "
+     "performed, signed by the caregiver. Establish a simple daily log from the first shift, a "
      "spiral notebook by the door works; consistency matters more than format.</p>"),
     ("Match documentation to the plan of care",
      "<p>If the plan of care says assistance with bathing, dressing, and meal preparation, the care "
@@ -340,7 +340,7 @@ def _section_5():
 ])}
 
 <h2>Expect recertification</h2>
-<p>Carriers periodically reassess whether the benefit trigger is still met — commonly every 6 to
+<p>Carriers periodically reassess whether the benefit trigger is still met, commonly every 6 to
 12 months, usually through updated physician statements. Treat it with the same care as the
 original claim: current records, and an accurate picture of a typical day.</p>
 
@@ -358,7 +358,7 @@ original claim: current records, and an accurate picture of a typical day.</p>
 ])}
 
 <h2>Watch the pool, not just the calendar</h2>
-<p>If your policy has a total benefit pool, request the remaining balance at least annually — and
+<p>If your policy has a total benefit pool, request the remaining balance at least annually, and
 remember that spending below the daily maximum extends it. See
 <a href="paying-for-care.html">Paying for care</a>.</p>
 

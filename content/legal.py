@@ -1,6 +1,6 @@
 """Privacy policy and accessibility statement.
 
-Both are drafts for legal review, and say so — a nonprofit publishing a
+Both are drafts for legal review, and say so. A nonprofit publishing a
 privacy policy it has not had reviewed is worse than publishing none.
 """
 
@@ -63,7 +63,7 @@ rather not have that happen, the fonts can be self-hosted; ask us.</p>
     "To send you the white paper, if you requested it.",
     "To send occasional program updates, but only if you affirmatively opted in. Every message "
     "includes an unsubscribe link.",
-    "To route your inquiry to a licensed professional — but only one you selected, and only with "
+    "To route your inquiry to a licensed professional, but only one you selected, and only with "
     "your consent.",
     "To understand, in aggregate, which pages families find useful.",
 ])}
@@ -73,7 +73,7 @@ rather not have that happen, the fonts can be self-hosted; ask us.</p>
 the professional you selected. Any professional you are referred to operates a separate business
 with its own privacy practices, and provides its own disclosures about services, licensing,
 affiliations, fees, and compensation before any engagement begins.</p>
-<p>We also use ordinary service providers — a website host and an email service — that process
+<p>We also use ordinary service providers, a website host and an email service, that process
 information on our behalf. Beyond that, we disclose information only if required by law.</p>
 
 <h2>How long we keep it</h2>

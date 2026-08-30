@@ -1,4 +1,4 @@
-"""About us — mission, vision, who we serve, what we do, and the leadership.
+"""About us, mission, vision, who we serve, what we do, and the leadership.
 
 Content supplied by the program (Tri-Valley LTC | Website Content). Headshots
 are not supplied yet, so each card reserves the space and shows the person's
@@ -68,7 +68,7 @@ def people_cards(people=None, heading_level=3):
 
 
 def about_sections(level=2):
-    """Mission, vision, who we serve, what we do, and the leadership — shared
+    """Mission, vision, who we serve, what we do, and the leadership, shared
     between the About us page and the home page so there is one source of
     truth. `level` shifts the headings: the About us page runs them at h2
     under its h1, the home page at h3 under its section h2."""
@@ -157,7 +157,7 @@ def build(**_):
     return page(
         "about.html",
         "About us",
-        "The mission, vision, and leadership of Tri-Valley LTC — a nonprofit helping Tri-Valley "
+        "The mission, vision, and leadership of Tri-Valley LTC, a nonprofit helping Tri-Valley "
         "families understand, plan for, and navigate long-term care.",
         body,
     )

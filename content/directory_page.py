@@ -51,13 +51,13 @@ def _contact(rec):
 
 
 def _listing(rec):
-    # One category per listing — the same one shown on the card's badge. Chips
+    # One category per listing, the same one shown on the card's badge. Chips
     # used to match every category a provider claimed, so clicking "Assisted
     # living" returned cards badged "Memory care" and the counts added up to
     # far more than the number of listings.
     cats = "|" + slug(rec["primary_category"]) + "|"
     city = _city_key(rec["city"])
-    # Only the fields that classify a provider — name, place, category, level of
+    # Only the fields that classify a provider, name, place, category, level of
     # care. The services and payment prose was in here too, which made the
     # search useless: nearly every listing says "care" somewhere in a sentence,
     # so common words matched almost everything.
@@ -153,7 +153,7 @@ def build(directory, **_):
 <div class="listings">{listings}</div>
 
 <p class="empty" data-empty hidden>No listings match those filters. Try clearing the search box,
-or <a href="help.html">ask us</a> — we keep track of providers that are not yet listed here.</p>
+or <a href="help.html">ask us</a>, we keep track of providers that are not yet listed here.</p>
 </div>
 </section>"""
 

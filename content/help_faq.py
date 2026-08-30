@@ -5,7 +5,7 @@ from layout import (FORM_ENDPOINT, PROGRAM_EMAIL, VERIFIED, faq_list, hero_page,
 
 FAQS = [
     ("Does Medicare pay for long-term care?",
-     "<p>Medicare generally does not pay for custodial long-term care — the ongoing, non-medical "
+     "<p>Medicare generally does not pay for custodial long-term care: the ongoing, non-medical "
      "help with daily activities that most long-term care actually consists of. It may cover "
      "limited skilled nursing or home health services when specific medical conditions and "
      "eligibility rules are met.</p>"),
@@ -17,7 +17,7 @@ FAQS = [
      "<p>Before a health event. Long-term care insurance is medically underwritten, so earlier "
      "planning means more choices, more time to save, and greater flexibility to coordinate estate "
      "and retirement decisions. If you are already past that point, you are choosing among funding "
-     "sources and providers instead — which is what most of this site covers.</p>"),
+     "sources and providers instead, which is what most of this site covers.</p>"),
     ("How much money should be reserved?",
      "<p>It depends on local care costs, the preferred setting, available family support, insurance "
      "benefits, inflation, and how much risk the family is comfortable keeping. Start with "
@@ -31,23 +31,23 @@ FAQS = [
      "<p>Certain qualified long-term care services and limited amounts of premiums for qualified "
      "policies may be treated as medical expenses under federal tax rules. Eligibility and the "
      "value of any deduction depend on the taxpayer&rsquo;s facts and on current law. Ask a tax "
-     "professional — this is not something to work out from a website.</p>"),
+     "professional. This is not something to work out from a website.</p>"),
     ("What is the California Partnership for Long-Term Care?",
      "<p>A California program involving the state and approved insurers. Qualifying Partnership "
      "policies include consumer protections and may provide Medi-Cal asset protection equal to "
      "qualifying benefits paid, subject to program rules. A Partnership policy and a hybrid or "
-     "asset-based policy are not automatically the same thing — verify whether a specific contract "
+     "asset-based policy are not automatically the same thing. Verify whether a specific contract "
      "is Partnership-approved.</p>"),
     ("My carrier stopped selling policies. Is my policy still good?",
      "<p>Yes. A carrier leaving the sales market does not cancel your policy, and claims on existing "
-     "policies are still paid — sometimes through a third-party administrator, so the name on your "
+     "policies are still paid, sometimes through a third-party administrator, so the name on your "
      "correspondence may differ from the name on your policy. Do not cancel a legacy policy without "
      "professional advice; older policies often contain benefits that cannot be bought at any price "
      "today.</p>"),
     ("How long does a claim take?",
      "<p>Commonly 60 to 90 days or more between the first phone call and the first benefit payment, "
      "once you account for claim paperwork, the carrier&rsquo;s assessment, and the elimination "
-     "period written into the policy. You can begin a claim before choosing a provider — and you "
+     "period written into the policy. You can begin a claim before choosing a provider, and you "
      "should. See <a href=\"using-coverage-filing-a-claim.html\">filing a claim</a>.</p>"),
     ("Can I pay a family member to provide care?",
      "<p>Sometimes. Many policies exclude or restrict payment to spouses and relatives; some cover "
@@ -72,7 +72,7 @@ def _help():
 
 <h1>Send us a message</h1>
 <form class="form" data-form action="{FORM_ENDPOINT}" method="POST">
-<input type="hidden" name="_subject" value="Tri-Valley LTC — contact form">
+<input type="hidden" name="_subject" value="Tri-Valley LTC: contact form">
 <input class="form__gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
 <div class="form__row">
 <label class="field"><span class="field__label">Your name</span>
@@ -134,13 +134,13 @@ def _faq():
 
 <h2 id="white-paper">Download the 2026 white paper</h2>
 <p><em>Planning for Long-Term Care in a Changing Insurance Market</em> covers costs, coverage
-options, the provider landscape, and asset-based strategies in more depth than these pages do —
+options, the provider landscape, and asset-based strategies in more depth than these pages do,
 with full source citations.</p>
 <p>You can <a href="white-paper.html">read the whole thing on this site</a>, free and with no
 email address required. If you would rather have a copy sent to you, leave an address below.</p>
 
 <form class="form" data-form action="{FORM_ENDPOINT}" method="POST">
-<input type="hidden" name="_subject" value="Tri-Valley LTC — white paper request">
+<input type="hidden" name="_subject" value="Tri-Valley LTC: white paper request">
 <input class="form__gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
 <label class="field"><span class="field__label">Email address</span>
 <input class="field__input" type="email" name="email" autocomplete="email" required></label>
@@ -312,7 +312,7 @@ not the entire installed base of long-term care coverage.</p>
      ["Total", "489,627", "100%"]],
     caption="Figure 2. LIMRA/EY 2024 new-policy data. The 92% life-based share includes "
             "chronic-illness riders, qualified LTC riders, and linked-benefit policies. These "
-            "categories are not interchangeable — a chronic-illness rider may use different "
+            "categories are not interchangeable, a chronic-illness rider may use different "
             "benefit triggers, tax rules, payout methods, or benefit calculations from a "
             "tax-qualified LTC rider.",
 )}
@@ -324,7 +324,7 @@ not the entire installed base of long-term care coverage.</p>
       "designs, while traditional stand-alone insurance continues to serve a smaller share of new "
       "buyers.</p>")}
 <p>Annuity/LTC products are measured separately. LIMRA reported record 2024 sales, more than 50%
-year-over-year growth, and approximately 14% of total individual long-term care insurance sales —
+year-over-year growth, and approximately 14% of total individual long-term care insurance sales,
 though only 0.2% of total annuity sales. That indicates meaningful growth from a small base rather
 than market dominance.</p>
 
@@ -370,7 +370,7 @@ benefit, contract value, or other financial utility. For households with suitabl
 make the funding decision feel more durable and easier to maintain than an open-ended stand-alone
 premium. For households seeking the greatest care benefit for the lowest current outlay,
 traditional insurance may still be more efficient. The appropriate comparison is therefore total
-value, guarantees, liquidity, inflation protection, claims design, and long-term affordability —
+value, guarantees, liquidity, inflation protection, claims design, and long-term affordability,
 not premium alone.</p>
 
 <h2 id="asset">Asset-based and linked-benefit long-term care</h2>

@@ -1,4 +1,4 @@
-"""Getting Long-Term Care — the educational overview.
+"""Getting Long-Term Care, the educational overview.
 
 Covers the Phase 1 outline: what long-term care is, types of care, when to
 start planning, how families pay, insurance basics, Medicare / Medi-Cal / VA,
@@ -37,13 +37,13 @@ ADL_ITEMS = [
     ("Eating",
      "Feeding oneself once food is prepared. Needing help looks like: difficulty using utensils, "
      "trouble swallowing, or meals left mostly uneaten. Trouble <em>preparing</em> meals counts "
-     "too — it is one of the most common early needs, even when eating itself is fine."),
+     "too, it is one of the most common early needs, even when eating itself is fine."),
     ("Continence",
      "Bladder and bowel control. Needing help looks like: accidents, hiding soiled clothing, or "
      "withdrawing from activities out of embarrassment."),
     ("Supervision",
      "Not on the standard list of six, but just as real. Some people can physically do all six "
-     "activities and still cannot safely be alone — because of memory loss, confusion, wandering, "
+     "activities and still cannot safely be alone, because of memory loss, confusion, wandering, "
      "or leaving the stove on. Supervision needs caused by cognitive change are a care need in "
      "their own right, and insurers treat them as one."),
 ]
@@ -62,7 +62,7 @@ def build(**_):
 <h2 id="what">What long-term care is</h2>
 <p>Long-term care is help with everyday living, not medical treatment. It supports people who
 need ongoing assistance because of chronic illness, disability, cognitive impairment, or
-frailty — help with bathing, dressing, eating, transferring, toileting, continence, meal
+frailty: help with bathing, dressing, eating, transferring, toileting, continence, meal
 preparation, supervision, transportation, and household tasks.</p>
 <p>That distinction matters more than almost anything else on this site, because it determines
 who pays. Medicare covers medically necessary acute care and limited skilled services. It does
@@ -78,7 +78,7 @@ taking a closer look.</p>
 {ul([
     "Missed medications, or confusion about which pills to take when",
     "Unpaid bills, unopened mail, or unusual purchases",
-    "A fall — or a new fear of falling, holding walls and furniture to get around",
+    "A fall, or a new fear of falling, holding walls and furniture to get around",
     "Weight loss, an empty refrigerator, or spoiled food",
     "Changes in personal hygiene, or wearing the same clothes for days",
     "The house is not being kept up the way it used to be",
@@ -90,27 +90,27 @@ reasons families seek help, and one of the best reasons to.</p>
 
 <h2 id="adls">The daily activities check</h2>
 <p>Care professionals, doctors, and insurance companies all measure care needs the same way:
-through six basic activities of daily living, usually called ADLs. Go through them honestly —
+through six basic activities of daily living, usually called ADLs. Go through them honestly,
 not &ldquo;can they do it on a good day,&rdquo; but &ldquo;can they do it safely and reliably,
 every day, without help.&rdquo;</p>
 {checklist(
     "adl",
     "Which activities need help?",
-    "<p>Tick each activity where help is needed. Your answers stay in this browser — we never "
-    "see them — and you can print them to bring to a doctor or a carrier.</p>",
+    "<p>Tick each activity where help is needed. Your answers stay in this browser; we never "
+    "see them, and you can print them to bring to a doctor or a carrier.</p>",
     ADL_ITEMS,
     trigger=2,
     rest_text="Answer honestly, including supervision. This list does double duty: it tells you "
               "what kind of help to look for, and it is the same test an insurance carrier applies.",
-    trigger_text="Needing substantial help with two or more of these — or needing supervision "
-                 "because of cognitive impairment — is typically what makes a long-term care "
+    trigger_text="Needing substantial help with two or more of these, or needing supervision "
+                 "because of cognitive impairment, is typically what makes a long-term care "
                  "policy start paying. If there is a policy in the family, read Section 2 of "
                  "Using your coverage next, and keep these answers.",
 )}
 {note("Why this list matters twice over",
       "<p>It tells you what kind of help to look for. And if there is a long-term care insurance "
-      "policy in the family, needing help with two or more of these activities — or needing "
-      "supervision due to cognitive impairment — is typically what makes the policy pay. Keep "
+      "policy in the family, needing help with two or more of these activities, or needing "
+      "supervision due to cognitive impairment, is typically what makes the policy pay. Keep "
       "your honest answers. You will use them again when you "
       "<a href=\"using-coverage-know-your-policy.html\">read the policy</a> and again when you "
       "<a href=\"using-coverage-filing-a-claim.html\">file a claim</a>.</p>", "info")}
@@ -132,8 +132,8 @@ every day, without help.&rdquo;</p>
      "<p>For medical needs: nursing care, recovery after a hospital stay, or comfort-focused care "
      "near the end of life.</p>"),
 ])}
-<p>These are not a one-way ladder. Many families combine them — adult day during the week plus
-in-home care on weekends — and needs step up and down over time. Every level of care above is
+<p>These are not a one-way ladder. Many families combine them, adult day during the week plus
+in-home care on weekends, and needs step up and down over time. Every level of care above is
 represented in the <a href="directory.html">Tri-Valley care directory</a>.</p>
 
 <h2 id="when">When to start planning</h2>
@@ -141,7 +141,7 @@ represented in the <a href="directory.html">Tri-Valley care directory</a>.</p>
 is medically underwritten, so the healthier you are, the more choices you have. Earlier planning
 also gives you more time to save and more flexibility to coordinate estate and retirement
 decisions.</p>
-<p>If you are already past that point — if a diagnosis has arrived or care is needed now — almost
+<p>If you are already past that point, if a diagnosis has arrived or care is needed now, almost
 everything on this site still applies. You are choosing among funding sources and providers
 rather than among insurance policies.</p>
 {table(
@@ -162,7 +162,7 @@ that follows.</p>
      "discussed. Ask directly, and ask early enough that the answer still matters.</p>"),
     ("Who is available to help, and at what cost to them?",
      "<p>Name the people. Then ask what caregiving would mean for their work, health, income, and "
-     "relationships — because unpaid family care is the single largest funding source for "
+     "relationships, because unpaid family care is the single largest funding source for "
      "long-term care in this country, and it is not free.</p>"),
     ("Who makes decisions if the person cannot?",
      "<p>Financial and medical powers of attorney, and whether the named people know they are "

@@ -1,4 +1,4 @@
-/* Tri-Valley Long Term Care — site behaviour.
+/* Tri-Valley Long Term Care, site behaviour.
    Everything here is progressive enhancement: with JavaScript off, the nav is
    a plain list, every directory listing is visible, and checklists are still
    usable on paper. */
@@ -44,7 +44,7 @@
       }
     };
     // Called straight from the scroll event: it reads one rect and flips one
-    // class, so it is cheap enough not to need frame throttling — and this way
+    // class, so it is cheap enough not to need frame throttling, and this way
     // the final state can never be dropped with a skipped frame.
     window.addEventListener('scroll', sync, { passive: true });
     window.addEventListener('resize', sync);
@@ -62,7 +62,7 @@
   }
   function writeState(state) {
     try { localStorage.setItem(STORE, JSON.stringify(state)); }
-    catch (err) { /* private browsing — checklist still works for this visit */ }
+    catch (err) { /* private browsing, checklist still works for this visit */ }
   }
 
   var state = readState();
@@ -243,7 +243,7 @@
   /* ------------------------------------------------------------ forms -- */
   /* Posts to the form service in the background so the visitor stays on the
      page. With JavaScript off the form submits natively to the same endpoint
-     and the service shows its own confirmation — nothing is lost either way. */
+     and the service shows its own confirmation, nothing is lost either way. */
   Array.prototype.forEach.call(document.querySelectorAll('[data-form]'), function (form) {
     // The status sits after the form, not inside it, so the form can be
     // removed on success while the confirmation stays.
@@ -274,7 +274,7 @@
       }).then(function (res) {
         if (res.ok) {
           form.reset();
-          say('<strong>Thank you — your message has been sent.</strong>' +
+          say('<strong>Thank you, your message has been sent.</strong>' +
               '<span>We reply within one business day. If it is urgent, or you would rather ' +
               'speak to someone, email <a href="mailto:' + CONTACT_EMAIL + '">' + CONTACT_EMAIL +
               '</a>.</span>', true);

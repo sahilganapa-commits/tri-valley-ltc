@@ -1,8 +1,8 @@
-"""Paying for Care — the financial-planning hub.
+"""Paying for Care, the financial-planning hub.
 
 Kept deliberately solution-neutral, as the source content plan requires: this
 page explains approaches, it does not recommend a product. The carrier-specific
-illustration from the source material has been genericised — see README.
+illustration from the source material has been genericised, see README.
 """
 
 from layout import (hero_page, checklist, cta, note, page, pagehead, rail, record,
@@ -56,7 +56,7 @@ requirements are met.</p>
 
 <h2 id="cost">What long-term care may cost</h2>
 <p>Costs vary by location, setting, hours of assistance, and the level of medical or cognitive
-support required. These are 2025 medians — a starting point for planning, not a quote. Note how
+support required. These are 2025 medians, a starting point for planning, not a quote. Note how
 far California runs above the national figures.</p>
 {table(
     ["Care setting", "2025 U.S. median", "2025 California median"],
@@ -157,8 +157,8 @@ solution.</p>
     ("Illustrative approach",
      "<p>An asset-based life/LTC illustration repositioned roughly $211,000 of IRA assets under the "
      "carrier&rsquo;s permitted structure. The illustration included a benefit enhancement and "
-     "showed maximum long-term care benefits of roughly $8,300 per month for each spouse — close to "
-     "$100,000 per person per year — with a lifetime-benefit option.</p>"),
+     "showed maximum long-term care benefits of roughly $8,300 per month for each spouse, close to "
+     "$100,000 per person per year, with a lifetime-benefit option.</p>"),
     ("Planning objective",
      "<p>Transform an existing asset into a larger pool of care benefits while preserving contract "
      "value or a death benefit if care is not fully used.</p>"),
@@ -200,7 +200,7 @@ solution.</p>
       "Carrier selection can change cost substantially"]],
     caption="2025 price-index benchmarks for select-health couples with an initial $165,000 benefit "
             "pool per spouse, from the American Association for Long-Term Care Insurance. Benchmarks "
-            "are based on Illinois pricing and vary by state and carrier — they are not quotes.",
+            "are based on Illinois pricing and vary by state and carrier. They are not quotes.",
 )}
 
 <h3>Repositioning an existing annuity or conservative asset</h3>
@@ -258,7 +258,7 @@ do first.</p>
     "How would one spouse&rsquo;s care costs affect the other spouse&rsquo;s housing and lifestyle?",
     "Do existing life, annuity, or long-term care policies provide benefits nobody has reviewed "
     "recently?",
-    "Are adult children expected to contribute money, time, or housing — and do they know it?",
+    "Are adult children expected to contribute money, time, or housing, and do they know it?",
 ])}
 
 <h2 id="help">How this program can help</h2>
@@ -288,8 +288,8 @@ insurance, and we are not paid by anyone whose products are described on this pa
 </section>
 
 {cta("Want a second set of eyes on the numbers?",
-     "Tell us what you are trying to work out — whether you can self-fund, how to protect a "
-     "spouse, or what an existing policy is actually worth — and we will help you find the right "
+     "Tell us what you are trying to work out, whether you can self-fund, how to protect a "
+     "spouse, or what an existing policy is actually worth, and we will help you find the right "
      "licensed professional.")}"""
 
     return page(

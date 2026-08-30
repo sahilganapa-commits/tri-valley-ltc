@@ -182,7 +182,7 @@ own device. Nothing is sent to us. <a href="privacy.html">Privacy policy</a>.</p
 def page(filename, title, description, body, current=None, overlay=False):
     """Wrap a page body in the shared shell and write it to site/."""
     current = current or filename
-    full_title = title if title == SITE_NAME else f"{title} — {SITE_NAME}"
+    full_title = title if title == SITE_NAME else f"{title} | {SITE_NAME}"
     html = f"""<!doctype html>
 <html lang="en">
 <head>
@@ -240,7 +240,7 @@ def record(rows, dark=False):
 
 
 def hero_page(name, alt, title, lede, focus="center 45%"):
-    """Full-screen photographic header for an interior page — same treatment as
+    """Full-screen photographic header for an interior page, same treatment as
     the home page. The picture fills the viewport, the nav rides on top of it,
     and the page title sits over the bottom."""
     return f"""<section class="hero hero--cover hero--page">
@@ -303,7 +303,7 @@ def ul(items, plain=False):
 
 
 def steps(items, level=3):
-    """`level` must make the page's heading outline continuous — a numbered list
+    """`level` must make the page's heading outline continuous, a numbered list
     sitting directly under the h1 is h2, one nested inside a section is h3."""
     out = ['<ol class="steps">']
     for title, body in items:
