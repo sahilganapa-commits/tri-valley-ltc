@@ -245,14 +245,20 @@
      page. With JavaScript off the form submits natively to the same endpoint
      and the service shows its own confirmation — nothing is lost either way. */
   Array.prototype.forEach.call(document.querySelectorAll('[data-form]'), function (form) {
-    var status = form.querySelector('[data-form-status]');
+    // The status sits after the form, not inside it, so the form can be
+    // removed on success while the confirmation stays.
+    var status = form.parentNode.querySelector('[data-form-status]');
     var button = form.querySelector('button[type="submit"]');
     if (!status || !form.getAttribute('action')) { return; }
 
     function say(message, ok) {
       status.hidden = false;
-      status.className = 'note ' + (ok ? 'note--info' : 'note');
+      status.className = ok ? 'formdone' : 'note';
       status.innerHTML = message;
+      // On success the form goes away entirely. Leaving a filled-in form on
+      // screen under a small notice reads as though nothing was sent, and
+      // invites people to submit a second time.
+      if (ok) { form.hidden = true; }
       status.focus();
     }
 
@@ -268,8 +274,10 @@
       }).then(function (res) {
         if (res.ok) {
           form.reset();
-          say('<strong>Thank you.</strong> Your message has been sent. We reply within one ' +
-              'business day.', true);
+          say('<strong>Thank you — your message has been sent.</strong>' +
+              '<span>We reply within one business day. If it is urgent, or you would rather ' +
+              'speak to someone, email <a href="mailto:' + CONTACT_EMAIL + '">' + CONTACT_EMAIL +
+              '</a>.</span>', true);
         } else {
           return res.json().then(function (data) {
             var why = (data && data.errors) ? data.errors.map(function (x) { return x.message; }).join(', ')

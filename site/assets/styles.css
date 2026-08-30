@@ -1340,3 +1340,28 @@ textarea.field__input { min-height: 8rem; line-height: 1.6; resize: vertical; }
 /* Honeypot: a field only a bot fills in. Hidden from sight and from the
    accessibility tree, so no real visitor ever encounters it. */
 .form__gotcha { display: none; }
+
+/* --- Form confirmation ---------------------------------------------------
+   Replaces the form on success, so it has to carry the weight the form did
+   rather than read as a footnote under it. */
+
+.formdone {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.75rem 1.6rem;
+  max-width: 38rem;
+}
+.formdone strong {
+  display: block;
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(1.3rem, 1.1rem + .7vw, 1.6rem);
+  line-height: 1.25;
+  color: var(--navy);
+  margin-bottom: .6rem;
+}
+.formdone span { display: block; color: var(--muted); }
+.formdone:focus { outline: none; }
+.formdone:focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; }

@@ -104,8 +104,8 @@ buy anything.</span>
 <button class="btn btn--primary" type="submit">Send message</button>
 <p class="form__note">We use your information only to respond to your inquiry. See the
 <a href="privacy.html">privacy policy</a>.</p>
-<p class="note note--info" data-form-status hidden tabindex="-1" role="status" aria-live="polite"></p>
 </form>
+<p class="note note--info" data-form-status hidden tabindex="-1" role="status" aria-live="polite"></p>
 
 </div>
 </div>
@@ -154,8 +154,8 @@ and every message has an unsubscribe link.</span>
 <button class="btn btn--primary" type="submit">Send me the white paper</button>
 <p class="form__note">Your address is used to send the paper and, if you tick the box, program
 updates. See the <a href="privacy.html">privacy policy</a>.</p>
-<p class="note note--info" data-form-status hidden tabindex="-1" role="status" aria-live="polite"></p>
 </form>
+<p class="note note--info" data-form-status hidden tabindex="-1" role="status" aria-live="polite"></p>
 </div>
 </div>
 </section>"""
